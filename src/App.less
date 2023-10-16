@@ -1,0 +1,33 @@
+@import "./variables.less";
+@font-face {
+    font-family: Mondia;
+    src: url("../public/fonts/Nasir\ Udin\ -\ MondiaThin.otf");
+
+}
+@font-face {
+    font-family: ArnoProRegular;
+    src: url("../public/fonts/ArnoPro-Regular.otf");
+}
+@font-face {
+    font-family: ArnoProBold;
+    src: url("../public/fonts/ArnoPro-Bold.otf");
+}
+*{
+    font-family: Mondia;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: @black;
+}
+.App{
+    padding: @page-top-bottom-padding;
+    background-color: @pink;
+    &::before{
+
+    }
+    .App-header{
+        padding:@page-left-right-paddings;
+    }
+}
