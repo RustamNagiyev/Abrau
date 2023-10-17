@@ -10,10 +10,6 @@
   font-family: ArnoProBold;
   src: url("../public/fonts/ArnoPro-Bold.otf");
 }
-@font-face {
-  font-family: Legan;
-  src: url("../public/fonts/Legan.ttf");
-}
 * {
   font-family: Mondia;
   margin: 0;
