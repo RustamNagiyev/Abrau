@@ -1,0 +1,14 @@
+h2 {
+  font-family: ArnoProRegular;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 66px;
+  color: #974D24;
+  text-align: center;
+}
+.brendscontainer .right h2 {
+  color: #fff;
+}
+.brendscontainer .left h2 {
+  color: #fff;
+}
