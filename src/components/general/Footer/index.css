@@ -1,0 +1,54 @@
+.sectionfooter .container {
+  background-color: #E7D2BB;
+  display: flex;
+  justify-content: space-around;
+  height: 262px;
+  padding-top: 60px;
+}
+.sectionfooter .container .flexable {
+  display: flex;
+  width: 25%;
+}
+.sectionfooter .container .flexable .div1 {
+  width: 45%;
+}
+.sectionfooter .container .div4 {
+  display: flex;
+  flex-direction: column;
+}
+.sectionfooter .container .div3 p {
+  padding-left: 90px;
+}
+.sectionfooter .container p {
+  font-family: ArnoProRegular;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 600;
+  padding-top: 25px;
+}
+.sectionfooter .container p span {
+  font-size: Mondia;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 15px;
+  padding-left: 2vmin;
+}
+.sectionfooter .container img {
+  height: 25px;
+  margin-top: 18px;
+}
+.sectionfooter .containertwo {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.sectionfooter .containertwo .pend1 {
+  width: 26%;
+  padding-top: 30px;
+}
+.sectionfooter .containertwo .pend2 {
+  text-align: end;
+  width: 25%;
+  padding-top: 30px;
+}

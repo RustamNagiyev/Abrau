@@ -1,0 +1,62 @@
+.about {
+  background-image: url("../../../images/home/aboutbackimg.svg");
+  background-position: bottom left;
+  background-size: contain;
+}
+.about .container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 120px;
+}
+.about .container .flex1 {
+  width: 26%;
+}
+.about .container .flex1 h1 {
+  font-family: ArnoProRegular;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 66px;
+  text-align: center;
+  color: #974D24;
+}
+.about .container .flex1 .text1 {
+  font-family: ArnoProRegular;
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+}
+.about .container .flex1 .text2 {
+  margin-top: 10px;
+  color: #130F02;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+}
+.about .container .flex1 button {
+  display: block;
+  margin: 80px auto;
+  width: 46%;
+  height: 40px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #974D24;
+  border-radius: 5px;
+  border: 1px solid #974D24;
+  background-color: #F4E5D4;
+  transition: 0.5s ease-in-out;
+}
+.about .container .flex1 button:hover {
+  color: #fff;
+  background-color: #974D24;
+  cursor: pointer;
+}
+.about .container .flex2 {
+  width: 32%;
+}
+.about .container .flex2 img {
+  width: 100%;
+}
