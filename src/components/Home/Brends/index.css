@@ -1,3 +1,6 @@
+.brends {
+  padding-top: 10vmin;
+}
 h2 {
   font-family: ArnoProRegular;
   font-weight: 400;
@@ -6,9 +9,186 @@ h2 {
   color: #974D24;
   text-align: center;
 }
+.brendscontainer {
+  position: relative;
+  height: 100vmin;
+}
+.brendscontainer .right {
+  position: relative;
+  display: inline-block;
+  height: 55vmin;
+  width: 50%;
+  transition: transform 0.4s;
+  /* Animation */
+}
+.brendscontainer .right:hover {
+  transform: scale(1.01);
+}
+.brendscontainer .right .text-wrapper {
+  position: absolute;
+  top: 420px;
+  right: 42%;
+  text-align: end;
+  color: white;
+}
+.brendscontainer .right .text-wrapper h2 {
+  text-align: end;
+}
+.brendscontainer .right .text-wrapper button {
+  width: 185px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #fafafd;
+  background-color: rgba(110, 97, 97, 0.5);
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+.brendscontainer .right .text-wrapper button:hover {
+  background-color: rgba(162, 148, 148, 0.5);
+  cursor: pointer;
+  color: #fff;
+}
+.brendscontainer .right img {
+  position: absolute;
+  top: 10%;
+  right: 40%;
+  width: 120%;
+  clip-path: polygon(100% 5%, 5% 100%, 100% 100%);
+}
 .brendscontainer .right h2 {
   color: #fff;
 }
+.brendscontainer .left {
+  position: relative;
+  display: inline-block;
+  height: 55vmin;
+  width: 49.5%;
+  z-index: 1;
+  transition: transform 0.4s;
+  /* Animation */
+}
+.brendscontainer .left:hover {
+  transform: scale(1.01);
+}
+.brendscontainer .left .text-wrapper {
+  position: absolute;
+  top: 40%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.brendscontainer .left .text-wrapper h2 {
+  text-align: start;
+}
+.brendscontainer .left .text-wrapper button {
+  width: 185px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #fafafd;
+  background-color: rgba(110, 97, 97, 0.5);
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+.brendscontainer .left .text-wrapper button:hover {
+  background-color: rgba(162, 148, 148, 0.5);
+  cursor: pointer;
+  color: #fff;
+}
+.brendscontainer .left img {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 120%;
+  clip-path: polygon(95% 0, 0 80%, 0 0);
+}
 .brendscontainer .left h2 {
   color: #fff;
+}
+.img1 {
+  display: flex;
+  justify-content: center;
+}
+.img1 h2 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  font-family: ArnoProRegular;
+  color: #974D24;
+  padding-top: 5vmin;
+  text-align: start;
+  padding-left: 5vmin;
+}
+.img1 p {
+  padding: 4vmin 5vmin 5vmin 5vmin;
+  text-align: start;
+  color: #505050;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.img1 .imgru {
+  width: 98%;
+  height: 600px;
+}
+.img1 button {
+  background: none;
+  color: #505050;
+  border: none;
+  padding-left: 5px;
+  transition: 0.5s ease-in-out;
+}
+.img1 button:hover {
+  background-color: red;
+  padding: 0 55px 0 5px;
+  border-radius: 0 0 25px 0;
+  cursor: pointer;
+}
+.img2 {
+  display: flex;
+  justify-content: center;
+}
+.img2 h2 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  font-family: ArnoProRegular;
+  color: #974D24;
+  padding-top: 5vmin;
+  text-align: start;
+  padding-left: 5vmin;
+}
+.img2 p {
+  padding: 4vmin 5vmin 5vmin 5vmin;
+  text-align: start;
+  color: #505050;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.img2 .imgaz {
+  width: 98%;
+  height: 600px;
+}
+.img2 button {
+  background: none;
+  color: #505050;
+  border: none;
+  padding-left: 5px;
+  transition: 0.5s ease-in-out;
+}
+.img2 button:hover {
+  background-color: red;
+  padding: 0 55px 0 5px;
+  border-radius: 0 0 25px 0;
+  cursor: pointer;
+}
+.divflex2 {
+  width: 30%;
+  margin-top: 40px;
+}
+.divflex1 {
+  width: 30%;
+  background-color: #fff;
+  height: 600px;
+  margin-top: 40px;
 }

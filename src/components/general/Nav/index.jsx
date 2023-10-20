@@ -13,15 +13,15 @@ export default function Nav() {
       <div className='container'>
         <div className="left">
             {/* <img className='logo' src={require('../../../logo.svg').default}/> */}
-            <NavLink><img  className='logo' src={logo} alt='search'/></NavLink>
+            <NavLink to="/"><img  className='logo' src={logo} alt='search'/></NavLink>
         </div>
         <div className="center">
             <ul>
-            <li><NavLink>HAQQIMIZDA</NavLink></li>
+            <li><NavLink to="/about">HAQQIMIZDA</NavLink></li>
             <li><NavLink>AZ ABRAU</NavLink></li>
             <li><NavLink>SATIŞ MƏNTƏQƏLƏRİ</NavLink></li>
             <li><NavLink>XƏBƏRLƏR</NavLink></li>
-            <li><NavLink>ƏLAQƏ</NavLink></li>
+            <li><NavLink to="/contact">ƏLAQƏ</NavLink></li>
             </ul> 
         </div>
         <div className="right">

@@ -1,0 +1,79 @@
+.top {
+  display: flex;
+  justify-content: center;
+  padding-top: 15vmin;
+  padding-bottom: 8vmin;
+}
+.top .container-contact {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  background-color: #E7D2BB;
+}
+.top .container-contact .flex-contact {
+  width: 22%;
+}
+.top .container-contact .flex-contact h2 {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 21px;
+  color: #974D24;
+  font-family: ArnoProRegular;
+  padding-top: 8vmin;
+}
+.top .container-contact .flex-contact p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 20px;
+  text-align: center;
+  padding-top: 2vmin;
+}
+.top .container-contact .flex-contact .p2 {
+  padding-top: 0;
+  padding-bottom: 8vmin;
+}
+.common-input .flex-input {
+  display: flex;
+  justify-content: center;
+}
+.common-input .flex-input input {
+  margin: 1vmin;
+  width: 25%;
+  height: 6vmin;
+  font-size: 18px;
+  background-color: #FFFAEF;
+  border: 1px solid #E7D2BB;
+}
+.common-input input {
+  display: block;
+  margin: 0 auto;
+  width: 51%;
+  margin-top: 1vmin;
+  height: 15vmin;
+  background-color: #FFFAEF;
+  border: 1px solid #E7D2BB;
+  padding-left: 2vmin;
+  font-size: 18px;
+}
+.contact-btn {
+  text-align: center;
+  width: 15%;
+  display: block;
+  margin: 4vmin auto;
+  height: 5vmin;
+  margin-bottom: 15vmin;
+  border-radius: 5px;
+  background-color: #F4E5D4;
+  color: #974D24;
+  border: 1px solid #974D24;
+  transition: 0.5s ease-in-out;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: ArnoProRegular;
+}
+.contact-btn:hover {
+  color: #fff;
+  background-color: #974D24;
+  cursor: pointer;
+}

@@ -8,7 +8,7 @@ import OurWork from "./OurWork"
 
 export default function Home() {
   return (
-    <div>
+    <div className="home">
      <Header />
      <About />
      
