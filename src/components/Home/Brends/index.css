@@ -1,41 +1,48 @@
 .brends {
   padding-top: 10vmin;
 }
-h2 {
+.brends h2 {
   font-family: ArnoProRegular;
   font-weight: 400;
   font-size: 55px;
   line-height: 66px;
-  color: #974D24;
+  color: #974d24;
   text-align: center;
 }
-.brendscontainer {
+.brends .brendscontainer {
   position: relative;
-  height: 100vmin;
+  margin-bottom: 10vmin;
+  /* height: 100vmin; */
 }
-.brendscontainer .right {
+.brends .brendscontainer .left,
+.brends .brendscontainer .right {
   position: relative;
   display: inline-block;
   height: 55vmin;
-  width: 50%;
   transition: transform 0.4s;
   /* Animation */
 }
-.brendscontainer .right:hover {
+.brends .brendscontainer .left:hover,
+.brends .brendscontainer .right:hover {
   transform: scale(1.01);
 }
-.brendscontainer .right .text-wrapper {
+.brends .brendscontainer .left .text-wrapper,
+.brends .brendscontainer .right .text-wrapper {
   position: absolute;
-  top: 420px;
-  right: 42%;
-  text-align: end;
   color: white;
+  width: min-content;
 }
-.brendscontainer .right .text-wrapper h2 {
-  text-align: end;
+.brends .brendscontainer .left .text-wrapper h2,
+.brends .brendscontainer .right .text-wrapper h2 {
+  font-size: 2.3rem;
+  width: 50%;
+  line-height: normal;
+  color: #fff;
+  position: relative;
 }
-.brendscontainer .right .text-wrapper button {
-  width: 185px;
+.brends .brendscontainer .left .text-wrapper button,
+.brends .brendscontainer .right .text-wrapper button {
+  width: 30vmin;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #fafafd;
@@ -43,152 +50,156 @@ h2 {
   color: white;
   transition: 0.5s ease-in-out;
 }
-.brendscontainer .right .text-wrapper button:hover {
+.brends .brendscontainer .left .text-wrapper button:hover,
+.brends .brendscontainer .right .text-wrapper button:hover {
   background-color: rgba(162, 148, 148, 0.5);
   cursor: pointer;
   color: #fff;
+  box-shadow: 0 0 400px 500px #00000069;
 }
-.brendscontainer .right img {
+.brends .brendscontainer .left img,
+.brends .brendscontainer .right img {
   position: absolute;
-  top: 10%;
-  right: 40%;
-  width: 120%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.brends .brendscontainer .right {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 70%;
   clip-path: polygon(100% 5%, 5% 100%, 100% 100%);
 }
-.brendscontainer .right h2 {
-  color: #fff;
+.brends .brendscontainer .right .text-wrapper {
+  bottom: 4vmin;
+  right: 4vmin;
 }
-.brendscontainer .left {
-  position: relative;
-  display: inline-block;
-  height: 55vmin;
-  width: 49.5%;
+.brends .brendscontainer .right .text-wrapper h2 {
+  text-align: end;
+}
+.brends .brendscontainer .left {
+  position: absolute;
+  left: 10%;
+  width: 82%;
+  height: 85%;
   z-index: 1;
-  transition: transform 0.4s;
-  /* Animation */
-}
-.brendscontainer .left:hover {
-  transform: scale(1.01);
-}
-.brendscontainer .left .text-wrapper {
-  position: absolute;
-  top: 40%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-.brendscontainer .left .text-wrapper h2 {
-  text-align: start;
-}
-.brendscontainer .left .text-wrapper button {
-  width: 185px;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid #fafafd;
-  background-color: rgba(110, 97, 97, 0.5);
-  color: white;
-  transition: 0.5s ease-in-out;
-}
-.brendscontainer .left .text-wrapper button:hover {
-  background-color: rgba(162, 148, 148, 0.5);
-  cursor: pointer;
-  color: #fff;
-}
-.brendscontainer .left img {
-  position: absolute;
-  top: 10%;
-  left: 40%;
-  width: 120%;
   clip-path: polygon(95% 0, 0 80%, 0 0);
 }
-.brendscontainer .left h2 {
-  color: #fff;
+.brends .brendscontainer .left .text-wrapper {
+  top: 4vmin;
+  left: 4vmin;
 }
-.img1 {
-  display: flex;
-  justify-content: center;
-}
-.img1 h2 {
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 60px;
-  font-family: ArnoProRegular;
-  color: #974D24;
-  padding-top: 5vmin;
+.brends .brendscontainer .left .text-wrapper h2 {
   text-align: start;
-  padding-left: 5vmin;
 }
-.img1 p {
-  padding: 4vmin 5vmin 5vmin 5vmin;
-  text-align: start;
-  color: #505050;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-}
-.img1 .imgru {
-  width: 98%;
-  height: 600px;
-}
-.img1 button {
-  background: none;
-  color: #505050;
-  border: none;
-  padding-left: 5px;
-  transition: 0.5s ease-in-out;
-}
-.img1 button:hover {
-  background-color: red;
-  padding: 0 55px 0 5px;
-  border-radius: 0 0 25px 0;
-  cursor: pointer;
-}
-.img2 {
-  display: flex;
-  justify-content: center;
-}
-.img2 h2 {
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 60px;
-  font-family: ArnoProRegular;
-  color: #974D24;
-  padding-top: 5vmin;
-  text-align: start;
-  padding-left: 5vmin;
-}
-.img2 p {
-  padding: 4vmin 5vmin 5vmin 5vmin;
-  text-align: start;
-  color: #505050;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-}
-.img2 .imgaz {
-  width: 98%;
-  height: 600px;
-}
-.img2 button {
-  background: none;
-  color: #505050;
-  border: none;
-  padding-left: 5px;
-  transition: 0.5s ease-in-out;
-}
-.img2 button:hover {
-  background-color: red;
-  padding: 0 55px 0 5px;
-  border-radius: 0 0 25px 0;
-  cursor: pointer;
-}
-.divflex2 {
-  width: 30%;
+.brends .brendscontainer .img1,
+.brends .brendscontainer .img2 {
+  padding: 0 7vmin 2vmin;
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: max-height 0.5s;
+  max-height: 0;
+  overflow: hidden;
+  animation: homeWineInfoPageAnimation 1s linear forwards;
 }
-.divflex1 {
-  width: 30%;
+.brends .brendscontainer .img1 .divflex1,
+.brends .brendscontainer .img2 .divflex1 {
+  width: 100%;
   background-color: #fff;
-  height: 600px;
-  margin-top: 40px;
+}
+.brends .brendscontainer .img1 .divflex1 button,
+.brends .brendscontainer .img2 .divflex1 button {
+  background: none;
+  color: #505050;
+  border: none;
+  padding-left: 5px;
+  transition: 0.5s ease-in-out;
+}
+.brends .brendscontainer .img1 .divflex1 button:hover,
+.brends .brendscontainer .img2 .divflex1 button:hover {
+  background-color: red;
+  padding: 0 55px 0 5px;
+  border-radius: 0 0 25px 0;
+  cursor: pointer;
+}
+.brends .brendscontainer .img1 .divflex1 h2,
+.brends .brendscontainer .img2 .divflex1 h2 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  font-family: ArnoProRegular;
+  color: #974d24;
+  padding: 5vmin 5vmin 0;
+  text-align: right;
+}
+.brends .brendscontainer .img1 .divflex1 p,
+.brends .brendscontainer .img2 .divflex1 p {
+  padding: 4vmin 5vmin 7vmin;
+  text-align: justify;
+  color: #505050;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.brends .brendscontainer .img1 .divflex2,
+.brends .brendscontainer .img2 .divflex2 {
+  width: 100%;
+}
+.brends .brendscontainer .img1 .divflex2 .imgru,
+.brends .brendscontainer .img2 .divflex2 .imgru,
+.brends .brendscontainer .img1 .divflex2 .imgaz,
+.brends .brendscontainer .img2 .divflex2 .imgaz {
+  height: 50vmin;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 20%;
+}
+@keyframes homeWineInfoPageAnimation {
+  100% {
+    max-height: 250vmin;
+  }
+}
+@media (min-width: 900px) {
+  .brends .brendscontainer .img1,
+  .brends .brendscontainer .img2 {
+    flex-direction: row;
+    height: min-content;
+  }
+  .brends .brendscontainer .img1 .divflex1,
+  .brends .brendscontainer .img2 .divflex1 {
+    height: min-content;
+  }
+  .brends .brendscontainer .img1 .divflex2,
+  .brends .brendscontainer .img2 .divflex2 {
+    position: relative;
+  }
+  .brends .brendscontainer .img1 .divflex2 .imgru,
+  .brends .brendscontainer .img2 .divflex2 .imgru,
+  .brends .brendscontainer .img1 .divflex2 .imgaz,
+  .brends .brendscontainer .img2 .divflex2 .imgaz {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+@media (min-width: 1440px) {
+  .brends .brendscontainer {
+    display: flex;
+    margin: 0 auto;
+  }
+  .brends .brendscontainer .right {
+    left: 18%;
+    width: 65%;
+  }
+  .brends .brendscontainer .left {
+    left: 18%;
+    width: 66%;
+  }
 }

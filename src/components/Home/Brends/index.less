@@ -1,195 +1,215 @@
 @import "../../../variables.less";
 .brends {
   padding-top: 10vmin;
-}
-h2 {
-  font-family: ArnoProRegular;
-  font-weight: 400;
-  font-size: 55px;
-  line-height: 66px;
-  color: @brown;
-  text-align: center;
-}
-.brendscontainer {
-  position: relative;
-  height: 100vmin;
-  .right {
+  // WARNING!!:: style these h2, h3.. etc. and buttons one time in App.less generally
+  h2 {
+    font-family: ArnoProRegular;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 66px;
+    color: @brown;
+    text-align: center;
+  }
+  // all important styles
+  .brendscontainer {
     position: relative;
-    display: inline-block;
-    height: 55vmin;
-    width: 50%;
-    transition: transform 0.4s; /* Animation */
-    &:hover {
-      transform: scale(1.01);
-    }
-    .text-wrapper {
-      position: absolute;
-      top: 420px;
-      right: 42%;
-      text-align: end;
-      color: white;
-      h2 {
-        text-align: end;
+    margin-bottom: 10vmin;
+    // styled this[height: 100vmin;] for main content's left and right absolute position ability in the jsx file
+    // if we don't add this height will be effect main content, otherwise that will be destroy ru and az wines info page's responsive height too
+    /* height: 100vmin; */
+
+    // left and right common styles:
+    .left,
+    .right {
+      position: relative;
+      display: inline-block;
+      height: 55vmin;
+      transition: transform 0.4s; /* Animation */
+      &:hover {
+        transform: scale(1.01);
       }
-      button {
-        width: 185px;
-        height: 40px;
-        border-radius: 5px;
-        border: 1px solid rgb(250, 250, 253);
-        background-color: rgba(110, 97, 97, 0.5);
+      .text-wrapper {
+        position: absolute;
         color: white;
-        transition: 0.5s ease-in-out;
-        &:hover {
-          background-color: rgba(162, 148, 148, 0.5);
-          cursor: pointer;
+        width: min-content;
+        h2 {
+          font-size: 2.3rem;
+          width: 50%;
+          line-height: normal;
           color: #fff;
+          position: relative;
+        }
+        button {
+          width: 30vmin;
+          height: 40px;
+          border-radius: 5px;
+          border: 1px solid rgb(250, 250, 253);
+          background-color: rgba(110, 97, 97, 0.5);
+          color: white;
+          transition: 0.5s ease-in-out;
+          &:hover {
+            background-color: rgba(162, 148, 148, 0.5);
+            cursor: pointer;
+            color: #fff;
+            box-shadow: 0 0 400px 500px #00000069;
+          }
         }
       }
+      img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
-    img {
+    // right's custom styles:
+    .right {
       position: absolute;
-      top: 10%;
-      right: 40%;
-      width: 120%;
+      left: 10%;
+      width: 80%;
+      height: 70%;
       clip-path: polygon(100% 5%, 5% 100%, 100% 100%);
-    }
-    h2 {
-      color: #fff;
-    }
-  }
-  .left {
-    position: relative;
-    display: inline-block;
-    height: 55vmin;
-    width: 49.5%;
-    z-index: 1;
-    transition: transform 0.4s; /* Animation */
-    &:hover {
-      transform: scale(1.01);
-    }
-    .text-wrapper {
-      position: absolute;
-      top: 40%;
-      left: 65%;
-      transform: translate(-50%, -50%);
-      color: white;
-      h2 {
-        text-align: start;
-      }
-      button {
-        width: 185px;
-        height: 40px;
-        border-radius: 5px;
-        border: 1px solid rgb(250, 250, 253);
-        background-color: rgba(110, 97, 97, 0.5);
-        color: white;
-        transition: 0.5s ease-in-out;
-        &:hover {
-          background-color: rgba(162, 148, 148, 0.5);
-          cursor: pointer;
-          color: #fff;
+      .text-wrapper {
+        bottom: 4vmin;
+        right: 4vmin;
+        h2 {
+          text-align: end;
         }
       }
     }
-    img {
+    // left's custom styles:
+    .left {
       position: absolute;
-      top: 10%;
-      left: 40%;
-      width: 120%;
+      left: 10%;
+      width: 82%;
+      height: 85%;
+      z-index: 1;
       clip-path: polygon(95% 0, 0 80%, 0 0);
+      .text-wrapper {
+        top: 4vmin;
+        left: 4vmin;
+        h2 {
+          text-align: start;
+        }
+      }
     }
-    h2 {
-      color: #fff;
+    // /* showing Nexts 'more info' page styles: */
+    // Russian wine info page and~
+    // Azeri wine info page~
+    // * common styles:
+    .img1,
+    .img2 {
+      padding: 0 @page-left-right-paddings 2vmin;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: max-height 0.5s;
+      max-height: 0;
+      overflow: hidden;
+      animation: homeWineInfoPageAnimation 1s linear forwards;
+      .divflex1 {
+        width: 100%;
+        background-color: #fff;
+        button {
+          background: none;
+          color: #505050;
+          border: none;
+          padding-left: 5px;
+          transition: 0.5s ease-in-out;
+          &:hover {
+            background-color: red;
+            padding: 0 55px 0 5px;
+            border-radius: 0 0 25px 0;
+            cursor: pointer;
+          }
+        }
+        h2 {
+          font-weight: 400;
+          font-size: 50px;
+          line-height: 60px;
+          font-family: ArnoProRegular;
+          color: @brown;
+          padding: 5vmin 5vmin 0;
+          text-align: right;
+        }
+        p {
+          padding: 4vmin 5vmin 7vmin;
+          text-align: justify;
+          color: #505050;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+      .divflex2 {
+        width: 100%;
+        .imgru,
+        .imgaz {
+          // width: 98%;
+          height: 50vmin;
+          width: 100%;
+          object-fit: cover;
+          object-position: 0 20%;
+        }
+      }
     }
   }
 }
-.img1 {
-  display: flex;
-  justify-content: center;
-  h2 {
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 60px;
-    font-family: ArnoProRegular;
-    color: @brown;
-    padding-top: 5vmin;
-    text-align: start;
-    padding-left: 5vmin;
-  }
-  p {
-    padding: 4vmin 5vmin 5vmin 5vmin;
-    text-align: start;
-    color: #505050;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-  }
-  .imgru {
-    width: 98%;
 
-    height: 600px;
+@keyframes homeWineInfoPageAnimation {
+  100% {
+    max-height: 250vmin;
   }
-  button {
-    background: none;
-    color: #505050;
-    border: none;
-    padding-left: 5px;
-    transition: 0.5s ease-in-out;
-    &:hover{
-      background-color: red;
-      padding: 0 55px 0 5px;
-      border-radius: 0 0 25px 0;
-      cursor: pointer;
+}
+@media (min-width: 900px) {
+  .brends {
+    // all important styles
+    .brendscontainer {
+      // /* showing Nexts 'more info' page styles: */
+      // Russian wine info page and~
+      // Azeri wine info page~
+      // * common styles:
+      .img1,
+      .img2 {
+        flex-direction: row;
+        height: min-content;
+        .divflex1 {
+          height: min-content;
+        }
+        .divflex2 {
+          position: relative;
+          .imgru,
+          .imgaz {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
     }
   }
 }
-.img2 {
-  display: flex;
-  justify-content: center;
-  h2 {
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 60px;
-    font-family: ArnoProRegular;
-    color: @brown;
-    padding-top: 5vmin;
-    text-align: start;
-    padding-left: 5vmin;
-  }
-  p {
-    padding: 4vmin 5vmin 5vmin 5vmin;
-    text-align: start;
-    color: #505050;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-  }
-  .imgaz {
-    width: 98%;
-
-    height: 600px;
-  }
-  button {
-    background: none;
-    color: #505050;
-    border: none;
-    padding-left: 5px;
-    transition: 0.5s ease-in-out;
-    &:hover{
-      background-color: red;
-      padding: 0 55px 0 5px;
-      border-radius: 0 0 25px 0;
-      cursor: pointer;
+@media (min-width: 1440px) {
+  .brends {
+    // all important styles
+    .brendscontainer {
+      display: flex;
+      margin: 0 auto;
+      // right's custom styles:
+      .right {
+        left: 18%;
+        width: 65%;
+      }
+      // left's custom styles:
+      .left {
+        left: 18%;
+        width: 66%;
+      }
     }
   }
-}
-.divflex2 {
-  width: 30%;
-  margin-top: 40px;
-}
-.divflex1 {
-  width: 30%;
-  background-color: #fff;
-  height: 600px;
-  margin-top: 40px;
 }

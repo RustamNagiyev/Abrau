@@ -1,0 +1,141 @@
+.about-main {
+  padding: 0 7vmin;
+  position: relative;
+}
+.about-main .page-info-nav {
+  position: absolute;
+  display: flex;
+  top: 3vmin;
+}
+.about-main .page-info-nav * {
+  font-family: Legan;
+}
+.about-main .page-info-nav a h4 {
+  color: #4c192a;
+}
+.about-main .page-info-nav span {
+  color: #bebbbb;
+}
+.about-main .part-container {
+  padding: 7vmin;
+  margin: 0 -7vmin;
+}
+.about-main .part-container:hover .all-container .all-wrapper .text-content-wrapper {
+  transform: translateY(-3rem);
+}
+.about-main .part-container .all-container .all-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.about-main .part-container .all-container .all-wrapper .top-container .title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-main .part-container .all-container .all-wrapper .top-container .title-wrapper h2:first-child {
+  font-family: ArnoProBold;
+  color: #ddc6ae;
+  font-weight: 700;
+  font-size: 14rem;
+}
+.about-main .part-container .all-container .all-wrapper .top-container .title-wrapper h2:last-child {
+  font-family: ArnoProRegular;
+  font-weight: normal;
+  font-size: 3rem;
+  margin-top: -6.7rem;
+  color: #974d24;
+}
+.about-main .part-container .all-container .all-wrapper .top-container img {
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  display: block;
+  object-fit: cover;
+}
+.about-main .part-container .all-container .all-wrapper .text-content-wrapper {
+  transition: transform 0.3s;
+  background-color: #e7d2bb;
+  padding: 3vmin;
+}
+.about-main .part-container .all-container .all-wrapper .text-content-wrapper p {
+  text-align: justify;
+}
+.about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container .title-wrapper h2:last-child {
+  width: min-content;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .about-main .part-container .all-container .all-wrapper .top-container .title-wrapper {
+    flex-direction: row;
+  }
+  .about-main .part-container .all-container .all-wrapper .top-container .title-wrapper h2:last-child {
+    margin-top: -2rem;
+    margin-left: -2.8rem;
+  }
+  .about-main .part-container .all-container .all-wrapper .top-container img {
+    margin-top: -3rem;
+  }
+  .about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container .title-wrapper {
+    flex-direction: row-reverse;
+  }
+  .about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container .title-wrapper h2:last-child {
+    margin: 0 -2.5rem 0 0;
+  }
+}
+@media (min-width: 1024px) {
+  .about-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-main .part-container {
+    padding: 0 7vmin;
+  }
+  .about-main .part-container .all-container {
+    margin: 0 auto;
+    width: 75%;
+  }
+  .about-main .part-container .all-container .all-wrapper {
+    margin: auto;
+    padding-top: 5rem;
+    border-left: #ddc6ae 1px solid;
+    border-bottom: #ddc6ae 1px solid;
+  }
+  .about-main .part-container .all-container .all-wrapper .top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about-main .part-container .all-container .all-wrapper .top-container .title-wrapper {
+    width: min-content;
+    margin-left: -7.3rem;
+  }
+  .about-main .part-container .all-container .all-wrapper .top-container img {
+    width: 50%;
+    margin-top: 2rem;
+  }
+  .about-main .part-container .all-container .all-wrapper .text-content-wrapper {
+    width: 80%;
+  }
+  .about-main .part-container:nth-child(odd) .all-container .all-wrapper {
+    border-left: unset;
+    border-right: #ddc6ae 1px solid;
+  }
+  .about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container {
+    flex-direction: row-reverse;
+  }
+  .about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container .title-wrapper {
+    margin-left: -7.3rem;
+    margin-right: -7rem;
+    flex-direction: row-reverse;
+  }
+  .about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container .title-wrapper h2:last-child {
+    margin: 0 -2.5rem 0 0;
+  }
+  .about-main .part-container:nth-child(odd) .all-container .all-wrapper .text-content-wrapper {
+    align-self: flex-end;
+  }
+  .about-main .part-container:last-child .all-container .all-wrapper {
+    border-bottom: unset;
+  }
+}
