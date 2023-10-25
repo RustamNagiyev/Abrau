@@ -1,4 +1,3 @@
-import Footer from "../general/Footer"
 import About from "./About"
 import Brends from "./Brends"
 import Header from "./Header"
@@ -16,7 +15,7 @@ export default function Home() {
      <OurWork />
      <Brends />
 
-     <Footer />
+     
     </div>
   )
 }

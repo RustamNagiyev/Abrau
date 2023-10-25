@@ -22,9 +22,9 @@ export default function Footer() {
           <p>Ünvan<span>Port Baku,Neftchilar Avenue 153,Baku Azerbaijan</span></p>
         </div>
         <div className='div4'>
-        <img src={require('../../../images/home/footerinsta.svg').default}/>
-        <img src={require('../../../images/home/footerwp.svg').default}/>
-        <img src={require('../../../images/home/footerfb.svg').default}/>
+        <img src={require('../../../images/home/footerinsta.svg').default} alt="insta"/>
+        <img src={require('../../../images/home/footerwp.svg').default} alt="whatsapp" />
+        <img src={require('../../../images/home/footerfb.svg').default} alt="facebook" />
         </div>
         </div>
         <div className='containertwo'>
