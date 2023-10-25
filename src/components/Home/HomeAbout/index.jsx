@@ -1,5 +1,5 @@
 import "./index.css"
-export default function About() {
+export default function HomeAbout() {
   return (
     <section className="about">
       <div className="container">
