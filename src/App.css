@@ -10,6 +10,10 @@
   font-family: ArnoProBold;
   src: url("../public/fonts/ArnoPro-Bold.otf");
 }
+@font-face {
+  font-family: Legan;
+  src: url("../public/fonts/Legan.ttf");
+}
 * {
   font-family: Mondia;
   margin: 0;
@@ -22,4 +26,23 @@
 .App {
   padding: "3vmin";
   background-color: #F4E5D4;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

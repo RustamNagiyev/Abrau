@@ -1,0 +1,53 @@
+.map-main {
+  /* Handle */
+  /* Handle on hover */
+}
+.map-main ::-webkit-scrollbar {
+  width: 5px;
+}
+.map-main ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.map-main ::-webkit-scrollbar-thumb {
+  background: #974D24;
+  border-radius: 10px;
+}
+.map-main ::-webkit-scrollbar-thumb:hover {
+  background: #130F02;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.map-main .map-container {
+  display: flex;
+  margin-top: 6vmin;
+  justify-content: center;
+  padding-bottom: 20vmin;
+}
+.map-main .map-container .map-flex1 {
+  width: 25%;
+  height: 500px;
+  overflow-y: scroll;
+  /* width */
+}
+.map-main .map-container .map-flex2 {
+  width: 50%;
+}
+.map-main .map-h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #974D24;
+  padding-top: 80px;
+}
+.map-main .map-btn {
+  border: none;
+  margin: 0;
+  text-align: end;
+  width: 85%;
+}
+.map-main .map-btn:hover {
+  background: none;
+  color: #130F02;
+}
