@@ -1,0 +1,209 @@
+@import "../../../variables.less";
+
+.about-main {
+  padding: 0 @page-left-right-paddings;
+  position: relative;
+  .page-info-nav {
+    position: absolute;
+    display: flex;
+    top: @page-top-bottom-padding;
+    * {
+      font-family: Legan;
+    }
+    a {
+      h4 {
+        color: @bordo-color;
+      }
+    }
+    span {
+      color: #bebbbb;
+    }
+  }
+  .part-container {
+    padding: @page-left-right-paddings;
+    margin: 0 -@page-left-right-paddings;
+    &:hover {
+      .all-container {
+        .all-wrapper {
+          .text-content-wrapper {
+            transform: translateY(-3rem);
+          }
+        }
+      }
+    }
+    .all-container {
+      .all-wrapper {
+        display: flex;
+        flex-direction: column;
+        .top-container {
+          .title-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h2 {
+              &:first-child {
+                font-family: ArnoProBold;
+                color: #ddc6ae;
+                font-weight: 700;
+                font-size: 14rem;
+              }
+              &:last-child {
+                font-family: ArnoProRegular;
+                font-weight: normal;
+                font-size: 3rem;
+                margin-top: -6.7rem;
+                color: @brown;
+              }
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            margin-top: 1rem;
+            display: block;
+            object-fit: cover;
+          }
+        }
+        .text-content-wrapper {
+          transition: transform 0.3s;
+          background-color: @dark-pink;
+          padding: @page-top-bottom-padding;
+          p {
+            text-align: justify;
+          }
+        }
+      }
+    }
+    // for second part's differences:
+    &:nth-child(odd) {
+      .all-container {
+        .all-wrapper {
+          .top-container {
+            .title-wrapper {
+              // flex-direction: row-reverse;
+              h2 {
+                &:last-child {
+                  width: min-content;
+                  // margin: 0 -2.5rem 0 0;
+                  z-index: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-main {
+    .part-container {
+      .all-container {
+        .all-wrapper {
+          .top-container {
+            .title-wrapper {
+              flex-direction: row;
+              h2 {
+                &:last-child {
+                  margin-top: -2rem;
+                  margin-left: -2.8rem;
+                }
+              }
+            }
+            img {
+              margin-top: -3rem;
+            }
+          }
+        }
+      }
+      // for second part's differences:
+      &:nth-child(odd) {
+        .all-container {
+          .all-wrapper {
+            .top-container {
+              .title-wrapper {
+                flex-direction: row-reverse;
+                h2 {
+                  &:last-child {
+                    margin: 0 -2.5rem 0 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-main {
+    display: flex;
+    flex-direction: column;
+
+    .part-container {
+      padding: 0 @page-left-right-paddings;
+      .all-container {
+        margin: 0 auto;
+        width: 75%;
+        .all-wrapper {
+          margin: auto;
+          padding-top: 5rem;
+          border-left: #ddc6ae 1px solid;
+          border-bottom: #ddc6ae 1px solid;
+          .top-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .title-wrapper {
+              width: min-content;
+              margin-left: -7.3rem;
+            }
+            img {
+              width: 50%;
+              margin-top: 2rem;
+            }
+          }
+          .text-content-wrapper {
+            width: 80%;
+          }
+        }
+      }
+      // for second part's differences:
+      &:nth-child(odd) {
+        .all-container {
+          .all-wrapper {
+            border-left: unset;
+            border-right: #ddc6ae 1px solid;
+            .top-container {
+              flex-direction: row-reverse;
+              .title-wrapper {
+                margin-left: -7.3rem;
+                margin-right: -7rem;
+                flex-direction: row-reverse;
+                h2 {
+                  &:last-child {
+                    margin: 0 -2.5rem 0 0;
+                  }
+                }
+              }
+            }
+            .text-content-wrapper {
+              align-self: flex-end;
+            }
+          }
+        }
+      }
+      &:last-child {
+        .all-container {
+          .all-wrapper {
+            border-bottom: unset;
+          }
+        }
+      }
+    }
+  }
+}

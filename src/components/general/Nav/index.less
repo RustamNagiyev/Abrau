@@ -1,44 +1,344 @@
 @import "../../../variables.less";
-.nav{
-    background-color: #030303;
-    height: 90px;
-    .container{
-        display: flex;
-        justify-content: space-around;
-        img{
-            margin-top: 15px;
-        }
-        .center{
-            width: 50%;
-            ul{
-                display: flex;
-                justify-content: space-around;
-                li{
-                    margin-top: 35px;
-                    a{
-                        color: #e4e4e4;
-                    }
-                }
-                }
-            }
-        
-        .right{
-            display: flex;
-            margin-top: -8px;
-            img{
-                margin-left: 3vmin;
-            }
-            .search-wrapper{
-                display: flex;
-                img{
-                    margin-right: 25vmin;
-                }
-                input{
-                    height: 40%;
-                    
-                }
-            }
-        }
+.nav {
+  background-color: #030303;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  .container {
+    padding: 1vmin @page-left-right-paddings;
+    display: grid;
+    grid-template-areas: "left right center";
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    // for all images:
+    img {
+      cursor: pointer;
+      transition: transform 0.5s;
+      position: relative;
+      z-index: 3;
+      &:hover {
+        transform: scale(0.9);
+      }
     }
-    
+    .center {
+      display: none;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        li {
+          a {
+            color: #e4e4e4;
+            &.active,
+            &:hover {
+              color: @light-nav-orange;
+            }
+          }
+        }
+      }
+    }
+    // menu button
+    .center-menu-button {
+      display: flex;
+      gap: 0.2rem;
+      grid-area: center;
+      width: 1.3rem;
+      height: 1.3rem;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        gap: 0.2rem;
+        position: relative;
+        div {
+          width: 0.3rem;
+          height: 0.3rem;
+          border-radius: 5px;
+          background-color: #fff;
+          transition: background-color 0.2s;
+          &::before,
+          &::after {
+            content: "";
+            width: 0.3rem;
+            height: 0.3rem;
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            transition: min-width 0.3s, left 0.3s, right 0.3s,
+              background-color 0.2s;
+          }
+          &::before {
+            background-color: #fff;
+            left: -0.5rem;
+            min-width: 1.3rem;
+          }
+          &::after {
+            right: -0.5rem;
+            background-color: #fff;
+            min-width: 1.3rem;
+          }
+        }
+      }
+      // menu button's hover effect
+      &:hover {
+        cursor: pointer;
+        div > div {
+          &::before,
+          &::after {
+            min-width: 0;
+          }
+          &::before {
+            left: 0;
+          }
+          &::after {
+            right: 0;
+          }
+        }
+      }
+      // menu button - after clicked animation
+      &.clicked {
+        &:hover {
+          div > div {
+            &::before,
+            &::after {
+              min-width: 1.3rem;
+            }
+            &::before {
+              left: -0.5rem;
+            }
+            &::after {
+              right: -0.5rem;
+            }
+          }
+        }
+        // transform to the five dots effect:
+        div {
+          &:not(:nth-child(2)) {
+            animation: BcTransparentAnimation 0.2s linear forwards;
+          }
+          div {
+            &::before,
+            &::after {
+              animation: beforeAfterWidthAnimation 0.2s 0.2s linear forwards,
+                firstLastWidthAnimation 0.3s 0.8s linear forwards,
+                transformToXbuttonFisrtChildAnimation 0.3s 1s linear forwards;
+            }
+            &:nth-child(2) {
+              &::before,
+              &::after {
+                animation: BcTransparentAnimation 0.2s linear forwards;
+              }
+              animation: BcTransparentAnimation 0.2s 0.7s linear forwards;
+            }
+            &:last-child {
+              &::before,
+              &::after {
+                animation: beforeAfterWidthAnimation 0.2s 0.2s linear forwards,
+                  firstLastWidthAnimation 0.3s 0.8s linear forwards,
+                  transformToXbuttonLastChildAnimation 0.3s 1s linear forwards;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      gap: 1rem;
+      .search-wrapper {
+        display: flex;
+        position: relative;
+        &:hover {
+          img {
+            left: 0;
+            translate: 0;
+          }
+          input {
+            visibility: visible;
+          }
+        }
+        img {
+          position: absolute;
+          padding: 0.2vmin 0;
+          height: 100%;
+          left: 50%;
+          translate: -50%;
+          transition: left 0.5s, translate 0.5s;
+        }
+        input {
+          transition: visibility;
+          background-color: transparent;
+          visibility: hidden;
+          color: white;
+          padding-left: 1.4rem;
+        }
+      }
+      .icons-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img {
+          display: block;
+        }
+        .lang-container {
+          display: flex;
+          position: relative;
+          .lang-wrapper {
+            position: absolute;
+            width: max-content;
+            background-color: @light-nav-orange;
+            top: 1.5rem;
+            padding: 0 2vmin;
+            transition: max-height 0.5s;
+            max-height: 0;
+            overflow: hidden;
+            li {
+              color: #fff;
+              transition: color 0.3s;
+              cursor: pointer;
+              &.active,
+              &:hover {
+                color: #030303;
+              }
+            }
+          }
+          &:hover {
+            .lang-wrapper {
+              max-height: 5rem;
+            }
+          }
+        }
+      }
+    }
+    // clicked after menuList styles:
+    &.clicked-menuList {
+      & > .center {
+        display: block;
+        position: fixed;
+        background-color: #030303;
+        width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        left: 0;
+        bottom: 0;
+        transform: translateY(-100%);
+        animation: menuListOpenCloseAnimation 0.7s 0.5s linear forwards;
+        ul {
+          flex-direction: column;
+          margin-top: 25vmin;
+          padding: @page-left-right-paddings;
+          opacity: 0;
+          animation: menuListOpacityAnimation 0.5s 1s linear forwards;
+          li {
+            width: max-content;
+            &::before {
+              content: "\259E";
+              color: #e4e4e4;
+              margin-right: 7px;
+              font-size: 0.8rem;
+            }
+            &:hover {
+              transform: content 0.5s;
+              &::before {
+                content: "\259A";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// menuXbuttonAnimation collection:
+/* for transform to the five dots effect: */
+@keyframes BcTransparentAnimation {
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes beforeAfterWidthAnimation {
+  100% {
+    min-width: 0;
+  }
+}
+/* for transform to the X button effect: */
+@keyframes firstLastWidthAnimation {
+  0% {
+    min-width: 0rem;
+  }
+  100% {
+    min-width: 1.3rem;
+  }
+}
+@keyframes transformToXbuttonFisrtChildAnimation {
+  100% {
+    transform: translateY(0.5rem) rotate(45deg);
+  }
+}
+@keyframes transformToXbuttonLastChildAnimation {
+  100% {
+    transform: translateY(-0.5rem) rotate(-45deg);
+  }
+}
+// menu list transition effect:
+@keyframes menuListOpenCloseAnimation {
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes menuListOpacityAnimation {
+  100% {
+    opacity: 1;;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav {
+    .container {
+      .right {
+        .search-wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 670px) {
+  .nav {
+    .container {
+      display: grid;
+      grid-template-areas:
+        "left right"
+        "center center";
+      gap: 0.5rem;
+      .center {
+        display: block;
+        grid-area: center;
+        align-self: space-around;
+        ul {
+          justify-content: space-evenly;
+        }
+      }
+      .center-menu-button {
+        display: none;
+      }
+      .right {
+        justify-self: end;
+      }
+    }
+  }
+}
+@media (min-width: 922px) {
+  .nav {
+    .container {
+      display: flex;
+      .center {
+        display: block;
+      }
+    }
+  }
 }

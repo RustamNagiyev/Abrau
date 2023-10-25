@@ -1,0 +1,98 @@
+.about-awards {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 7vmin;
+  margin-top: 3rem;
+}
+.about-awards .all-awards-slider .awards-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  gap: 3rem;
+}
+.about-awards .all-awards-slider .buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.about-awards .all-awards-slider .buttons-wrapper div {
+  display: flex;
+  cursor: pointer;
+}
+.about-awards .all-awards-slider .buttons-wrapper div * {
+  color: #974d24;
+}
+.about-awards .all-awards-slider .buttons-wrapper div button {
+  border: 1px solid #974d24;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 0 3vmin;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+.about-awards .all-awards-slider .buttons-wrapper div button:hover {
+  background-color: rgba(151, 76, 36, 0.176);
+  color: #fff;
+}
+.about-awards .all-awards-slider .buttons-wrapper div span {
+  display: block;
+}
+.about-awards div.decanter-awards h3 {
+  margin-top: 5rem;
+}
+.about-awards div h2 {
+  margin: 2rem 0;
+  color: #974d24;
+  font-family: ArnoProRegular;
+  font-weight: normal;
+  font-size: 3rem;
+}
+.about-awards div h3 {
+  font-family: ArnoProRegular;
+  margin: 2rem 0;
+  font-weight: normal;
+  color: #974d24;
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 7vmin;
+}
+.about-awards div .awards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  padding: 0 7vmin;
+  justify-content: space-between;
+}
+.about-awards div .awards-container .award-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+.about-awards div .awards-container .award-card img {
+  width: 5rem;
+}
+@media (min-width: 375px) {
+  .about-awards div .awards-container .award-card {
+    width: 40%;
+  }
+}
+@media (min-width: 768px) {
+  .about-awards div .awards-container .award-card {
+    width: 25%;
+  }
+}
+@media (min-width: 1440px) {
+  .about-awards div .awards-container .award-card {
+    width: 12%;
+  }
+}

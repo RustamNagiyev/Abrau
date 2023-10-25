@@ -1,0 +1,131 @@
+@import "../../../variables.less";
+
+.about-awards {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: @page-left-right-paddings;
+  margin-top: 3rem;
+  .all-awards-slider {
+    .awards-container {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      gap: 3rem;
+    }
+    .buttons-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      div {
+        display: flex;
+        cursor: pointer;
+        * {
+          color: @brown;
+        }
+        button {
+          border: 1px solid @brown;
+          background-color: transparent;
+          border-radius: 3px;
+          padding: 0 3vmin;
+          margin: 0 0.5rem;
+          cursor: pointer;
+          font-weight: 600;
+          transition: background-color 0.3s, color 0.3s;
+          &:hover {
+            background-color: rgba(151, 76, 36, 0.176);
+            color: #fff;
+          }
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  // commonS
+  div {
+    &.decanter-awards {
+      h3 {
+        margin-top: 5rem;
+      }
+    }
+    h2 {
+      margin: 2rem 0;
+      color: @brown;
+      font-family: ArnoProRegular;
+      font-weight: normal;
+      font-size: 3rem;
+    }
+    h3 {
+      font-family: ArnoProRegular;
+      margin: 2rem 0;
+      font-weight: normal;
+      color: @brown;
+      font-size: 1.5rem;
+      text-align: left;
+      padding-left: @page-left-right-paddings;
+    }
+    .awards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      width: 100%;
+      padding: 0 @page-left-right-paddings;
+      justify-content: space-between;
+      .award-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 100%;
+        img {
+          width: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .about-awards {
+    // commonS
+    div {
+      .awards-container {
+        .award-card {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-awards {
+    // commonS
+    div {
+      .awards-container {
+        .award-card {
+          width: 25%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .about-awards {
+    // commonS
+    div {
+      .awards-container {
+        .award-card {
+          width: 12%;
+        }
+      }
+    }
+  }
+}

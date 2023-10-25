@@ -1,40 +1,295 @@
 .nav {
   background-color: #030303;
-  height: 90px;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
 }
 .nav .container {
-  display: flex;
-  justify-content: space-around;
+  padding: 1vmin 7vmin;
+  display: grid;
+  grid-template-areas: "left right center";
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
 }
 .nav .container img {
-  margin-top: 15px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  position: relative;
+  z-index: 3;
+}
+.nav .container img:hover {
+  transform: scale(0.9);
 }
 .nav .container .center {
-  width: 50%;
+  display: none;
 }
 .nav .container .center ul {
   display: flex;
-  justify-content: space-around;
-}
-.nav .container .center ul li {
-  margin-top: 35px;
+  justify-content: space-between;
+  gap: 1rem;
 }
 .nav .container .center ul li a {
   color: #e4e4e4;
 }
+.nav .container .center ul li a.active,
+.nav .container .center ul li a:hover {
+  color: #f8c66a;
+}
+.nav .container .center-menu-button {
+  display: flex;
+  gap: 0.2rem;
+  grid-area: center;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.nav .container .center-menu-button div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.2rem;
+  position: relative;
+}
+.nav .container .center-menu-button div div {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+.nav .container .center-menu-button div div::before,
+.nav .container .center-menu-button div div::after {
+  content: "";
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  transition: min-width 0.3s, left 0.3s, right 0.3s, background-color 0.2s;
+}
+.nav .container .center-menu-button div div::before {
+  background-color: #fff;
+  left: -0.5rem;
+  min-width: 1.3rem;
+}
+.nav .container .center-menu-button div div::after {
+  right: -0.5rem;
+  background-color: #fff;
+  min-width: 1.3rem;
+}
+.nav .container .center-menu-button:hover {
+  cursor: pointer;
+}
+.nav .container .center-menu-button:hover div > div::before,
+.nav .container .center-menu-button:hover div > div::after {
+  min-width: 0;
+}
+.nav .container .center-menu-button:hover div > div::before {
+  left: 0;
+}
+.nav .container .center-menu-button:hover div > div::after {
+  right: 0;
+}
+.nav .container .center-menu-button.clicked:hover div > div::before,
+.nav .container .center-menu-button.clicked:hover div > div::after {
+  min-width: 1.3rem;
+}
+.nav .container .center-menu-button.clicked:hover div > div::before {
+  left: -0.5rem;
+}
+.nav .container .center-menu-button.clicked:hover div > div::after {
+  right: -0.5rem;
+}
+.nav .container .center-menu-button.clicked div:not(:nth-child(2)) {
+  animation: BcTransparentAnimation 0.2s linear forwards;
+}
+.nav .container .center-menu-button.clicked div div::before,
+.nav .container .center-menu-button.clicked div div::after {
+  animation: beforeAfterWidthAnimation 0.2s 0.2s linear forwards, firstLastWidthAnimation 0.3s 0.8s linear forwards, transformToXbuttonFisrtChildAnimation 0.3s 1s linear forwards;
+}
+.nav .container .center-menu-button.clicked div div:nth-child(2) {
+  animation: BcTransparentAnimation 0.2s 0.7s linear forwards;
+}
+.nav .container .center-menu-button.clicked div div:nth-child(2)::before,
+.nav .container .center-menu-button.clicked div div:nth-child(2)::after {
+  animation: BcTransparentAnimation 0.2s linear forwards;
+}
+.nav .container .center-menu-button.clicked div div:last-child::before,
+.nav .container .center-menu-button.clicked div div:last-child::after {
+  animation: beforeAfterWidthAnimation 0.2s 0.2s linear forwards, firstLastWidthAnimation 0.3s 0.8s linear forwards, transformToXbuttonLastChildAnimation 0.3s 1s linear forwards;
+}
 .nav .container .right {
   display: flex;
-  margin-top: -8px;
-}
-.nav .container .right img {
-  margin-left: 3vmin;
+  gap: 1rem;
 }
 .nav .container .right .search-wrapper {
   display: flex;
+  position: relative;
+}
+.nav .container .right .search-wrapper:hover img {
+  left: 0;
+  translate: 0;
+}
+.nav .container .right .search-wrapper:hover input {
+  visibility: visible;
 }
 .nav .container .right .search-wrapper img {
-  margin-right: 25vmin;
+  position: absolute;
+  padding: 0.2vmin 0;
+  height: 100%;
+  left: 50%;
+  translate: -50%;
+  transition: left 0.5s, translate 0.5s;
 }
 .nav .container .right .search-wrapper input {
-  height: 40%;
+  transition: visibility;
+  background-color: transparent;
+  visibility: hidden;
+  color: white;
+  padding-left: 1.4rem;
+}
+.nav .container .right .icons-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav .container .right .icons-wrapper img {
+  display: block;
+}
+.nav .container .right .icons-wrapper .lang-container {
+  display: flex;
+  position: relative;
+}
+.nav .container .right .icons-wrapper .lang-container .lang-wrapper {
+  position: absolute;
+  width: max-content;
+  background-color: #f8c66a;
+  top: 1.5rem;
+  padding: 0 2vmin;
+  transition: max-height 0.5s;
+  max-height: 0;
+  overflow: hidden;
+}
+.nav .container .right .icons-wrapper .lang-container .lang-wrapper li {
+  color: #fff;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.nav .container .right .icons-wrapper .lang-container .lang-wrapper li.active,
+.nav .container .right .icons-wrapper .lang-container .lang-wrapper li:hover {
+  color: #030303;
+}
+.nav .container .right .icons-wrapper .lang-container:hover .lang-wrapper {
+  max-height: 5rem;
+}
+.nav .container.clicked-menuList > .center {
+  display: block;
+  position: fixed;
+  background-color: #030303;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+  transform: translateY(-100%);
+  animation: menuListOpenCloseAnimation 0.7s 0.5s linear forwards;
+}
+.nav .container.clicked-menuList > .center ul {
+  flex-direction: column;
+  margin-top: 25vmin;
+  padding: 7vmin;
+  opacity: 0;
+  animation: menuListOpacityAnimation 0.5s 1s linear forwards;
+}
+.nav .container.clicked-menuList > .center ul li {
+  width: max-content;
+}
+.nav .container.clicked-menuList > .center ul li::before {
+  content: "\259E";
+  color: #e4e4e4;
+  margin-right: 7px;
+  font-size: 0.8rem;
+}
+.nav .container.clicked-menuList > .center ul li:hover {
+  transform: content 0.5s;
+}
+.nav .container.clicked-menuList > .center ul li:hover::before {
+  content: "\259A";
+}
+/* for transform to the five dots effect: */
+@keyframes BcTransparentAnimation {
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes beforeAfterWidthAnimation {
+  100% {
+    min-width: 0;
+  }
+}
+/* for transform to the X button effect: */
+@keyframes firstLastWidthAnimation {
+  0% {
+    min-width: 0rem;
+  }
+  100% {
+    min-width: 1.3rem;
+  }
+}
+@keyframes transformToXbuttonFisrtChildAnimation {
+  100% {
+    transform: translateY(0.5rem) rotate(45deg);
+  }
+}
+@keyframes transformToXbuttonLastChildAnimation {
+  100% {
+    transform: translateY(-0.5rem) rotate(-45deg);
+  }
+}
+@keyframes menuListOpenCloseAnimation {
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes menuListOpacityAnimation {
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 380px) {
+  .nav .container .right .search-wrapper {
+    display: none;
+  }
+}
+@media (min-width: 670px) {
+  .nav .container {
+    display: grid;
+    grid-template-areas: "left right" "center center";
+    gap: 0.5rem;
+  }
+  .nav .container .center {
+    display: block;
+    grid-area: center;
+    align-self: space-around;
+  }
+  .nav .container .center ul {
+    justify-content: space-evenly;
+  }
+  .nav .container .center-menu-button {
+    display: none;
+  }
+  .nav .container .right {
+    justify-self: end;
+  }
+}
+@media (min-width: 922px) {
+  .nav .container {
+    display: flex;
+  }
+  .nav .container .center {
+    display: block;
+  }
 }
