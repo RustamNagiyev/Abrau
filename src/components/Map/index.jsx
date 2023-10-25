@@ -4,7 +4,7 @@ import Main from './Main'
 
 
 export default function Map(prop) {
-  console.log(prop.map !== undefined && prop.map)
+
   return (
     <section className='map'>
       <Header />

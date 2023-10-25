@@ -27,7 +27,7 @@
 .nav .container .center ul {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 3rem;
 }
 .nav .container .center ul li a {
   color: #e4e4e4;
@@ -264,7 +264,7 @@
     display: none;
   }
 }
-@media (min-width: 670px) {
+@media (min-width: 720px) {
   .nav .container {
     display: grid;
     grid-template-areas: "left right" "center center";
@@ -285,7 +285,7 @@
     justify-self: end;
   }
 }
-@media (min-width: 922px) {
+@media (min-width: 1111px) {
   .nav .container {
     display: flex;
   }

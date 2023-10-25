@@ -2,11 +2,7 @@ import "./index.css"
 
 
 export default function Main(props) {
-  console.log('aaaaaaaaaa',props.map !== undefined && props.map);
 
-  // if (!props.map) {
-  //   return null;
-  // }
 
   const handleMapClick = (iframeSrc) => {
     const iframe = document.getElementById('map-iframe');
