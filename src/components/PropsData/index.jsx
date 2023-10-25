@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Home from '../Home';
-import About from '../Home/About';
+
 import Contact from '../Contact';
 import Map from '../Map';
 import { Route, Routes } from 'react-router-dom';
+import About from '../About';
 
 export default function PropsData() {
   const [data, setData] = useState({});
