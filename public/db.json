@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "img": "1.png",
+      "img": "wine1.png",
       "name": "Gücləndirilmiş şərab “Şəki Ağ Şərab”",
       "sort": "100% Qırmızı spirtli içkilər",
       "alcohol": "19%",
@@ -20,7 +20,7 @@
     },
     {
       "id": 2,
-      "img": "2.png",
+      "img": "wine2.png",
       "name": "Təbii Qırmızı “Üzüm Şərabı”",
       "sort": "Qırmızı Şərab",
       "alcohol": "0%",
@@ -38,7 +38,7 @@
     },
     {
       "id": 3,
-      "img": "3.png",
+      "img": "wine3.png",
       "name": "Əla növ “Bəyaz Şərab”",
       "sort": "Bəyaz Şərab",
       "alcohol": "13%",
@@ -56,7 +56,7 @@
     },
     {
       "id": 4,
-      "img": "4.png",
+      "img": "wine4.png",
       "name": "Premium Qırmızı “Köpüklü Şərab”",
       "sort": "Qırmızı Köpüklü Şərab",
       "alcohol": "12%",
@@ -74,7 +74,7 @@
     },
     {
       "id": 5,
-      "img": "5.png",
+      "img": "wine5.png",
       "name": "Təbii Alkolsuz “Beyaz Şərab”",
       "sort": "Beyaz Şərab",
       "alcohol": "0%",
@@ -92,7 +92,7 @@
     },
     {
       "id": 6,
-      "img": "6.png",
+      "img": "wine1.png",
       "name": "Premium “Rosé Şərab”",
       "sort": "Rosé Şərab",
       "alcohol": "11%",
@@ -110,7 +110,7 @@
     },
     {
       "id": 7,
-      "img": "7.png",
+      "img": "wine1.png",
       "name": "Xüsusi “Qırmızı Şərab”",
       "sort": "Qırmızı Şərab",
       "alcohol": "14%",
@@ -128,7 +128,7 @@
     },
     {
       "id": 8,
-      "img": "8.png",
+      "img": "wine1.png",
       "name": "Alkolsuz “Qırmızı Şərab”",
       "sort": "Qırmızı Şərab",
       "alcohol": "0%",
@@ -146,7 +146,7 @@
     },
     {
       "id": 9,
-      "img": "9.png",
+      "img": "wine6.png",
       "name": "CULLEN",
       "sort": "Ağ Qırmızı Şərab",
       "alcohol": "15%",
@@ -164,7 +164,7 @@
     },
     {
       "id": 10,
-      "img": "10.png",
+      "img": "wine2.png",
       "name": "Premium Alkolsuz “Beyaz Şərab”",
       "sort": "Bəyaz Şərab",
       "alcohol": "0%",
@@ -182,7 +182,7 @@
     },
     {
       "id": 11,
-      "img": "11.png",
+      "img": "wine4.png",
       "name": "Xüsusi “Qırmızı Portveyn”",
       "sort": "Qırmızı Portveyn",
       "alcohol": "18%",
@@ -200,7 +200,7 @@
     },
     {
       "id": 12,
-      "img": "12.png",
+      "img": "wine1.png",
       "name": "Bəyaz Portveyn",
       "sort": "Bəyaz Portveyn",
       "alcohol": "16%",
