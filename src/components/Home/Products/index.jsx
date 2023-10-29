@@ -1,38 +1,23 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import "./index.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, EffectCoverflow, Autoplay,} from "swiper/modules";
+import { Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
 
-import "./index.css";
 
-export default function Products() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("/db.json")
-      .then((response) => {
-        setData(response.data.products);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
-
+export default function Products(prop) {
   return (
-    <section className="products">
+    <section className="products-home">
       <h2 className="products-h2">Məhsullar</h2>
-      <Swiper
+      {prop.products && <Swiper
         effect={"coverflow"}
-        slidesPerView={5}
+        slidesPerView={1}
         navigation={true}
         modules={[Navigation, EffectCoverflow, Autoplay]}
         className="mySwiper"
         loop={true}
         autoplay={{
-          delay: 2000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         coverflowEffect={{
@@ -45,23 +30,30 @@ export default function Products() {
           maxRatio: 15,
           scale: 0.9,
         }}
+        breakpoints={{
+          1440: { slidesPerView: 5 }
+        }}
       >
-        {data.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div>
-              <img
-                className="img-slide"
-                src={require(`../../../images/home/${item.img}`)}
-                alt={item.name}
-              />
-              <h3>{item.name}</h3>
-              <p>Sort: {item.sort}</p>
-              <p>Alcohol: {item.alcohol}</p>
-              <button>Ətraflı</button>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <div>
+          {prop.products.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div>
+                <img
+                  className="img-slide"
+                  src={require(`../../../images/home/${item.img}`)}
+                  alt={item.name}
+                />
+                <div className="text-wrapper">
+                  <h3>{item.name}</h3>
+                  <p>Sort: {item.sort}</p>
+                  <p>Alcohol: {item.alcohol}</p>
+                  <button>Ətraflı</button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </div>
+      </Swiper>}
     </section>
   );
 }

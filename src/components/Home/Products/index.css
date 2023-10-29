@@ -1,46 +1,57 @@
-.products {
+.products-home {
   padding-bottom: 10vmin;
 }
-.products-h2 {
-  color: #974D24;
+.products-home .products-h2 {
+  color: #974d24;
   font-weight: 400;
   font-size: 55px;
   line-height: 66px;
   font-family: ArnoProRegular;
   margin-top: 6vmin;
 }
-.swiper-slide img {
-  width: 25%;
+.products-home .swiper-slide img {
+  height: 22rem;
+  width: max-content;
+  object-fit: contain;
   margin: 0 auto;
   padding-top: 3vmin;
 }
-button {
+.products-home button {
   display: block;
   margin: 30px auto;
-  width: 46%;
+  width: max-content;
+  padding: 0 5rem;
   height: 40px;
   text-align: center;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  color: #974D24;
+  color: #974d24;
   border-radius: 5px;
-  border: 1px solid #974D24;
-  background-color: #F4E5D4;
-  transition: 0.5s ease-in-out;
-}
-button:hover {
-  color: #fff;
-  background-color: #974D24;
+  border: 1px solid #974d24;
+  background-color: #f4e5d4;
   cursor: pointer;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
-h3 {
+.products-home button:hover {
+  color: #fff;
+  background-color: #974d24;
+}
+.products-home h3 {
   padding-top: 2vmin;
-  color: #130F02;
+  color: #130f02;
   font-weight: 700;
   font-size: 21px;
   line-height: 24px;
 }
-p {
+.products-home p {
   padding-top: 1vmin;
+}
+@media (min-width: 1440px) {
+  .products-home .text-wrapper {
+    visibility: hidden;
+  }
+  .products-home .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-next + div .text-wrapper {
+    visibility: visible;
+  }
 }

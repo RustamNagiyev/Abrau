@@ -1,24 +1,27 @@
 @import "../../../variables.less";
-.products{
-    padding-bottom: 10vmin;
-}
-.products-h2{
-    color: #974D24;
+.products-home {
+  padding-bottom: 10vmin;
+  .products-h2 {
+    color: #974d24;
     font-weight: 400;
     font-size: 55px;
     line-height: 66px;
     font-family: ArnoProRegular;
     margin-top: 6vmin;
-}
-.swiper-slide img{
-    width: 25%;
+  }
+  //SWIPER styles:
+  .swiper-slide img {
+    height: 22rem;
+    width: max-content;
+    object-fit: contain;
     margin: 0 auto;
     padding-top: 3vmin;
-}
-button{
+  }
+  button {
     display: block;
     margin: 30px auto;
-    width: 46%;
+    width: max-content;
+    padding: 0 5rem;
     height: 40px;
     text-align: center;
     font-weight: 400;
@@ -28,21 +31,36 @@ button{
     border-radius: 5px;
     border: 1px solid @brown;
     background-color: @pink;
-    transition: 0.5s ease-in-out;
-    &:hover{
-        color: #fff;
-        background-color: @brown;
-        cursor: pointer;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    &:hover {
+      color: #fff;
+      background-color: @brown;
     }
-}
-h3{
+  }
+  h3 {
     padding-top: 2vmin;
-    color: #130F02;
+    color: #130f02;
     font-weight: 700;
     font-size: 21px;
     line-height: 24px;
-}
-p{
-padding-top: 1vmin;
+  }
+  p {
+    padding-top: 1vmin;
+  }
 }
 
+@media (min-width: 1440px) {
+  .products-home {
+    .text-wrapper {
+      visibility: hidden;
+    }
+    // getting centered element and restyled that by a clever way))
+    .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-next
+      + div {
+      .text-wrapper {
+        visibility: visible;
+      }
+    }
+  }
+}

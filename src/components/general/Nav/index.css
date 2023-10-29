@@ -3,6 +3,8 @@
   position: fixed;
   z-index: 5;
   width: 100%;
+  left: 0;
+  top: 0;
 }
 .nav .container {
   padding: 1vmin 7vmin;

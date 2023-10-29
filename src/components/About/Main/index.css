@@ -21,7 +21,7 @@
   margin: 0 -7vmin;
 }
 .about-main .part-container:hover .all-container .all-wrapper .text-content-wrapper {
-  transform: translateY(-3rem);
+  transform: translateY(-7rem);
 }
 .about-main .part-container .all-container .all-wrapper {
   display: flex;
@@ -54,16 +54,16 @@
   object-fit: cover;
 }
 .about-main .part-container .all-container .all-wrapper .text-content-wrapper {
-  transition: transform 0.3s;
+  transition: transform 0.5s;
   background-color: #e7d2bb;
   padding: 3vmin;
+  z-index: 2;
 }
 .about-main .part-container .all-container .all-wrapper .text-content-wrapper p {
   text-align: justify;
 }
 .about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container .title-wrapper h2:last-child {
   width: min-content;
-  z-index: 1;
 }
 @media (min-width: 768px) {
   .about-main .part-container .all-container .all-wrapper .top-container .title-wrapper {
@@ -73,14 +73,12 @@
     margin-top: -2rem;
     margin-left: -2.8rem;
   }
-  .about-main .part-container .all-container .all-wrapper .top-container img {
-    margin-top: -3rem;
-  }
   .about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container .title-wrapper {
     flex-direction: row-reverse;
   }
   .about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container .title-wrapper h2:last-child {
     margin: 0 -2.5rem 0 0;
+    z-index: 1;
   }
 }
 @media (min-width: 1024px) {

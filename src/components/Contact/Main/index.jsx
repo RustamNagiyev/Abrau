@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./index.css";
 import axios from "axios";
 
@@ -6,20 +6,35 @@ export default function Main() {
   const [inputValues, setInputValues] = useState({});
   const [allInputs, setAllInputs] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  // }, [])
-
   const handleInputOnchanges = (e) => {
     setInputValues({ ...inputValues, [e.target.name]: e.target.value });
-    let allInputsArray = [...allInputs, !allInputs.includes(e.target) && e.target];
-    console.log(allInputsArray);
+    let allInputsArray = [...allInputs];
+    !allInputs.includes(e.target) && allInputsArray.push(e.target);
     setAllInputs(allInputsArray);
   }
 
   const submitContactData = (e) => {
     e.preventDefault();
+    
+    // // clear all input values after submit:
+    // allInputs.length === 5 && allInputs.forEach((element) => {
+    //   element.value = ''
+    // })
+
+    // axios({
+    //   method: 'POST',
+    //   url: 'http://localhost:3000/contact',
+    //   data: inputValues
+    // }).then(response => {
+    //   console.log(response);
+    // }).then(error => {
+    //   console.log(error);
+    // })
+
     console.log(inputValues);
+    // console.log(window.location.pathname = '/success');
+    // console.log(window.location.pathname = '/error');
+
   }
   return (
     <section className="main-contact">
@@ -40,20 +55,20 @@ export default function Main() {
           </div>
         </div>
       </div>
-      <form onSubmit={submitContactData}>
-        <div className="common-input">
+      <div className="common-input">
+        <form onSubmit={submitContactData}>
           <div className="flex-input">
             <input type="text" placeholder="Adınız" autoComplete="off" name="name" onChange={handleInputOnchanges} required />
             <input type="text" placeholder="Soyadınız" name="surname" onChange={handleInputOnchanges} required />
           </div>
           <div className="flex-input">
             <input type="email" placeholder="E-mail adresi" name="email" autoComplete="off" onChange={handleInputOnchanges} required />
-            <input type="tel" placeholder="Telefon nömrəsi" pattern="[0-9]" name="phone" autoComplete="off" onChange={handleInputOnchanges} required />
+            <input type="tel" placeholder="Telefon nömrəsi" pattern="^\d{9,10}$" name="phone" autoComplete="off" onChange={handleInputOnchanges} required />
           </div>
           <textarea placeholder="Əlavə qeyd" name="note" required onChange={handleInputOnchanges} />
-        </div>
-        <button className="contact-btn">Ətraflı</button>
-      </form>
+          <button type="submit" className="contact-btn">Ətraflı</button>
+        </form>
+      </div>
     </section>
   );
 }

@@ -1,10 +1,14 @@
-.main-contact .top {
+.contact .main-contact .top {
   display: flex;
   justify-content: center;
   padding-top: 15vmin;
   padding-bottom: 8vmin;
 }
-.main-contact .top .container-contact {
+.contact .main-contact .top h2 {
+  padding: 0;
+  text-align: left;
+}
+.contact .main-contact .top .container-contact {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -12,44 +16,47 @@
   justify-content: space-between;
   background-color: #e7d2bb;
 }
-.main-contact .top .container-contact .flex-contact {
+.contact .main-contact .top .container-contact .flex-contact {
   padding: 2rem;
 }
-.main-contact .top .container-contact .flex-contact h2 {
+.contact .main-contact .top .container-contact .flex-contact * {
+  text-align: center;
+}
+.contact .main-contact .top .container-contact .flex-contact h2 {
   font-weight: 600;
   font-size: 26px;
   line-height: 21px;
   color: #974d24;
   font-family: ArnoProRegular;
 }
-.main-contact .top .container-contact .flex-contact p {
+.contact .main-contact .top .container-contact .flex-contact p {
   font-weight: 400;
   font-size: 19px;
   line-height: 20px;
   padding-top: 2vmin;
 }
-.main-contact form .common-input {
+.contact .main-contact .common-input form {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
   margin: 0 auto;
   width: 80%;
 }
-.main-contact form .common-input .flex-input {
+.contact .main-contact .common-input form .flex-input {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
 }
-.main-contact form .common-input .flex-input input {
+.contact .main-contact .common-input form .flex-input input {
   padding: 0.5rem;
   width: 100%;
   font-size: 18px;
   background-color: #fffaef;
   border: 1px solid #e7d2bb;
 }
-.main-contact form .common-input textarea {
+.contact .main-contact .common-input form textarea {
   margin-top: 1vmin;
   background-color: #fffaef;
   border: 1px solid #e7d2bb;
@@ -59,7 +66,7 @@
   height: 7rem;
   resize: none;
 }
-.main-contact .contact-btn {
+.contact .contact-btn {
   text-align: center;
   padding: 0 2rem;
   display: block;
@@ -75,30 +82,65 @@
   line-height: 28px;
   font-family: ArnoProRegular;
 }
-.main-contact .contact-btn:hover {
+.contact .contact-btn:hover {
   color: #fff;
   background-color: #974d24;
   cursor: pointer;
 }
+.contact .common-response {
+  padding: 7vmin;
+}
+.contact .common-response .content-container {
+  padding: 7vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+.contact .common-response .content-container h3 {
+  color: #1f315f;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.contact .common-response .content-container img {
+  width: 100%;
+}
+.contact .common-response .content-container a:last-child {
+  color: #974d24;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s linear;
+}
+.contact .common-response .content-container a:last-child:hover {
+  color: #687ed4;
+}
+.contact .common-response .content-container a button {
+  margin: 0;
+}
 @media (min-width: 425px) {
-  .main-contact form .common-input .flex-input {
+  .contact .main-contact .common-input form .flex-input {
     flex-direction: row;
   }
 }
 @media (min-width: 768px) {
-  .main-contact .top .container-contact {
+  .contact .main-contact .top .container-contact {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .main-contact .top .container-contact .flex-contact {
+  .contact .main-contact .top .container-contact .flex-contact {
     width: 45%;
+  }
+  .contact .common-response .content-container img {
+    width: 45vmin;
   }
 }
 @media (min-width: 1024px) {
-  .main-contact .top .container-contact .flex-contact {
+  .contact .main-contact .top .container-contact .flex-contact {
     width: 30%;
   }
-  .main-contact form .common-input {
+  .contact .main-contact .common-input form {
     width: 50%;
   }
 }
