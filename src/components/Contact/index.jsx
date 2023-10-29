@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import Footer from '../general/Footer'
 import Header from './Header'
 import Main from './Main'
 import Error from './Error'

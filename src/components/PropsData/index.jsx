@@ -7,6 +7,10 @@ import About from '../About';
 import Contact from '../Contact';
 import Map from '../Map';
 import News from '../News';
+import { Route, Routes } from 'react-router-dom';
+import About from '../About';
+import Products from '../Products';
+// import ReadProduct from '../Products/ReadProduct';
 
 export default function PropsData() {
   const [data, setData] = useState({});
@@ -27,6 +31,7 @@ export default function PropsData() {
       <Route index path="/contact/*" element={<Contact />} />
       <Route index path="/map" element={<Map map={data.map} />} />
       <Route index path="/news/*" element={<News news={data.news} />} />
-    </Routes>
+    <Route index path="/products" element={<Products products={data.products} />} />
+  </Routes>
   )
 }

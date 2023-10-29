@@ -18,7 +18,7 @@
   font-size: 55px;
   line-height: 66px;
   text-align: center;
-  color: #974D24;
+  color: #974d24;
 }
 .about .container .flex1 .text1 {
   font-family: ArnoProRegular;
@@ -44,20 +44,38 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  color: #974D24;
+  color: #974d24;
   border-radius: 5px;
-  border: 1px solid #974D24;
-  background-color: #F4E5D4;
+  border: 1px solid #974d24;
+  background-color: #f4e5d4;
   transition: 0.5s ease-in-out;
 }
 .about .container .flex1 button:hover {
   color: #fff;
-  background-color: #974D24;
+  background-color: #974d24;
   cursor: pointer;
 }
 .about .container .flex2 {
   width: 32%;
+  position: relative;
 }
-.about .container .flex2 img {
+.about .container .flex2::after {
+  content: '';
   width: 100%;
+  height: 100%;
+  background-color: red;
+  background: url("../../../images/home/winesabout.svg") 0 0 no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: aboutImgAnimation 3s 4s alternate-reverse infinite;
+}
+@keyframes aboutImgAnimation {
+  100% {
+    background: url("../../../images/home/aboutanimationimg.png") 0 0 no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }

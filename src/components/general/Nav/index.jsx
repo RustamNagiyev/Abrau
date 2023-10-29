@@ -22,7 +22,7 @@ export default function Nav() {
           <ul onClick={(e)=>{e.target.nodeName === 'A' && setClickedMenuButton(false)}}>
             <li><NavLink to="/about">HAQQIMIZDA</NavLink></li>
             <li><NavLink to={'/products'}>MƏHSULLAR</NavLink></li>
-            <li><NavLink to={'/addresses'}>SATIŞ MƏNTƏQƏLƏRİ</NavLink></li>
+            <li><NavLink to={'/map'}>SATIŞ MƏNTƏQƏLƏRİ</NavLink></li>
             <li><NavLink to={'/news'}>XƏBƏRLƏR</NavLink></li>
             <li><NavLink to="/contact">ƏLAQƏ</NavLink></li>
           </ul>
