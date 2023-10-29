@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-import Home from '../Home';
 
+import Home from '../Home';
+import About from '../About';
 import Contact from '../Contact';
 import Map from '../Map';
+import News from '../News';
 import { Route, Routes } from 'react-router-dom';
 import About from '../About';
 import Products from '../Products';
@@ -22,13 +25,13 @@ export default function PropsData() {
       });
   }, []);
   return (
-  <Routes>
-    <Route index path="/" element={<Home />} />
-    <Route index path="/about" element={<About />} />
-    <Route index path="/contact" element={<Contact />} />
-    <Route index path="/map" element={<Map map={data.map} />} />
+    <Routes>
+      <Route index path="/" element={<Home products={data.products} news={data.news} />} />
+      <Route index path="/about" element={<About awards={data.awards} />} />
+      <Route index path="/contact/*" element={<Contact />} />
+      <Route index path="/map" element={<Map map={data.map} />} />
+      <Route index path="/news/*" element={<News news={data.news} />} />
     <Route index path="/products" element={<Products products={data.products} />} />
-    {/* <Route index path="/read-product" element={<ReadProduct />} /> */}
   </Routes>
   )
 }

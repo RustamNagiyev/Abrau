@@ -2,7 +2,7 @@ import "./index.css"
 
 export default function Header() {
   return (
-    <header>
+    <header className="home-header">
       <img src={require('../../../images/home/abrauheaderlogo.svg').default}/>
       <p className='p1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
       <h1>ŞƏKİ ŞƏRABI</h1>

@@ -1,0 +1,183 @@
+@import "../../../variables.less";
+
+.news-container {
+  header.header-news {
+    background: url("../../../images/news/news-header-bg.svg") 0 0 no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 4rem;
+    h1 {
+      margin: 4rem 0;
+    }
+  }
+  section {
+    padding: @page-left-right-paddings;
+    .page-info-nav {
+      display: flex;
+      margin: 1rem 0 4rem;
+      a {
+        h4 {
+          color: #4c192a;
+        }
+      }
+      span {
+        color: #bebbbb;
+      }
+    }
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .head-news {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          //   width: 45%;
+          width: 100%;
+        }
+        div.right-text-content-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+          justify-content: flex-start;
+          h3 {
+            color: @brown;
+          }
+          span {
+            color: #838383;
+          }
+          p {
+            height: 7.2rem;
+            overflow: hidden;
+            color: #4c192a;
+          }
+          button {
+            text-align: center;
+            padding: 0 2rem;
+            width: max-content;
+            display: block;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            background-color: @pink;
+            color: @brown;
+            border: 1px solid @brown;
+            transition: 0.5s ease-in-out;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            font-family: ArnoProRegular;
+            &:hover {
+              color: #fff;
+              background-color: @brown;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .other-news-cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        * {
+          color: #fafafd;
+          font-family: ArnoProRegular;
+          font-weight: lighter;
+        }
+        .left-black-bgS,
+        .right-light-bgS {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          .news-card {
+            position: relative;
+            height: 15rem;
+            overflow: hidden;
+            transition: box-shadow .3s ease;
+            &:hover {
+              box-shadow: -5px 4px 9px 1px rgba(0, 0, 0, 0.412);
+            }
+            .img-wrapper {
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                object-fit: cover;
+              }
+              h3,
+              span {
+                position: absolute;
+              }
+              h3 {
+                width: 50%;
+                hyphens: auto;
+              }
+            }
+          }
+        }
+        .left-black-bgS {
+          .news-card {
+            .img-wrapper {
+              h3 {
+                left: 4vmin;
+                top: 4vmin;
+              }
+              span {
+                right: 4vmin;
+                bottom: 4vmin;
+              }
+            }
+          }
+        }
+        .right-light-bgS {
+          .news-card {
+            .img-wrapper {
+              h3 {
+                right: 4vmin;
+                top: 4vmin;
+              }
+              span {
+                left: 4vmin;
+                bottom: 4vmin;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .news-container {
+    section {
+      .content-wrapper {
+        .head-news {
+          flex-direction: row;
+          img {
+            width: 45%;
+          }
+        }
+        .other-news-cards-wrapper {
+          flex-direction: row;
+          justify-content: center;
+          .left-black-bgS,
+          .right-light-bgS {
+            width: 100%;
+            .news-card {
+              width: 100%;
+              .img-wrapper {
+                img {
+                  height: 15rem;
+                  position: relative;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

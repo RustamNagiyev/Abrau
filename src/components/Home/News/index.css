@@ -1,0 +1,139 @@
+.home-news h2 {
+  color: #974d24;
+  padding: 0;
+}
+.home-news .home-news-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.home-news .home-news-card-container .home-news-card .img-wrapper {
+  position: relative;
+  height: 15rem;
+}
+.home-news .home-news-card-container .home-news-card .img-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.363);
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer !important;
+}
+.home-news .home-news-card-container .home-news-card .img-wrapper * {
+  color: #fafafd;
+  font-family: ArnoProRegular;
+}
+.home-news .home-news-card-container .home-news-card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-news .home-news-card-container .home-news-card .img-wrapper h3 {
+  position: absolute;
+  left: 4vmin;
+  top: 4vmin;
+  width: 50%;
+}
+.home-news .home-news-card-container .home-news-card .img-wrapper span {
+  position: absolute;
+  right: 4vmin;
+  bottom: 4vmin;
+}
+.home-news .swiper {
+  margin-bottom: 4rem;
+  /* restyled buttons */
+  /* clear both of after pseudos's arrows which automatically comes from swiper*/
+}
+.home-news .swiper .swiper-wrapper {
+  position: relative;
+  margin: 1rem 0;
+}
+.home-news .swiper .swiper-android .swiper-slide::after,
+.home-news .swiper .swiper-ios .swiper-slide::after,
+.home-news .swiper .swiper-slide::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.363);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.home-news .swiper .swiper-android .swiper-slide *,
+.home-news .swiper .swiper-ios .swiper-slide *,
+.home-news .swiper .swiper-slide * {
+  color: #fafafd;
+  font-family: ArnoProRegular;
+}
+.home-news .swiper .swiper-android .swiper-slide img,
+.home-news .swiper .swiper-ios .swiper-slide img,
+.home-news .swiper .swiper-slide img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover !important;
+}
+.home-news .swiper .swiper-android .swiper-slide h3,
+.home-news .swiper .swiper-ios .swiper-slide h3,
+.home-news .swiper .swiper-slide h3 {
+  position: absolute;
+  left: 4vmin;
+  top: 4vmin;
+  width: 50%;
+  text-align: left;
+  z-index: 2;
+}
+.home-news .swiper .swiper-android .swiper-slide span,
+.home-news .swiper .swiper-ios .swiper-slide span,
+.home-news .swiper .swiper-slide span {
+  position: absolute;
+  right: 4vmin;
+  bottom: 4vmin;
+  z-index: 2;
+}
+.home-news .swiper .swiper-button-next:after,
+.home-news .swiper .swiper-button-prev:after {
+  content: unset;
+}
+.home-news .swiper .swiper-button-prev.custom-button,
+.home-news .swiper .swiper-button-next.custom-button {
+  position: relative;
+  color: #974d24;
+  display: block;
+  margin: 0 auto;
+}
+.home-news .swiper .swiper-button-prev.custom-button {
+  translate: -6rem;
+}
+.home-news .swiper .swiper-button-next.custom-button {
+  margin-top: -2.75rem;
+  translate: 3.5rem;
+}
+.home-news .swiper .swiper-button-prev.custom-button span,
+.home-news .swiper .swiper-button-next.custom-button span {
+  border: 1px solid #974d24;
+  padding: 0 3vmin;
+  margin: 0 0.5rem;
+  color: #974d24;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+.home-news .swiper .swiper-button-prev.custom-button span:hover,
+.home-news .swiper .swiper-button-next.custom-button span:hover {
+  background-color: rgba(151, 76, 36, 0.176);
+  color: #fff;
+}
+@media (min-width: 1024px) {
+  .home-news .swiper .swiper-slide {
+    translate: 30%;
+  }
+  .home-news .swiper .swiper-slide.swiper-slide-active {
+    translate: -30%;
+  }
+  .home-news .swiper .swiper-slide.swiper-slide-next {
+    translate: 0;
+  }
+}

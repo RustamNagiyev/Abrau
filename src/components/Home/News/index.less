@@ -1,0 +1,154 @@
+@import "../../../variables.less";
+
+.home-news {
+  h2 {
+    color: @brown;
+    padding: 0;
+  }
+  .home-news-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    .home-news-card {
+      .img-wrapper {
+        position: relative;
+        height: 15rem;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.363);
+          //   background-color: green;
+          position: absolute;
+          left: 0;
+          top: 0;
+          cursor: pointer !important;
+        }
+        * {
+          color: #fafafd;
+          font-family: ArnoProRegular;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        h3 {
+          position: absolute;
+          left: 4vmin;
+          top: 4vmin;
+          width: 50%;
+        }
+        span {
+          position: absolute;
+          right: 4vmin;
+          bottom: 4vmin;
+        }
+      }
+    }
+  }
+
+  // SWIPER
+  .swiper {
+    margin-bottom: 4rem;
+    .swiper-wrapper {
+      position: relative;
+      margin: 1rem 0;
+    }
+    .swiper-android .swiper-slide,
+    .swiper-ios .swiper-slide,
+    .swiper-slide {
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.363);
+        //   background-color: green;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      * {
+        color: #fafafd;
+        font-family: ArnoProRegular;
+      }
+      img {
+        width: 100%;
+        height: 14rem;
+        object-fit: cover !important;
+      }
+      h3 {
+        position: absolute;
+        left: 4vmin;
+        top: 4vmin;
+        width: 50%;
+        text-align: left;
+        z-index: 2;
+      }
+      span {
+        position: absolute;
+        right: 4vmin;
+        bottom: 4vmin;
+        z-index: 2;
+      }
+    }
+    // buttons
+    /* restyled buttons */
+    /* clear both of after pseudos's arrows which automatically comes from swiper*/
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      content: unset;
+    }
+    .swiper-button-prev.custom-button,
+    .swiper-button-next.custom-button {
+      position: relative;
+      color: #974d24;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .swiper-button-prev.custom-button {
+      translate: -6rem;
+    }
+
+    .swiper-button-next.custom-button {
+      margin-top: -2.75rem;
+      translate: 3.5rem;
+    }
+
+    .swiper-button-prev.custom-button span,
+    .swiper-button-next.custom-button span {
+      border: 1px solid #974d24;
+      padding: 0 3vmin;
+      margin: 0 0.5rem;
+      color: #974d24;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .swiper-button-prev.custom-button span:hover,
+    .swiper-button-next.custom-button span:hover {
+      background-color: rgba(151, 76, 36, 0.176);
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-news {
+    // SWIPER
+    .swiper {
+      .swiper-slide {
+        translate: 30%;
+        &.swiper-slide-active {
+          translate: -30%;
+        }
+        &.swiper-slide-next {
+          translate: 0;
+        }
+      }
+    }
+  }
+}

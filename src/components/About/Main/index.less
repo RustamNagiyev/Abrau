@@ -26,7 +26,7 @@
       .all-container {
         .all-wrapper {
           .text-content-wrapper {
-            transform: translateY(-3rem);
+            transform: translateY(-7rem);
           }
         }
       }
@@ -66,9 +66,10 @@
           }
         }
         .text-content-wrapper {
-          transition: transform 0.3s;
+          transition: transform 0.5s;
           background-color: @dark-pink;
           padding: @page-top-bottom-padding;
+          z-index: 2;
           p {
             text-align: justify;
           }
@@ -81,12 +82,9 @@
         .all-wrapper {
           .top-container {
             .title-wrapper {
-              // flex-direction: row-reverse;
               h2 {
                 &:last-child {
                   width: min-content;
-                  // margin: 0 -2.5rem 0 0;
-                  z-index: 1;
                 }
               }
             }
@@ -112,9 +110,6 @@
                 }
               }
             }
-            img {
-              margin-top: -3rem;
-            }
           }
         }
       }
@@ -128,6 +123,7 @@
                 h2 {
                   &:last-child {
                     margin: 0 -2.5rem 0 0;
+                    z-index: 1;
                   }
                 }
               }
