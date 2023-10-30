@@ -29,14 +29,14 @@ export default function Brends() {
               <img src={require('../../../images/home/left.png')} alt="Image 1" />
               <div className="text-wrapper">
                 <h2>AZERBAYCAN ŞƏRABI</h2>
-                <button onClick={handleButtonClick1}>Ətraflı</button>
+                <button className='transparent-bg' onClick={handleButtonClick1}>Ətraflı</button>
               </div>
             </div>
             <div className="right">
               <img src={require('../../../images/home/rightmain.png')} alt="Image 2" />
               <div className="text-wrapper">
                 <h2>RUSİYA ŞƏRABI</h2>
-                <button onClick={handleButtonClick2}>Ətraflı</button>
+                <button className='transparent-bg' onClick={handleButtonClick2}>Ətraflı</button>
               </div>
             </div>
           </>
@@ -46,7 +46,7 @@ export default function Brends() {
               <div className="img1">
 
                 <div className="divflex1">
-                  <button onClick={handleBackButtonClick}>&#10006;</button>
+                  <h3 className='button' onClick={handleBackButtonClick}>&#10006;</h3>
                   <h2>Rusiya şərabı</h2>
                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book
@@ -61,7 +61,7 @@ export default function Brends() {
               <div className="img2">
 
                 <div className="divflex1">
-                  <button onClick={handleBackButtonClick}>&#10006;</button>
+                  <h3 className='button' onClick={handleBackButtonClick}>&#10006;</h3>
                   <h2>Azərbaycan şərabı</h2>
                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book

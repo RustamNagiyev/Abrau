@@ -1,54 +1,70 @@
 .sectionfooter .container {
-  background-color: #E7D2BB;
+  background-color: #e7d2bb;
   display: flex;
-  justify-content: space-around;
-  height: 262px;
-  padding-top: 60px;
+  justify-content: space-between;
+  gap: 10vmin;
+  flex-wrap: wrap;
+  padding: 7vmin;
 }
 .sectionfooter .container .flexable {
+  width: 100%;
   display: flex;
-  width: 25%;
+  gap: 11vmin;
+  justify-content: space-between;
 }
-.sectionfooter .container .flexable .div1 {
-  width: 45%;
-}
-.sectionfooter .container .div4 {
+.sectionfooter .container .flexable div {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 }
-.sectionfooter .container .div3 p {
-  padding-left: 90px;
+.sectionfooter .container .div4,
+.sectionfooter .container .div3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.sectionfooter .container .div4 {
+  flex-direction: row;
 }
 .sectionfooter .container p {
   font-family: ArnoProRegular;
   font-size: 17px;
   line-height: 20px;
   font-weight: 600;
-  padding-top: 25px;
 }
 .sectionfooter .container p span {
   font-size: Mondia;
   font-weight: 400;
   font-size: 15px;
   line-height: 15px;
-  padding-left: 2vmin;
 }
 .sectionfooter .container img {
-  height: 25px;
-  margin-top: 18px;
+  height: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.sectionfooter .container img:hover {
+  transform: scale(1.1);
 }
 .sectionfooter .containertwo {
   display: flex;
   justify-content: space-around;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding: 7vmin;
 }
 .sectionfooter .containertwo .pend1 {
   width: 26%;
-  padding-top: 30px;
 }
 .sectionfooter .containertwo .pend2 {
   text-align: end;
   width: 25%;
-  padding-top: 30px;
+}
+@media (min-width: 740px) {
+  .sectionfooter .container .flexable {
+    width: 40%;
+  }
+}
+@media (min-width: 980px) {
+  .sectionfooter .container .div4 {
+    flex-direction: column;
+  }
 }

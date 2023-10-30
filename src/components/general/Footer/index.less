@@ -1,60 +1,88 @@
 @import "../../../variables.less";
-.sectionfooter{
-    .container{
-        background-color: @dark-pink;
-        display: flex;
-        justify-content: space-around;
-        height: 262px;
-        padding-top: 60px;
-        .flexable{
-            display: flex;
-            width: 25%;
-            .div1{
-                width: 45%;
-            }
-        }
-       .div4{
+.sectionfooter {
+  .container {
+    background-color: @dark-pink;
+    display: flex;
+    justify-content: space-between;
+    gap: 10vmin;
+    flex-wrap: wrap;
+
+    padding: @page-left-right-paddings;
+    .flexable {
+      width: 100%;
+      display: flex;
+      gap: 11vmin;
+      justify-content: space-between;
+      // width: 25%;
+      div {
         display: flex;
         flex-direction: column;
-       
-       }
-       .div3{
-        p{
-            padding-left: 90px;
-        }
-       }
-       p{
-        font-family: ArnoProRegular;
-        font-size: 17px;
-        line-height: 20px;
-        font-weight: 600;
-        padding-top: 25px;
-        span{
-            font-size: Mondia;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 15px;
-            padding-left: 2vmin;
-        }
-       }
-       img{
-        height: 25px;
-        margin-top: 18px;
-       }
+        gap: 1.5rem;
+        // width: 45%;
+      }
     }
-    .containertwo{
-        display: flex;
-        justify-content: space-around;
-        padding-top: 30px;
-        padding-bottom: 20px;
-        .pend1{
-            width: 26%;
-            padding-top: 30px;
-        }
-        .pend2{
-            text-align: end;
-            width: 25%;
-            padding-top: 30px;
-        }
+    .div4,
+    .div3 {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
+    .div4{
+        flex-direction: row;
+    }
+
+    p {
+      font-family: ArnoProRegular;
+      font-size: 17px;
+      line-height: 20px;
+      font-weight: 600;
+
+      span {
+        font-size: Mondia;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 15px;
+      }
+    }
+    img {
+      height: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .containertwo {
+    display: flex;
+    justify-content: space-around;
+    padding: @page-left-right-paddingsz;
+    .pend1 {
+      width: 26%;
+    }
+    .pend2 {
+      text-align: end;
+      width: 25%;
+    }
+  }
 }
+
+@media (min-width:740px) {
+  .sectionfooter {
+    .container {
+      .flexable {
+        width: 40%;
+      }
+    }
+  }
+}
+@media (min-width:980px) {
+    .sectionfooter {
+      .container {
+        .div4{
+           flex-direction: column;
+        }
+      }
+    }
+  }
+  

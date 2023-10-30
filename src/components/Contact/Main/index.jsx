@@ -13,28 +13,28 @@ export default function Main() {
     setAllInputs(allInputsArray);
   }
 
-  const submitContactData = (e) => {
+  const submitContactData = async (e) => {
     e.preventDefault();
-    
-    // // clear all input values after submit:
-    // allInputs.length === 5 && allInputs.forEach((element) => {
-    //   element.value = ''
-    // })
-
-    // axios({
-    //   method: 'POST',
-    //   url: 'http://localhost:3000/contact',
-    //   data: inputValues
-    // }).then(response => {
-    //   console.log(response);
-    // }).then(error => {
-    //   console.log(error);
-    // })
-
+  
+    // Tüm input değerlerini temizle:
+    allInputs.length === 5 && allInputs.forEach((element) => {
+      element.value = '';
+    });
+  
+    try {
+      const response = await axios.post('http://localhost:5000/contact', inputValues);
+      console.log(response.data);
+  
+      // Başarı sayfasına yönlendir
+      // window.location.pathname = '/success';
+    } catch (error) {
+      console.error(error);
+  
+      // Hata sayfasına yönlendir
+      // window.location.pathname = '/error';
+    }
+  
     console.log(inputValues);
-    // console.log(window.location.pathname = '/success');
-    // console.log(window.location.pathname = '/error');
-
   }
   return (
     <section className="main-contact">

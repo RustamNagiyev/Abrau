@@ -20,11 +20,11 @@ export default function Nav() {
         </div>
         <div className="center">
           <ul onClick={(e)=>{e.target.nodeName === 'A' && setClickedMenuButton(false)}}>
-            <li><NavLink to="/about">HAQQIMIZDA</NavLink></li>
-            <li><NavLink to={'/products'}>MƏHSULLAR</NavLink></li>
-            <li><NavLink to={'/map'}>SATIŞ MƏNTƏQƏLƏRİ</NavLink></li>
-            <li><NavLink to={'/news'}>XƏBƏRLƏR</NavLink></li>
-            <li><NavLink to="/contact">ƏLAQƏ</NavLink></li>
+            <li><NavLink to="about">HAQQIMIZDA</NavLink></li>
+            <li><NavLink to='map'>SATIŞ MƏNTƏQƏLƏRİ</NavLink></li>
+            <li><NavLink to='news'>XƏBƏRLƏR</NavLink></li>
+            <li><NavLink to='products'>MƏHSULLAR</NavLink></li>
+            <li><NavLink to="contact">ƏLAQƏ</NavLink></li>
           </ul>
         </div>
         <div className={`center-menu-button ${clickedMenuButton && 'clicked'}`} onClick={handleClick}>

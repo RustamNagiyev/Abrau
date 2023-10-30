@@ -1,86 +1,89 @@
 @import "../../../variables.less";
 
-.about{
-    background-image: url("../../../images/home/aboutbackimg.svg");
-    background-position: bottom left;
-    background-size:contain;
-    .container{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 120px;
-        .flex1{
-            width: 26%;
-            h2{
-                padding-top: 0;
-                font-family: ArnoProRegular;
-                font-weight: 400;
-                font-size: 55px;
-                line-height: 66px;
-                text-align: center;
-                color: @brown;
-            }
-            .text1{
-                font-family: ArnoProRegular;
-                text-align: center;
-                font-weight: 600;
-                font-size: 25px;
-                line-height: 30px;  
-            }
-            .text2{
-                margin-top: 10px;
-                color: #130F02;
-                text-align: center;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 18px;
-            }
-            button{
-                display: block;
-                margin: 80px auto;
-                width: 46%;
-                height: 40px;
-                text-align: center;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 24px;
-                color: @brown;
-                border-radius: 5px;
-                border: 1px solid @brown;
-                background-color: @pink;
-                transition: 0.5s ease-in-out;
-                &:hover{
-                    color: #fff;
-                    background-color: @brown;
-                    cursor: pointer;
-                }
-            }
-            
-        }
-        .flex2{
-            width: 32%;
-            position: relative;
-            &::after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                background-color: red;
-                background: url("../../../images/home/winesabout.svg") 0 0 no-repeat;
-                background-position: center;
-                background-size: contain;
-                position: absolute;
-                top: 0;
-                left: 0;
-                animation: aboutImgAnimation 3s 4s alternate-reverse infinite;
-            }
-
-        }
+.about {
+  background-image: url("../../../images/home/aboutbackimg.svg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: @page-left-right-paddings;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    padding: @page-left-right-paddings 0;
+    .flex1 {
+      width: 35%;
+      h2 {
+        padding-top: 0;
+        font-family: ArnoProRegular;
+        font-weight: 400;
+        font-size: 55px;
+        line-height: 66px;
+        text-align: center;
+        color: @brown;
+      }
+      .text1 {
+        font-family: ArnoProRegular;
+        text-align: center;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 30px;
+      }
+      .text2 {
+        margin-top: 10px;
+        color: #130f02;
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+      }
+      button {
+        display: block;
+        margin: 2rem auto;
+     
+      }
     }
+    .flex2 {
+      width: 32%;
+      position: relative;
+      height: 20rem;
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        background: url("../../../images/home/winesabout.svg") 0 0 no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: aboutImgAnimation 3s 4s alternate-reverse infinite;
+      }
+    }
+  }
 }
 
 @keyframes aboutImgAnimation {
-    100% {
-        background: url("../../../images/home/aboutanimationimg.png") 0 0 no-repeat;
-        background-position: center;
-        background-size: contain;
+  100% {
+    background: url("../../../images/home/aboutanimationimg.png") 0 0 no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    
+    .container {
+      flex-direction: column;
+      .flex1 {
+        width: 100%;
+       
+      }
+      .flex2 {
+        width: 100%;
+        
+      }
     }
+  }
 }

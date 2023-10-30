@@ -589,5 +589,21 @@
     }
   ],
   "contact": [
+    {
+      "name": "dscsc",
+      "surname": "vsvcdcvcsd",
+      "email": "ulviyareliyev@gmail.com",
+      "phone": "0559324965",
+      "note": "scsdvsd",
+      "id": 1
+    },
+    {
+      "name": "asdas",
+      "surname": "asdas",
+      "email": "ulviyareliyev@gmail.com",
+      "phone": "0559324965",
+      "note": "asdad",
+      "id": 2
+    }
   ]
 }

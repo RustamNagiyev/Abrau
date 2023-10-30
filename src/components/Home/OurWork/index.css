@@ -2,37 +2,41 @@
   background-image: url("../../../images/home//barrelGif.gif");
   height: 653px;
   background-size: cover;
+  padding: 7vmin;
+}
+.ourwork div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 .ourwork div h2 {
   font-family: ArnoProRegular;
   font-weight: 600;
   font-size: 50px;
   line-height: 75px;
-  color: #FAFAFD;
-  width: 500px;
-  padding-top: 20vmin;
-  padding-left: 10vmin;
+  color: #fafafd;
+  width: 100%;
 }
 .ourwork div p {
   font-family: Legan;
-  color: #FAFAFD;
-  padding-left: 10vmin;
-  width: 45%;
+  color: #fafafd;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
-  padding-top: 3vmin;
+  text-align: center;
 }
-.ourwork div button {
-  height: 40px;
-  width: 10%;
-  margin-left: 10vmin;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  margin-top: 8vmin;
-  transition: 0.5s ease-in-out;
-}
-.ourwork div button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
+@media (min-width: 768px) {
+  .ourwork div {
+    align-items: flex-start;
+  }
+  .ourwork div h2,
+  .ourwork div p {
+    text-align: left;
+    width: 40%;
+  }
+  .ourwork div p {
+    width: 50%;
+  }
 }

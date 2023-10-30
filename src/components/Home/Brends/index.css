@@ -40,24 +40,6 @@
   color: #fff;
   position: relative;
 }
-.brends .brendscontainer .left .text-wrapper button,
-.brends .brendscontainer .right .text-wrapper button {
-  width: 30vmin;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid #fafafd;
-  background-color: rgba(110, 97, 97, 0.5);
-  color: white;
-  transition: 0.5s ease-in-out;
-  margin: 0;
-}
-.brends .brendscontainer .left .text-wrapper button:hover,
-.brends .brendscontainer .right .text-wrapper button:hover {
-  background-color: rgba(162, 148, 148, 0.5);
-  cursor: pointer;
-  color: #fff;
-  box-shadow: 0 0 400px 500px #00000069;
-}
 .brends .brendscontainer .left img,
 .brends .brendscontainer .right img {
   position: absolute;
@@ -113,16 +95,17 @@
   width: 100%;
   background-color: #fff;
 }
-.brends .brendscontainer .img1 .divflex1 button,
-.brends .brendscontainer .img2 .divflex1 button {
+.brends .brendscontainer .img1 .divflex1 h3.button,
+.brends .brendscontainer .img2 .divflex1 h3.button {
   background: none;
   color: #505050;
   border: none;
   padding-left: 5px;
+  width: max-content;
   transition: 0.5s ease-in-out;
 }
-.brends .brendscontainer .img1 .divflex1 button:hover,
-.brends .brendscontainer .img2 .divflex1 button:hover {
+.brends .brendscontainer .img1 .divflex1 h3.button:hover,
+.brends .brendscontainer .img2 .divflex1 h3.button:hover {
   background-color: red;
   padding: 0 55px 0 5px;
   border-radius: 0 0 25px 0;
