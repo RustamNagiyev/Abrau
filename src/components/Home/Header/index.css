@@ -1,13 +1,27 @@
 header.home-header {
-  background-image: url("../../../images/home/headerbackimg.svg");
-  height: 1620px;
+  background-image: url("../../../images/home/main-back.jpg");
+  height: 1350px;
   background-size: cover;
+  position: relative;
+}
+header.home-header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.408);
+  position: absolute;
 }
 header.home-header img {
   display: block;
   margin: 0 auto;
   padding-top: 210px;
   width: 44%;
+}
+header.home-header h1,
+header.home-header p,
+header.home-header img {
+  z-index: 2;
+  position: relative;
 }
 header.home-header .p1 {
   display: block;
@@ -18,9 +32,10 @@ header.home-header .p1 {
   font-size: 20px;
   line-height: 18px;
   width: 30%;
+  color: #f4e5d4;
 }
 header.home-header h1 {
-  margin-top: 550px;
+  margin-top: 15rem;
   color: #EF9700;
   font-family: ArnoProRegular;
   font-weight: 400;
@@ -37,5 +52,5 @@ header.home-header .p2 {
   display: block;
   margin: 40px auto;
   text-align: center;
-  color: #fff;
+  color: #f4e5d4;
 }

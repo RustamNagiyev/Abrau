@@ -3,11 +3,11 @@ import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 
 import Home from '../Home';
-import About from '../About';
+
 import Contact from '../Contact';
 import Map from '../Map';
 import News from '../News';
-import { Route, Routes } from 'react-router-dom';
+
 import About from '../About';
 import Products from '../Products';
 // import ReadProduct from '../Products/ReadProduct';
