@@ -1,0 +1,7 @@
+export const BASE_URL = 'https://azabrau-database.vercel.app'
+export const PRODUCTS_URL = BASE_URL + '/products'
+export const NEWS_URL = BASE_URL + '/news'
+export const MAP_URL = BASE_URL + '/map'
+export const ABOUTDATA_URL = BASE_URL + '/aboutData'
+export const AWARDS_URL = BASE_URL + '/awards'
+export const CONTACT_URL = BASE_URL + '/contact'

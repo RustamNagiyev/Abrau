@@ -18,7 +18,16 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        // width: 45%;
+        a {
+          * {
+            transition: color .3s;
+          }
+          &.active, &:hover {
+            *{
+              color: @brown;
+            }
+          }
+        }
       }
     }
     .div4,
@@ -56,7 +65,8 @@
   .containertwo {
     display: flex;
     justify-content: space-around;
-    padding: @page-left-right-paddings;
+    padding: @page-top-bottom-padding @page-left-right-paddings;
+
     .pend1 {
       width: 26%;
     }
@@ -71,7 +81,7 @@
   .sectionfooter {
     .container {
       .flexable {
-        width: 40%;
+        width: 27%;
       }
     }
   }

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./index.css";
 export default function Footer() {
   return (
@@ -6,28 +7,42 @@ export default function Footer() {
         <div className="container">
           <div className="flexable">
             <div className="div1">
-              <p>Haqqımızda</p>
-              <p>Şəki Şərabları</p>
-              <p>Abrau-Dürso</p>
+              <NavLink to={'/about'}>
+                <p>Haqqımızda</p>
+              </NavLink>
+              <NavLink to={'/products'}>
+                <p>Şəki Şərabları</p>
+              </NavLink>
+              <NavLink to={'/products'}>
+                <p>Abrau-Dürso</p>
+              </NavLink>
             </div>
             <div className="div2">
-              <p>Satış məntəqələri</p>
-              <p>Xəbərlər</p>
-              <p>Əlaqə</p>
+              <NavLink to={'/map'}>
+                <p>Satış məntəqələri</p>
+              </NavLink>
+              <NavLink to={'/news'}>
+                <p>Xəbərlər</p>
+              </NavLink>
+              <NavLink to={'/contact'}>
+                <p>Əlaqə</p>
+              </NavLink>
             </div>
           </div>
           <div className="div3">
             <p>
-              Telefon
+              Telefon &nbsp;&nbsp;
               <span>
                 <a href="tel:+994501234567">+994 50 123 45 67</a>
               </span>
             </p>
+            <a href="mailto:info@azabrau.az">
+              <p>
+                E-mail &nbsp;&nbsp;<span>info@azabrau.az</span>
+              </p>
+            </a>
             <p>
-              E-mail<span>info@azabrau.az</span>
-            </p>
-            <p>
-              Ünvan<span>Port Baku,Neftchilar Avenue 153,Baku Azerbaijan</span>
+              Ünvan &nbsp;&nbsp;<span>Port Baku,Neftchilar Avenue 153,Baku Azerbaijan</span>
             </p>
           </div>
           <div className="div4">
@@ -53,7 +68,7 @@ export default function Footer() {
         </div>
         <div className="containertwo">
           <p className="pend1">2022 Az Abrau</p>
-          <img src={require("../../../images/home/logo2.svg").default} />
+          <img src={require("../../../images/home/logo2.svg").default} alt="logo" />
           <p className="pend2">Məxfilik Siyasəti | Şərtlər və qaydalar</p>
         </div>
       </section>

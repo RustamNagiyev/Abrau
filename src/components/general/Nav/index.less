@@ -151,32 +151,55 @@
     .right {
       display: flex;
       gap: 1rem;
-      .search-wrapper {
-        display: flex;
+      .search-container {
         position: relative;
-        &:hover {
+        .search-wrapper {
+          display: flex;
+          position: relative;
+          &.clicked{
+            img {
+              left: 0;
+              translate: 0;
+            }
+            input {
+              visibility: visible;
+            }
+          }
           img {
-            left: 0;
-            translate: 0;
+            position: absolute;
+            padding: 0.2vmin 0;
+            height: 100%;
+            left: 50%;
+            translate: -50%;
+            transition: left 0.5s, translate 0.5s;
           }
           input {
-            visibility: visible;
+            transition: visibility;
+            background-color: transparent;
+            visibility: hidden;
+            color: white;
+            padding-left: 1.4rem;
           }
         }
-        img {
+        ul {
           position: absolute;
-          padding: 0.2vmin 0;
-          height: 100%;
-          left: 50%;
-          translate: -50%;
-          transition: left 0.5s, translate 0.5s;
-        }
-        input {
-          transition: visibility;
-          background-color: transparent;
-          visibility: hidden;
-          color: white;
-          padding-left: 1.4rem;
+          width: 100%;
+          background-color: #fff;
+          transition: .5s linear;
+          li {
+            padding: 1vmin 2vmin;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: color .3s;
+            a {
+              transition: color .3s;
+            }
+            &:hover {
+              &, * {
+                color: @brown;
+              }
+            }
+          }
         }
       }
       .icons-wrapper {
@@ -294,7 +317,7 @@
 }
 @keyframes menuListOpacityAnimation {
   100% {
-    opacity: 1;;
+    opacity: 1;
   }
 }
 

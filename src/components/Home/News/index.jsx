@@ -16,7 +16,7 @@ export default function News(prop) {
     return (
         <section className='home-news'>
             <h2>Xəbərlər</h2>
-            {prop.news && <Swiper
+            {prop.news && prop.news.length !== 0 &&  <Swiper
                 loop={true}
                 navigation={{
                     nextEl: '.swiper-button-next',

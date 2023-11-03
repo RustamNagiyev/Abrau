@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 export default function About() {
   return (
@@ -17,7 +18,7 @@ export default function About() {
             printing and typesetting industry. Lorem Ipsum hasLorem Ipsum is
             simply dummy text of the printing and typesetting industry.{" "}
           </p>
-          <button>Ətraflı</button>
+          <Link to={'/about'}><button>Ətraflı</button></Link>
         </div>
         <div className="flex2">
         </div>
