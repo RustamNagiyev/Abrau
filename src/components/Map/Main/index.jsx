@@ -35,7 +35,6 @@ export default function Main(props) {
               title={props.map[0].name}
               width="100%"
               height="500"
-              frameBorder="0"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"

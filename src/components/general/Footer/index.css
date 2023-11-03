@@ -17,6 +17,13 @@
   flex-direction: column;
   gap: 1.5rem;
 }
+.sectionfooter .container .flexable div a * {
+  transition: color 0.3s;
+}
+.sectionfooter .container .flexable div a.active *,
+.sectionfooter .container .flexable div a:hover * {
+  color: #974d24;
+}
 .sectionfooter .container .div4,
 .sectionfooter .container .div3 {
   display: flex;
@@ -49,7 +56,7 @@
 .sectionfooter .containertwo {
   display: flex;
   justify-content: space-around;
-  padding: 7vmin;
+  padding: 3vmin 7vmin;
 }
 .sectionfooter .containertwo .pend1 {
   width: 26%;
@@ -60,7 +67,7 @@
 }
 @media (min-width: 740px) {
   .sectionfooter .container .flexable {
-    width: 40%;
+    width: 27%;
   }
 }
 @media (min-width: 980px) {

@@ -34,7 +34,7 @@ export default function News(prop) {
                                         <h3>{news.title}</h3>
                                         <span>{news.releasedTime}</span>
                                         <p>{news.content}</p>
-                                        <button onClick={() => { setShowReadNews(true); setClickedId(news.id) }}>Ətraflı</button>
+                                        <button onClick={() => { setShowReadNews(true); setClickedId(news.id); window.scrollTo(0, 0); }}>Ətraflı</button>
                                     </div>
                                 </div>)
                             })
@@ -43,7 +43,7 @@ export default function News(prop) {
                                 <div className="left-black-bgS">
                                     {prop.news && prop.news.map((news) => {
                                         return (news.blackBG && !news.headComponent) && (
-                                            <div key={news.id} className="news-card" onClick={() => { setShowReadNews(true); setClickedId(news.id) }}>
+                                            <div key={news.id} className="news-card" onClick={() => { setShowReadNews(true); setClickedId(news.id); window.scrollTo(0, 0); }}>
                                                 <div className="img-wrapper">
                                                     <img src={require(`../../images/news/${news.img}`)} alt="news" />
                                                     <h3>{news.title}</h3>
@@ -56,7 +56,7 @@ export default function News(prop) {
                                 <div className="right-light-bgS">
                                     {prop.news && prop.news.map((news) => {
                                         return (!news.blackBG && !news.headComponent) && (
-                                            <div key={news.id} className="news-card" onClick={() => { setShowReadNews(true); setClickedId(news.id) }}>
+                                            <div key={news.id} className="news-card" onClick={() => { setShowReadNews(true); setClickedId(news.id); window.scrollTo(0, 0); }}>
                                                 <div className="img-wrapper">
                                                     <img src={require(`../../images/news/${news.img}`)} alt="news" />
                                                     <h3>{news.title}</h3>

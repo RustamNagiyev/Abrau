@@ -8,7 +8,7 @@ export default function Products(prop) {
   return (
     <section className='products'>
       <Header />
-      <Main products={prop.products} />
+      <Main products={prop.products} clickedProductId={prop.clickedProductId} handleSetClickedPId={prop.handleSetClickedPId} />
       
     </section>
   )

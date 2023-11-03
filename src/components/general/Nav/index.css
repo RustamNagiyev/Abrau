@@ -127,18 +127,21 @@
   display: flex;
   gap: 1rem;
 }
-.nav .container .right .search-wrapper {
+.nav .container .right .search-container {
+  position: relative;
+}
+.nav .container .right .search-container .search-wrapper {
   display: flex;
   position: relative;
 }
-.nav .container .right .search-wrapper:hover img {
+.nav .container .right .search-container .search-wrapper.clicked img {
   left: 0;
   translate: 0;
 }
-.nav .container .right .search-wrapper:hover input {
+.nav .container .right .search-container .search-wrapper.clicked input {
   visibility: visible;
 }
-.nav .container .right .search-wrapper img {
+.nav .container .right .search-container .search-wrapper img {
   position: absolute;
   padding: 0.2vmin 0;
   height: 100%;
@@ -146,12 +149,31 @@
   translate: -50%;
   transition: left 0.5s, translate 0.5s;
 }
-.nav .container .right .search-wrapper input {
+.nav .container .right .search-container .search-wrapper input {
   transition: visibility;
   background-color: transparent;
   visibility: hidden;
   color: white;
   padding-left: 1.4rem;
+}
+.nav .container .right .search-container ul {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.5s linear;
+}
+.nav .container .right .search-container ul li {
+  padding: 1vmin 2vmin;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.nav .container .right .search-container ul li a {
+  transition: color 0.3s;
+}
+.nav .container .right .search-container ul li:hover,
+.nav .container .right .search-container ul li:hover * {
+  color: #974d24;
 }
 .nav .container .right .icons-wrapper {
   display: flex;

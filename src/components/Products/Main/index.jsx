@@ -6,6 +6,8 @@ export default function Main(props) {
   const [clickedId, setClickedId] = useState(1);
   const { products } = props;
   const [selectedCategories, setSelectedCategories] = useState([]);
+
+
   //xeta almamaq ucun
   // if (!props.products) {
   //   return null;
@@ -27,32 +29,32 @@ export default function Main(props) {
   const filteredProducts =
     products !== undefined
       ? products.filter((product) => {
-          const { light, portveyn, alcohol, sparklingWine, madeIn } = product;
-          if (
-            selectedCategories.length === 0 ||
-            (selectedCategories.includes("Yüngül şərablar") && light) ||
-            (selectedCategories.includes("Portveyn") && portveyn) ||
-            (selectedCategories.includes("SekiHamısı") && madeIn === "Şəki") ||
-            (selectedCategories.includes("AzabrauHamısı") &&
-              madeIn === "Ağdam") ||
-            (selectedCategories.includes("AzabrauHamısı") &&
-              madeIn === "Bakı") ||
-            (selectedCategories.includes("Alkaqolsuz içkilər") &&
-              alcohol === "0%") ||
-            (selectedCategories.includes("Yüksək alkoqollu içkilər") &&
-              alcohol === "19%") ||
-            (selectedCategories.includes("Köpüklü şərablar") && sparklingWine)
-          ) {
-            return true; // Seçilen kategoriyalardan her hansi birine aid mehsullari goster
-          } else {
-            return false; // mehsullari gizlet
-          }
-        })
+        const { light, portveyn, alcohol, sparklingWine, madeIn } = product;
+        if (
+          selectedCategories.length === 0 ||
+          (selectedCategories.includes("Yüngül şərablar") && light) ||
+          (selectedCategories.includes("Portveyn") && portveyn) ||
+          (selectedCategories.includes("SekiHamısı") && madeIn === "Şəki") ||
+          (selectedCategories.includes("AzabrauHamısı") &&
+            madeIn === "Ağdam") ||
+          (selectedCategories.includes("AzabrauHamısı") &&
+            madeIn === "Bakı") ||
+          (selectedCategories.includes("Alkaqolsuz içkilər") &&
+            alcohol === "0%") ||
+          (selectedCategories.includes("Yüksək alkoqollu içkilər") &&
+            alcohol === "19%") ||
+          (selectedCategories.includes("Köpüklü şərablar") && sparklingWine)
+        ) {
+          return true; // Seçilen kategoriyalardan her hansi birine aid mehsullari goster
+        } else {
+          return false; // mehsullari gizlet
+        }
+      })
       : [];
 
   return (
     <>
-      {!showReadProduct ? (
+      {!showReadProduct & window.location.search === '' ? (
         <section className="products-main">
           <div className="products-container">
             <div className="categories">
@@ -141,6 +143,7 @@ export default function Main(props) {
                     onClick={() => {
                       setShowReadProduct(true);
                       setClickedId(product.id);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     Ətraflı
@@ -155,8 +158,8 @@ export default function Main(props) {
           {products &&
             products.map((product) => {
               return (
-                clickedId === product.id && (
-                  <div>
+                ((props.clickedProductId === null) ? (clickedId === product.id) : (product.id === props.clickedProductId)) && (
+                  <div key={product.id}>
                     <div className="container-clicked">
                       <div className="back-imgClicked">
                         <img
@@ -182,43 +185,43 @@ export default function Main(props) {
                         <img
                           className="wolt"
                           src={require("../../../images/home/wolt.png")}
-                          alt="Image 1"
+                          alt="wolt"
                         />
                       </div>
                     </div>
                     <div className="container-product">
                       <div className="composition">
-                      <img
+                        <img
                           className="wolt"
                           src={require("../../../images/home/grape.png")}
-                          alt="Image 1"
+                          alt="grape"
                         />
-                      <h4 className="product-h42">Tərkibi</h4>
-                      <p className="product-p2">{product.ingredients}</p>
+                        <h4 className="product-h42">Tərkibi</h4>
+                        <p className="product-p2">{product.ingredients}</p>
                       </div>
                       <div className="composition">
-                      <img
+                        <img
                           className="composition-img"
                           src={require("../../../images/home/availability.png")}
-                          alt="Image 1"
+                          alt="availability"
                         />
                         <h4 className="product-h43">Uygunluq</h4>
                         <p className="product-p2">{product.suitability}</p>
                       </div>
                       <div className="composition">
-                      <img
+                        <img
                           className="composition-img"
                           src={require("../../../images/home/temperature.png")}
-                          alt="Image 1"
+                          alt="temperature"
                         />
                         <h4 className="product-h43">Temperatur</h4>
                         <p className="product-p2">{product.temperatur}</p>
                       </div>
                       <div className="composition">
-                      <img
+                        <img
                           className="composition-img"
                           src={require("../../../images/home/storage.png")}
-                          alt="Image 1"
+                          alt="storage"
                         />
                         <h4 className="product-h43">Saxlama forması</h4>
                         <p className="product-p2">{product.storageForm}</p>
@@ -226,29 +229,31 @@ export default function Main(props) {
                     </div>
                     <h3 className="product-h32">Digər Məhsullar</h3>
                     <div className="container-flex-products">
-                    {filteredProducts.slice(0, 4).map((product) => (
-                     
-                <div key={product.id} className="product">
-                  <img
-                    src={require(`../../../images/home/${product.img}`)}
-                    alt={product.name}
-                  />
-                  <h3>{product.name}</h3>
-                  <p>{product.sort}</p>
-                  <p>{product.alcohol}</p>
-                  <p>{product.madeIn}</p>
-                  <button
-                    onClick={() => {
-                      setShowReadProduct(true);
-                      setClickedId(product.id);
-                    }}
-                  >
-                    Ətraflı
-                  </button>
-                </div>
-               
-              ))}
-               </div>
+                      {filteredProducts.slice(0, 4).map((product) => (
+
+                        <div key={product.id} className="product">
+                          <img
+                            src={require(`../../../images/home/${product.img}`)}
+                            alt={product.name}
+                          />
+                          <h3>{product.name}</h3>
+                          <p>{product.sort}</p>
+                          <p>{product.alcohol}</p>
+                          <p>{product.madeIn}</p>
+                          <button
+                            onClick={() => {
+                              setShowReadProduct(true);
+                              setClickedId(product.id);
+                              props.handleSetClickedPId(product.id);
+                              window.scrollTo(0, 0);
+                            }}
+                          >
+                            Ətraflı
+                          </button>
+                        </div>
+
+                      ))}
+                    </div>
                   </div>
                 )
               );

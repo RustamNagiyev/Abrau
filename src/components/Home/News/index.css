@@ -50,6 +50,11 @@
   position: relative;
   margin: 1rem 0;
 }
+.home-news .swiper .swiper-android .swiper-slide,
+.home-news .swiper .swiper-ios .swiper-slide,
+.home-news .swiper .swiper-slide {
+  height: 14rem;
+}
 .home-news .swiper .swiper-android .swiper-slide::after,
 .home-news .swiper .swiper-ios .swiper-slide::after,
 .home-news .swiper .swiper-slide::after {

@@ -12,7 +12,7 @@ export default function Home(prop) {
     <div className="home">
       <Header />
       <About />
-      <Products products={prop.products} />
+      <Products products={prop.products} handleSetClickedPId={prop.handleSetClickedPId} />
       <OurWork />
       <Brends />
       <News news={prop.news} />

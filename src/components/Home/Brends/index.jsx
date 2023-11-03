@@ -26,14 +26,14 @@ export default function Brends() {
         {showContent ? (
           <>
             <div className="left">
-              <img src={require('../../../images/home/left.png')} alt="Image 1" />
+              <img src={require('../../../images/home/left.png')} alt="template" />
               <div className="text-wrapper">
                 <h2>AZERBAYCAN ŞƏRABI</h2>
                 <button className='transparent-bg' onClick={handleButtonClick1}>Ətraflı</button>
               </div>
             </div>
             <div className="right">
-              <img src={require('../../../images/home/rightmain.png')} alt="Image 2" />
+              <img src={require('../../../images/home/rightmain.png')} alt="template" />
               <div className="text-wrapper">
                 <h2>RUSİYA ŞƏRABI</h2>
                 <button className='transparent-bg' onClick={handleButtonClick2}>Ətraflı</button>
@@ -54,7 +54,7 @@ export default function Brends() {
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                 </div>
                 <div className='divflex2'>
-                  <img className='imgru' src={require('../../../images/home/img2.png')} alt="Image 1" />
+                  <img className='imgru' src={require('../../../images/home/img2.png')} alt="template" />
                 </div>
               </div>
             ) : (
@@ -69,7 +69,7 @@ export default function Brends() {
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                 </div>
                 <div className='divflex2'>
-                  <img className='imgaz' src={require('../../../images/home/img1.png')} alt="Image 2" />
+                      <img className='imgaz' src={require('../../../images/home/img1.png')} alt="template" />
                 </div>
               </div>
             )}

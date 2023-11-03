@@ -3,13 +3,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 
 export default function Products(prop) {
+
   return (
     <section className="products-home">
       <h2 className="products-h2">Məhsullar</h2>
-      {prop.products && <Swiper
+      {prop.products && prop.products.length !== 0 && <Swiper
         effect={"coverflow"}
         slidesPerView={1}
         navigation={true}
@@ -47,7 +49,7 @@ export default function Products(prop) {
                   <h3>{item.name}</h3>
                   <p>Sort: {item.sort}</p>
                   <p>Alcohol: {item.alcohol}</p>
-                  <button>Ətraflı</button>
+                  <Link to={'/products?searching'}><button onClick={() => { prop.handleSetClickedPId && prop.handleSetClickedPId(item.id) }}>Ətraflı</button></Link>
                 </div>
               </div>
             </SwiperSlide>

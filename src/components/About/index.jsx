@@ -7,7 +7,7 @@ export default function About(prop) {
   return (
     <section className='aboutmain'>
       <Header />
-      <Main />
+      <Main aboutData={prop.aboutData} />
       <Awards awards={prop.awards} />
     </section>
   )
