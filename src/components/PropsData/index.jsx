@@ -30,7 +30,7 @@ export default function PropsData() {
       <Route index path="/about" element={<About awards={data.awards} />} />
       <Route index path="/map" element={<Map map={data.map} />} />
       <Route index path="/news/*" element={<News news={data.news} />} />
-    <Route index path="/products" element={<Products products={data.products} />} />
+      <Route index path="/products" element={<Products products={data.products} />} />
       <Route index path="/contact/*" element={<Contact />} />
   </Routes>
   )
