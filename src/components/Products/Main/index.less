@@ -1,3 +1,4 @@
+@import "../../../variables.less";
 .products-container {
   display: flex;
   flex-direction: column;
@@ -16,9 +17,7 @@
   display: flex;
   flex-direction: column;
   width: 60%;
-  border-top: 1px solid #e7d2bb;
-  border-right: 1px solid #e7d2bb;
-  border-left: 1px solid #e7d2bb;
+  border: 1px solid #e7d2bb;
   padding: 2vmin;
 }
 .product {
@@ -27,7 +26,7 @@
   border: 1px solid #e7d2bb;
   padding-top: 4vmin;
   padding-bottom: 2vmin;
-  button{
+  button {
     margin: 1rem auto;
   }
 }
@@ -99,7 +98,6 @@
     color: #4c192a;
     padding-bottom: 2vmin;
     width: 60%;
-  
   }
   .product-h4 {
     font-family: ArnoProRegular;
@@ -113,74 +111,117 @@
     padding-top: 2vmin;
   }
   .product-hr {
-    border: 1px solid #E7D2BB;
-    
+    border: 1px solid #e7d2bb;
   }
-  .wolt{
+  .wolt {
     margin-left: -4vmin;
   }
 }
-.container-product{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    border: 1px solid #E7D2BB;
-    width: 90%;
-    margin: 25vmin auto;
-    .composition{
-        border-right:1px solid #E7D2BB;
-        width: 25%;
-        
-.product-h42{
-    font-family: ArnoProRegular;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    color: #974d24;
-    padding-top: 0;
-    padding-top: 2vmin;
-    text-align: center;
-}
-.product-h43{
-    font-family: ArnoProRegular;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    color: #974d24;
-    
-    padding-top: 4vmin;
-    text-align: center;
-}
-.composition-img{
-margin-top: 2vmin;
-}
-.product-p2{
-    padding-bottom: 4vmin;
-    padding-left: 2vmin;
-    padding-right: 2vmin;
-}
-    }
-}
-.product-h32{
-    font-family: ArnoProRegular;
-font-size: 55px;
-font-weight: 400;
-line-height: 66px;
-letter-spacing: 0em;
-text-align: center;
-color: #974d24;
-}
-.container-flex-products{
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
-padding-top: 15vmin;
-.product{
-    border: none;
+.container-product {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  border: 1px solid #e7d2bb;
+  width: 90%;
+  margin: 25vmin auto;
+  .composition {
+    border-right: 1px solid #e7d2bb;
     width: 25%;
+
+    .product-h42 {
+      font-family: ArnoProRegular;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: #974d24;
+      padding-top: 0;
+      padding-top: 2vmin;
+      text-align: center;
+    }
+    .product-h43 {
+      font-family: ArnoProRegular;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: #974d24;
+
+      padding-top: 4vmin;
+      text-align: center;
+    }
+    .composition-img {
+      margin-top: 2vmin;
+    }
+    .product-p2 {
+      padding-bottom: 4vmin;
+      padding-left: 2vmin;
+      padding-right: 2vmin;
+    }
+  }
 }
+.product-h32 {
+  font-family: ArnoProRegular;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #974d24;
+}
+.container-flex-products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 15vmin;
+  .product {
+    border: none;
+    width: 17rem;
+  }
+}
+@media (min-width: 934px) {
+  .products-container {
+    flex-direction: row;
+    align-items: self-start;
+    justify-content: center;
+    .categories {
+      width: 30%;
+    }
+  }
+}
+@media (max-width: 905px) {
+  .flex-product {
+    width: 100%;
+    padding: @page-left-right-paddings;
+    .product-h3 {
+      text-align: center;
+    }
+    .product-h4 {
+      text-align: center;
+    }
+    .product-p {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .container-clicked {
+    flex-direction: column-reverse;
+  }
+  .back-imgClicked {
+    margin: 0 auto;
+    &::before {
+      width: 280px;
+      top: 80%;
+    }
+  }
+  .container-product {
+    flex-wrap: wrap;
+    .composition {
+      width: 20rem;
+      border-right: none;
+      border-bottom: 1px solid #e7d2bb;
+    }
+  }
 }
