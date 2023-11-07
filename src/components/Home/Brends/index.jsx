@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
+import { useTranslation } from 'react-i18next';
 
 export default function Brends() {
   const [showContent, setShowContent] = useState(true);
@@ -19,24 +20,25 @@ export default function Brends() {
     setShowContent(true);
   };
 
+  const { t } = useTranslation();
   return (
     <section className="brends">
-      <h2>Brendlər</h2>
-      <div className="brendscontainer" style={{ height: `${showContent ? '100vmin' : 'unset'}`}}>
+      <h2>{t("homeBrendsTitle")}</h2>
+      <div className="brendscontainer" style={{ height: `${showContent ? '100vmin' : 'unset'}` }}>
         {showContent ? (
           <>
             <div className="left">
               <img src={require('../../../images/home/left.png')} alt="template" />
               <div className="text-wrapper">
-                <h2>AZERBAYCAN ŞƏRABI</h2>
-                <button className='transparent-bg' onClick={handleButtonClick1}>Ətraflı</button>
+                <h2>{t("azWine")}</h2>
+                <button className='transparent-bg' onClick={handleButtonClick1}>{t("moreInfoButton")}</button>
               </div>
             </div>
             <div className="right">
               <img src={require('../../../images/home/rightmain.png')} alt="template" />
               <div className="text-wrapper">
-                <h2>RUSİYA ŞƏRABI</h2>
-                <button className='transparent-bg' onClick={handleButtonClick2}>Ətraflı</button>
+                <h2>{t("ruWine")}</h2>
+                <button className='transparent-bg' onClick={handleButtonClick2}>{t("moreInfoButton")}</button>
               </div>
             </div>
           </>
@@ -47,11 +49,8 @@ export default function Brends() {
 
                 <div className="divflex1">
                   <h3 className='button' onClick={handleBackButtonClick}>&#10006;</h3>
-                  <h2>Rusiya şərabı</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book standard dummy text
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                  <h2>{t("ruWine")}</h2>
+                  <p>{t("ruWineP1")} <br /> {t("ruWineP2")} <br /> {t("ruWineP3")}</p>
                 </div>
                 <div className='divflex2'>
                   <img className='imgru' src={require('../../../images/home/img2.png')} alt="template" />
@@ -62,14 +61,11 @@ export default function Brends() {
 
                 <div className="divflex1">
                   <h3 className='button' onClick={handleBackButtonClick}>&#10006;</h3>
-                  <h2>Azərbaycan şərabı</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book standard dummy text
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                  <h2>{t("azWine")}</h2>
+                  <p>{t("azWineP1")} <br />{t("azWineP2")} <br />{t("azWineP3")}</p>
                 </div>
                 <div className='divflex2'>
-                      <img className='imgaz' src={require('../../../images/home/img1.png')} alt="template" />
+                  <img className='imgaz' src={require('../../../images/home/img1.png')} alt="template" />
                 </div>
               </div>
             )}

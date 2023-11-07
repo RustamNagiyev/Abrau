@@ -1,227 +1,306 @@
-@import "../../../variables.less";
-.products-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  margin-top: 20vmin;
-  align-items: center;
-}
-.products-filter {
-  display: flex;
-  flex-wrap: wrap;
-  width: 60%;
-  justify-content: center;
-}
-.categories {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  border: 1px solid #e7d2bb;
-  padding: 2vmin;
-}
-.product {
-  text-align: center;
-  width: 280px;
-  border: 1px solid #e7d2bb;
-  padding-top: 4vmin;
-  padding-bottom: 2vmin;
-  button {
-    margin: 1rem auto;
-  }
-}
-.cat-div {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #e7d2bb;
-  padding: 0 2vmin;
-}
-.clean-btn {
-  padding: 0;
-  background: none;
-  height: unset;
-  border: none;
-  color: #313131;
-  text-align: end;
-  &:hover {
-    background: none;
-    color: red;
-  }
-}
+@import "../../../utils/variables.less";
 
-.headp {
-  padding-bottom: 3vmin;
-}
-.container-clicked {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 15vmin;
-}
-.back-imgClicked {
-  position: relative;
-  width: 40vmin;
-  display: flex;
-  justify-content: center;
-  &::before {
-    content: "";
-    width: 400px;
-    background: url("../../../images/home/backimgwine.png") 0 0 no-repeat;
-    background-size: contain;
-    height: 30rem;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    translate: -50% -50%;
-  }
-  img {
-    z-index: 1;
-  }
-}
-.flex-product {
-  width: 50%;
-
-  .product-h3 {
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60px;
-    letter-spacing: 0em;
-    text-align: left;
-    font-family: ArnoProRegular;
-    color: #974d24;
-  }
-  .product-p {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #4c192a;
-    padding-bottom: 2vmin;
-    width: 60%;
-  }
-  .product-h4 {
-    font-family: ArnoProRegular;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    color: #974d24;
-    padding-top: 0;
-    padding-top: 2vmin;
-  }
-  .product-hr {
-    border: 1px solid #e7d2bb;
-  }
-  .wolt {
-    margin-left: -4vmin;
-  }
-}
-.container-product {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  border: 1px solid #e7d2bb;
-  width: 90%;
-  margin: 25vmin auto;
-  .composition {
-    border-right: 1px solid #e7d2bb;
-    width: 25%;
-
-    .product-h42 {
-      font-family: ArnoProRegular;
-      font-size: 17px;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0.02em;
-      text-align: left;
-      color: #974d24;
-      padding-top: 0;
-      padding-top: 2vmin;
-      text-align: center;
-    }
-    .product-h43 {
-      font-family: ArnoProRegular;
-      font-size: 17px;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0.02em;
-      text-align: left;
-      color: #974d24;
-
-      padding-top: 4vmin;
-      text-align: center;
-    }
-    .composition-img {
-      margin-top: 2vmin;
-    }
-    .product-p2 {
-      padding-bottom: 4vmin;
-      padding-left: 2vmin;
-      padding-right: 2vmin;
-    }
-  }
-}
-.product-h32 {
-  font-family: ArnoProRegular;
-  font-size: 55px;
-  font-weight: 400;
-  line-height: 66px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #974d24;
-}
-.container-flex-products {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-top: 15vmin;
+.all-products-sections {
   .product {
-    border: none;
-    width: 17rem;
+    text-align: center;
+    width: 280px;
+    border: 1px solid #e7d2bb;
+    padding-top: 4vmin;
+    padding-bottom: 2vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    img {
+      width: 5rem;
+    }
+    .content-container {
+      button {
+        margin: 1rem auto;
+      }
+    }
+  }
+  .products-main {
+    .page-info-nav {
+      margin-top: 5rem;
+      margin-left: 5rem;
+      display: flex;
+      h4 {
+        color: #4c192a;
+        cursor: pointer;
+        word-wrap: nowrap;
+        text-wrap: nowrap;
+        transition: color 0.5s;
+        &:hover {
+          color: @brown;
+        }
+      }
+      span {
+        text-transform: capitalize;
+        color: #bebbbb;
+      }
+    }
+    .products-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      margin-top: 14vmin;
+      align-items: center;
+    }
+    .products-filter {
+      display: flex;
+      flex-wrap: wrap;
+      width: 60%;
+      justify-content: center;
+    }
+    .categories {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      border: 1px solid #e7d2bb;
+      padding: 1.5rem;
+    }
+    .cat-div {
+      display: flex;
+      justify-content: space-between;
+      gap: 4vmin;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #e7d2bb;
+      padding: 0 0 2vmin;
+    }
+    .clean-btn {
+      padding: 0;
+      background: none;
+      height: unset;
+      border: none;
+      color: #313131;
+      text-align: end;
+      text-decoration: underline;
+      &:hover {
+        background: none;
+        color: red;
+      }
+    }
+
+    .headp {
+      padding: 2vmin 0;
+    }
+    label {
+      margin: 2px 0;
+      span.checkbox-container {
+        position: relative;
+        margin-right: 4px;
+        cursor: pointer;
+        input[type="checkbox"] {
+          margin-right: 7px;
+          visibility: hidden;
+        }
+        input[type="checkbox"]:checked {
+          & + span {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url("../../../images/home/wine5.png") center 0 no-repeat;
+            background-size: contain;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          border: 1.2px solid #4c192a;
+          width: 90%;
+          height: 90%;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+  section {
+    .container-clicked {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15vmin;
+    }
+    .back-imgClicked {
+      position: relative;
+      width: 40vmin;
+      display: flex;
+      justify-content: center;
+      &::before {
+        content: "";
+        width: 400px;
+        background: url("../../../images/home/backimgwine.png") 0 0 no-repeat;
+        background-size: contain;
+        height: 30rem;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        translate: -50% -50%;
+      }
+      img {
+        z-index: 1;
+      }
+    }
+    .flex-product {
+      width: 50%;
+
+      .product-h3 {
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 60px;
+        letter-spacing: 0em;
+        text-align: left;
+        font-family: ArnoProRegular;
+        color: #974d24;
+      }
+      .product-p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #4c192a;
+        padding-bottom: 2vmin;
+        width: 60%;
+      }
+      .product-h4 {
+        font-family: ArnoProRegular;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #974d24;
+        padding-top: 0;
+        padding-top: 2vmin;
+      }
+      .product-hr {
+        border: 1px solid #e7d2bb;
+      }
+      .wolt {
+        margin-left: -4vmin;
+      }
+    }
+    .container-product {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      border: 1px solid #e7d2bb;
+      width: 90%;
+      margin: 25vmin auto;
+      .composition {
+        border-right: 1px solid #e7d2bb;
+        width: 25%;
+
+        .product-h42 {
+          font-family: ArnoProRegular;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0.02em;
+          text-align: left;
+          color: #974d24;
+          padding-top: 0;
+          padding-top: 2vmin;
+          text-align: center;
+        }
+        .product-h43 {
+          font-family: ArnoProRegular;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0.02em;
+          text-align: left;
+          color: #974d24;
+
+          padding-top: 4vmin;
+          text-align: center;
+        }
+        .composition-img {
+          margin-top: 2vmin;
+        }
+        .product-p2 {
+          padding-bottom: 4vmin;
+          padding-left: 2vmin;
+          padding-right: 2vmin;
+        }
+      }
+    }
+    .product-h32 {
+      font-family: ArnoProRegular;
+      font-size: 55px;
+      font-weight: 400;
+      line-height: 66px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #974d24;
+    }
+    .container-flex-products {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding-top: 15vmin;
+      .product {
+        border: none;
+        width: 17rem;
+      }
+    }
   }
 }
 @media (min-width: 934px) {
-  .products-container {
-    flex-direction: row;
-    align-items: self-start;
-    justify-content: center;
-    .categories {
-      width: 30%;
+  .all-products-sections {
+    .products-main {
+      .products-container {
+        flex-direction: row;
+        align-items: self-start;
+        justify-content: center;
+        .categories {
+          width: 30%;
+        }
+      }
     }
   }
 }
 @media (max-width: 905px) {
-  .flex-product {
-    width: 100%;
-    padding: @page-left-right-paddings;
-    .product-h3 {
-      text-align: center;
-    }
-    .product-h4 {
-      text-align: center;
-    }
-    .product-p {
-      text-align: center;
-      width: 100%;
-    }
-  }
-  .container-clicked {
-    flex-direction: column-reverse;
-  }
-  .back-imgClicked {
-    margin: 0 auto;
-    &::before {
-      width: 280px;
-      top: 80%;
-    }
-  }
-  .container-product {
-    flex-wrap: wrap;
-    .composition {
-      width: 20rem;
-      border-right: none;
-      border-bottom: 1px solid #e7d2bb;
+  .all-products-sections {
+    section {
+      .flex-product {
+        width: 100%;
+        padding: @page-left-right-paddings;
+        .product-h3 {
+          text-align: center;
+        }
+        .product-h4 {
+          text-align: center;
+        }
+        .product-p {
+          text-align: center;
+          width: 100%;
+        }
+      }
+      .container-clicked {
+        flex-direction: column-reverse;
+      }
+      .back-imgClicked {
+        margin: 0 auto;
+        &::before {
+          width: 280px;
+          top: 80%;
+        }
+      }
+      .container-product {
+        flex-wrap: wrap;
+        .composition {
+          width: 20rem;
+          border-right: none;
+          border-bottom: 1px solid #e7d2bb;
+        }
+      }
     }
   }
 }

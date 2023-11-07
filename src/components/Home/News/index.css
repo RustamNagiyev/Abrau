@@ -1,6 +1,8 @@
 .home-news h2 {
   color: #974d24;
   padding: 0;
+  text-transform: capitalize;
+  margin-top: 2rem;
 }
 .home-news .home-news-card-container {
   display: flex;
@@ -109,11 +111,11 @@
   margin: 0 auto;
 }
 .home-news .swiper .swiper-button-prev.custom-button {
-  translate: -6rem;
+  translate: -10rem;
 }
 .home-news .swiper .swiper-button-next.custom-button {
   margin-top: -2.75rem;
-  translate: 3.5rem;
+  translate: 2rem;
 }
 .home-news .swiper .swiper-button-prev.custom-button span,
 .home-news .swiper .swiper-button-next.custom-button span {
@@ -131,14 +133,41 @@
   background-color: rgba(151, 76, 36, 0.176);
   color: #fff;
 }
+@media (max-width: 767px) {
+  .home-news .swiper .swiper-button-prev.custom-button {
+    translate: -7rem;
+  }
+}
 @media (min-width: 1024px) {
   .home-news .swiper .swiper-slide {
     translate: 30%;
+    margin-top: 2rem;
   }
   .home-news .swiper .swiper-slide.swiper-slide-active {
     translate: -30%;
   }
   .home-news .swiper .swiper-slide.swiper-slide-next {
     translate: 0;
+    position: relative;
+  }
+  .home-news .swiper .swiper-slide.swiper-slide-next::before,
+  .home-news .swiper .swiper-slide.swiper-slide-next::after {
+    content: "";
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    left: -4.5rem;
+    top: -3rem;
+    z-index: -1;
+    background: url("../../../images/news/newsGrapeLeafTopLeftFrame.svg") left top no-repeat;
+    background-size: contain;
+  }
+  .home-news .swiper .swiper-slide.swiper-slide-next::after {
+    left: auto;
+    right: -3.5rem;
+    top: auto;
+    bottom: -3.5rem !important;
+    background: url("../../../images/news/newsGrapeLeafBottomRightFrame.svg") right bottom no-repeat;
+    background-size: contain;
   }
 }

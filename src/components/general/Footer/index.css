@@ -38,6 +38,7 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 .sectionfooter .container p span {
   font-size: Mondia;
@@ -64,6 +65,11 @@
 .sectionfooter .containertwo .pend2 {
   text-align: end;
   width: 25%;
+  overflow-x: hidden;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 @media (min-width: 740px) {
   .sectionfooter .container .flexable {

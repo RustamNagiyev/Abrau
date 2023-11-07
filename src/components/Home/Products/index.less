@@ -1,4 +1,4 @@
-@import "../../../variables.less";
+@import "../../../utils/variables.less";
 .products-home {
   padding-bottom: 10vmin;
   .products-h2 {
@@ -7,7 +7,7 @@
     font-size: 55px;
     line-height: 66px;
     font-family: ArnoProRegular;
-    margin-top: 6vmin;
+    text-transform: capitalize;
   }
   //SWIPER styles:
   .swiper-slide img {
@@ -26,14 +26,13 @@
     text-align: center;
     font-size: 18px;
     background: transparent;
-    // width: 20%!important;
-  
+
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
   }
- 
+
   button {
     display: block;
     margin: 30px auto;
@@ -72,7 +71,6 @@
     .text-wrapper {
       visibility: hidden;
     }
-    // getting centered element and restyled that by a clever way))
     .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-next
       + div {
       .text-wrapper {

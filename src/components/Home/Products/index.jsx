@@ -1,16 +1,16 @@
- import "./index.css";
+import "./index.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from 'react-i18next'
 
 export default function Products(prop) {
-
+  const { t } = useTranslation();
   return (
     <section className="products-home">
-      <h2 className="products-h2">Məhsullar</h2>
+      <h2 className="products-h2">{t("products")}</h2>
       {prop.products && prop.products.length !== 0 && <Swiper
         effect={"coverflow"}
         slidesPerView={1}
@@ -47,9 +47,9 @@ export default function Products(prop) {
                 />
                 <div className="text-wrapper">
                   <h3>{item.name}</h3>
-                  <p>Sort: {item.sort}</p>
-                  <p>Alcohol: {item.alcohol}</p>
-                  <Link to={'/products?searching'}><button onClick={() => { prop.handleSetClickedPId && prop.handleSetClickedPId(item.id) }}>Ətraflı</button></Link>
+                  <p>{t("sort")}: {item.sort}</p>
+                  <p>{t("alcohol")}: {item.alcohol}</p>
+                  <Link to={'/products?searching'}><button onClick={() => { prop.handleSetClickedPId && prop.handleSetClickedPId(item.id) }}>{t("moreInfoButton")}</button></Link>
                 </div>
               </div>
             </SwiperSlide>

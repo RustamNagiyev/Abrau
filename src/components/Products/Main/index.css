@@ -1,67 +1,127 @@
-.products-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  margin-top: 20vmin;
-  align-items: center;
-}
-.products-filter {
-  display: flex;
-  flex-wrap: wrap;
-  width: 60%;
-  justify-content: center;
-}
-.categories {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  border: 1px solid #e7d2bb;
-  padding: 2vmin;
-}
-.product {
+.all-products-sections .product {
   text-align: center;
   width: 280px;
   border: 1px solid #e7d2bb;
   padding-top: 4vmin;
   padding-bottom: 2vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
 }
-.product button {
+.all-products-sections .product img {
+  width: 5rem;
+}
+.all-products-sections .product .content-container button {
   margin: 1rem auto;
 }
-.cat-div {
+.all-products-sections .products-main .page-info-nav {
+  margin-top: 5rem;
+  margin-left: 5rem;
+  display: flex;
+}
+.all-products-sections .products-main .page-info-nav h4 {
+  color: #4c192a;
+  cursor: pointer;
+  word-wrap: nowrap;
+  text-wrap: nowrap;
+  transition: color 0.5s;
+}
+.all-products-sections .products-main .page-info-nav h4:hover {
+  color: #974d24;
+}
+.all-products-sections .products-main .page-info-nav span {
+  text-transform: capitalize;
+  color: #bebbbb;
+}
+.all-products-sections .products-main .products-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin-top: 14vmin;
+  align-items: center;
+}
+.all-products-sections .products-main .products-filter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  justify-content: center;
+}
+.all-products-sections .products-main .categories {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border: 1px solid #e7d2bb;
+  padding: 1.5rem;
+}
+.all-products-sections .products-main .cat-div {
   display: flex;
   justify-content: space-between;
+  gap: 4vmin;
+  flex-wrap: wrap;
   border-bottom: 1px solid #e7d2bb;
-  padding: 0 2vmin;
+  padding: 0 0 2vmin;
 }
-.clean-btn {
+.all-products-sections .products-main .clean-btn {
   padding: 0;
   background: none;
   height: unset;
   border: none;
   color: #313131;
   text-align: end;
+  text-decoration: underline;
 }
-.clean-btn:hover {
+.all-products-sections .products-main .clean-btn:hover {
   background: none;
   color: red;
 }
-.headp {
-  padding-bottom: 3vmin;
+.all-products-sections .products-main .headp {
+  padding: 2vmin 0;
 }
-.container-clicked {
+.all-products-sections .products-main label {
+  margin: 2px 0;
+}
+.all-products-sections .products-main label span.checkbox-container {
+  position: relative;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.all-products-sections .products-main label span.checkbox-container input[type="checkbox"] {
+  margin-right: 7px;
+  visibility: hidden;
+}
+.all-products-sections .products-main label span.checkbox-container input[type="checkbox"]:checked + span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../../../images/home/wine5.png") center 0 no-repeat;
+  background-size: contain;
+}
+.all-products-sections .products-main label span.checkbox-container::before {
+  content: "";
+  position: absolute;
+  border: 1.2px solid #4c192a;
+  width: 90%;
+  height: 90%;
+  left: 0;
+  top: 0;
+}
+.all-products-sections section .container-clicked {
   display: flex;
   justify-content: space-around;
   margin-top: 15vmin;
 }
-.back-imgClicked {
+.all-products-sections section .back-imgClicked {
   position: relative;
   width: 40vmin;
   display: flex;
   justify-content: center;
 }
-.back-imgClicked::before {
+.all-products-sections section .back-imgClicked::before {
   content: "";
   width: 400px;
   background: url("../../../images/home/backimgwine.png") 0 0 no-repeat;
@@ -72,13 +132,13 @@
   left: 50%;
   translate: -50% -50%;
 }
-.back-imgClicked img {
+.all-products-sections section .back-imgClicked img {
   z-index: 1;
 }
-.flex-product {
+.all-products-sections section .flex-product {
   width: 50%;
 }
-.flex-product .product-h3 {
+.all-products-sections section .flex-product .product-h3 {
   font-size: 50px;
   font-weight: 400;
   line-height: 60px;
@@ -87,7 +147,7 @@
   font-family: ArnoProRegular;
   color: #974d24;
 }
-.flex-product .product-p {
+.all-products-sections section .flex-product .product-p {
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
@@ -97,7 +157,7 @@
   padding-bottom: 2vmin;
   width: 60%;
 }
-.flex-product .product-h4 {
+.all-products-sections section .flex-product .product-h4 {
   font-family: ArnoProRegular;
   font-size: 17px;
   font-weight: 400;
@@ -108,13 +168,13 @@
   padding-top: 0;
   padding-top: 2vmin;
 }
-.flex-product .product-hr {
+.all-products-sections section .flex-product .product-hr {
   border: 1px solid #e7d2bb;
 }
-.flex-product .wolt {
+.all-products-sections section .flex-product .wolt {
   margin-left: -4vmin;
 }
-.container-product {
+.all-products-sections section .container-product {
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -122,11 +182,11 @@
   width: 90%;
   margin: 25vmin auto;
 }
-.container-product .composition {
+.all-products-sections section .container-product .composition {
   border-right: 1px solid #e7d2bb;
   width: 25%;
 }
-.container-product .composition .product-h42 {
+.all-products-sections section .container-product .composition .product-h42 {
   font-family: ArnoProRegular;
   font-size: 17px;
   font-weight: 400;
@@ -138,7 +198,7 @@
   padding-top: 2vmin;
   text-align: center;
 }
-.container-product .composition .product-h43 {
+.all-products-sections section .container-product .composition .product-h43 {
   font-family: ArnoProRegular;
   font-size: 17px;
   font-weight: 400;
@@ -149,15 +209,15 @@
   padding-top: 4vmin;
   text-align: center;
 }
-.container-product .composition .composition-img {
+.all-products-sections section .container-product .composition .composition-img {
   margin-top: 2vmin;
 }
-.container-product .composition .product-p2 {
+.all-products-sections section .container-product .composition .product-p2 {
   padding-bottom: 4vmin;
   padding-left: 2vmin;
   padding-right: 2vmin;
 }
-.product-h32 {
+.all-products-sections section .product-h32 {
   font-family: ArnoProRegular;
   font-size: 55px;
   font-weight: 400;
@@ -166,55 +226,55 @@
   text-align: center;
   color: #974d24;
 }
-.container-flex-products {
+.all-products-sections section .container-flex-products {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding-top: 15vmin;
 }
-.container-flex-products .product {
+.all-products-sections section .container-flex-products .product {
   border: none;
   width: 17rem;
 }
 @media (min-width: 934px) {
-  .products-container {
+  .all-products-sections .products-main .products-container {
     flex-direction: row;
     align-items: self-start;
     justify-content: center;
   }
-  .products-container .categories {
+  .all-products-sections .products-main .products-container .categories {
     width: 30%;
   }
 }
 @media (max-width: 905px) {
-  .flex-product {
+  .all-products-sections section .flex-product {
     width: 100%;
     padding: 7vmin;
   }
-  .flex-product .product-h3 {
+  .all-products-sections section .flex-product .product-h3 {
     text-align: center;
   }
-  .flex-product .product-h4 {
+  .all-products-sections section .flex-product .product-h4 {
     text-align: center;
   }
-  .flex-product .product-p {
+  .all-products-sections section .flex-product .product-p {
     text-align: center;
     width: 100%;
   }
-  .container-clicked {
+  .all-products-sections section .container-clicked {
     flex-direction: column-reverse;
   }
-  .back-imgClicked {
+  .all-products-sections section .back-imgClicked {
     margin: 0 auto;
   }
-  .back-imgClicked::before {
+  .all-products-sections section .back-imgClicked::before {
     width: 280px;
     top: 80%;
   }
-  .container-product {
+  .all-products-sections section .container-product {
     flex-wrap: wrap;
   }
-  .container-product .composition {
+  .all-products-sections section .container-product .composition {
     width: 20rem;
     border-right: none;
     border-bottom: 1px solid #e7d2bb;

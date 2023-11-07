@@ -33,6 +33,7 @@
 }
 .nav .container .center ul li a {
   color: #e4e4e4;
+  text-transform: uppercase;
 }
 .nav .container .center ul li a.active,
 .nav .container .center ul li a:hover {
@@ -285,7 +286,7 @@
 }
 @media (max-width: 380px) {
   .nav .container .right .search-wrapper {
-    display: none;
+    display: none !important;
   }
 }
 @media (min-width: 720px) {

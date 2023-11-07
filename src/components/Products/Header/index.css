@@ -6,6 +6,7 @@
   font-size: 80px;
   line-height: 78px;
   color: #fff;
+  text-transform: uppercase;
 }
 .header-products {
   background-image: url("../../../images/home/productsbackimg.png");

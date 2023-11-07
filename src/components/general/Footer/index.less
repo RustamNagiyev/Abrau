@@ -1,4 +1,4 @@
-@import "../../../variables.less";
+@import "../../../utils/variables.less";
 .sectionfooter {
   .container {
     background-color: @dark-pink;
@@ -13,17 +13,17 @@
       display: flex;
       gap: 11vmin;
       justify-content: space-between;
-      // width: 25%;
       div {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         a {
           * {
-            transition: color .3s;
+            transition: color 0.3s;
           }
-          &.active, &:hover {
-            *{
+          &.active,
+          &:hover {
+            * {
               color: @brown;
             }
           }
@@ -36,8 +36,8 @@
       flex-direction: column;
       gap: 1.5rem;
     }
-    .div4{
-        flex-direction: row;
+    .div4 {
+      flex-direction: row;
     }
 
     p {
@@ -45,6 +45,7 @@
       font-size: 17px;
       line-height: 20px;
       font-weight: 600;
+      text-transform: capitalize;
 
       span {
         font-size: Mondia;
@@ -73,11 +74,16 @@
     .pend2 {
       text-align: end;
       width: 25%;
+      overflow-x: hidden;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
     }
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .sectionfooter {
     .container {
       .flexable {
@@ -86,13 +92,12 @@
     }
   }
 }
-@media (min-width:980px) {
-    .sectionfooter {
-      .container {
-        .div4{
-           flex-direction: column;
-        }
+@media (min-width: 980px) {
+  .sectionfooter {
+    .container {
+      .div4 {
+        flex-direction: column;
       }
     }
   }
-  
+}

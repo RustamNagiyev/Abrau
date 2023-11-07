@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "./index.css";
+import { useTranslation } from 'react-i18next';
 
 export default function Main(props) {
   const handleMapClick = (iframeSrc) => {
@@ -6,9 +8,14 @@ export default function Main(props) {
     iframe.src = iframeSrc;
   };
 
+  const { t } = useTranslation();
   return (
     <section className="map-main">
-      <h2 className="map-h2">Sizə ən yaxın mağazını seçin</h2>
+      <div className="page-info-nav">
+        <Link to={'/'}><h4>{t("mainPage")} /</h4></Link>
+        <span>&nbsp; {t("salePlaces")}</span>
+      </div>
+      <h2 className="map-h2">{t("chooseShop")}</h2>
       <div className="map-container">
         <div className="map-flex1">
           {props.map !== undefined &&
@@ -21,7 +28,7 @@ export default function Main(props) {
                   className="map-btn"
                   onClick={() => handleMapClick(item.iframeSrc)}
                 >
-                  Xəritədə bax
+                  {t("lookOnMap")}
                 </button>
               </div>
             ))}

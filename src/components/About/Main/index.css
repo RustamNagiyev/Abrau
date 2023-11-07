@@ -6,6 +6,7 @@
   position: absolute;
   display: flex;
   top: 3vmin;
+  left: 1.5rem;
 }
 .about-main .page-info-nav * {
   font-family: Legan;
@@ -14,6 +15,7 @@
   color: #4c192a;
 }
 .about-main .page-info-nav span {
+  text-transform: capitalize;
   color: #bebbbb;
 }
 .about-main .part-container {
@@ -21,7 +23,7 @@
   margin: 0 -7vmin;
 }
 .about-main .part-container:hover .all-container .all-wrapper .text-content-wrapper {
-  transform: translateY(-7rem);
+  transform: translateY(-3rem);
 }
 .about-main .part-container .all-container .all-wrapper {
   display: flex;
@@ -65,6 +67,14 @@
 .about-main .part-container:nth-child(odd) .all-container .all-wrapper .top-container .title-wrapper h2:last-child {
   width: min-content;
 }
+@media (max-width: 500px) {
+  .about-main .part-container .all-container .all-wrapper .top-container .title-wrapper h2 {
+    font-size: 3rem !important;
+  }
+  .about-main .part-container .all-container .all-wrapper .top-container .title-wrapper h2:first-child {
+    font-size: 10rem !important;
+  }
+}
 @media (min-width: 768px) {
   .about-main .part-container .all-container .all-wrapper .top-container .title-wrapper {
     flex-direction: row;
@@ -107,6 +117,9 @@
   .about-main .part-container .all-container .all-wrapper .top-container .title-wrapper {
     width: min-content;
     margin-left: -7.3rem;
+  }
+  .about-main .part-container .all-container .all-wrapper .top-container .title-wrapper h2 {
+    padding: 0;
   }
   .about-main .part-container .all-container .all-wrapper .top-container img {
     width: 50%;

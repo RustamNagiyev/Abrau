@@ -1,4 +1,5 @@
 .map-main {
+  position: relative;
   /* Handle */
   /* Handle on hover */
 }
@@ -17,6 +18,22 @@
   background: #130f02;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+}
+.map-main .page-info-nav {
+  position: absolute;
+  display: flex;
+  left: 2rem;
+  top: 3vmin;
+}
+.map-main .page-info-nav * {
+  font-family: Legan;
+}
+.map-main .page-info-nav a h4 {
+  color: #4c192a;
+}
+.map-main .page-info-nav span {
+  text-transform: capitalize;
+  color: #bebbbb;
 }
 .map-main .map-container {
   margin-top: 6vmin;

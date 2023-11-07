@@ -9,7 +9,6 @@ export default function Products(prop) {
     <section className='products'>
       <Header />
       <Main products={prop.products} clickedProductId={prop.clickedProductId} handleSetClickedPId={prop.handleSetClickedPId} />
-      
     </section>
   )
 }

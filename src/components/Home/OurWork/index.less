@@ -1,7 +1,7 @@
-@import "../../../variables.less";
+@import "../../../utils/variables.less";
 .ourwork {
-  background-image: url("../../../images/home//barrelGif.gif");
-  height: 653px;
+  // background-image: url("../../../images/home//barrelGif.gif");
+  background-image: url("../../../images/home/home-gif.gif");
   background-size: cover;
   padding: @page-left-right-paddings;
 
@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    padding-bottom: 3rem;
     h2 {
       font-family: ArnoProRegular;
       font-weight: 600;
@@ -34,12 +35,13 @@
   .ourwork {
     div {
       align-items: flex-start;
-      h2,p {
+      h2,
+      p {
         text-align: left;
         width: 40%;
       }
       p {
-        width: 50%;
+        width: 45%;
       }
     }
   }

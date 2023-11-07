@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./index.css";
+import { useTranslation } from 'react-i18next';
+
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer>
       <section className="sectionfooter">
@@ -8,41 +11,41 @@ export default function Footer() {
           <div className="flexable">
             <div className="div1">
               <NavLink to={'/about'}>
-                <p>Haqqımızda</p>
+                <p>{t("about")}</p>
               </NavLink>
               <NavLink to={'/products'}>
-                <p>Şəki Şərabları</p>
+                <p>{t("shakiWines")}</p>
               </NavLink>
               <NavLink to={'/products'}>
-                <p>Abrau-Dürso</p>
+                <p>{t("abrauDurso")}</p>
               </NavLink>
             </div>
             <div className="div2">
               <NavLink to={'/map'}>
-                <p>Satış məntəqələri</p>
+                <p>{t("salePlaces")}</p>
               </NavLink>
               <NavLink to={'/news'}>
-                <p>Xəbərlər</p>
+                <p>{t("news")}</p>
               </NavLink>
               <NavLink to={'/contact'}>
-                <p>Əlaqə</p>
+                <p>{t("contact")}</p>
               </NavLink>
             </div>
           </div>
           <div className="div3">
             <p>
-              Telefon &nbsp;&nbsp;
+              {t("phone")} &nbsp;&nbsp;
               <span>
                 <a href="tel:+994501234567">+994 50 123 45 67</a>
               </span>
             </p>
             <a href="mailto:info@azabrau.az">
               <p>
-                E-mail &nbsp;&nbsp;<span>info@azabrau.az</span>
+                {t("email")} &nbsp;&nbsp;<span>info@azabrau.az</span>
               </p>
             </a>
             <p>
-              Ünvan &nbsp;&nbsp;<span>Port Baku,Neftchilar Avenue 153,Baku Azerbaijan</span>
+              {t("address")} &nbsp;&nbsp;<span>Port Baku,Neftchilar Avenue 153,Baku Azerbaijan</span>
             </p>
           </div>
           <div className="div4">
@@ -67,9 +70,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="containertwo">
-          <p className="pend1">2022 Az Abrau</p>
+          <p className="pend1">{t("createdPageAndTime")}</p>
           <img src={require("../../../images/home/logo2.svg").default} alt="logo" />
-          <p className="pend2">Məxfilik Siyasəti | Şərtlər və qaydalar</p>
+          <p className="pend2">{t("privacy")}</p>
         </div>
       </section>
     </footer>

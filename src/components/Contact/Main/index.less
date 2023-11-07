@@ -1,4 +1,9 @@
-@import "../../../variables.less";
+@import "../../../utils/variables.less";
+
+// sweet alert framework custom buttons restyles for responsiveness:
+.swal2-actions {
+  gap: 0.5rem;
+}
 .contact {
   .main-contact {
     .top {
@@ -95,6 +100,7 @@
       cursor: pointer;
     }
   }
+
   // error and success's styles
   .common-response {
     padding: @page-left-right-paddings;
@@ -144,6 +150,12 @@
       }
     }
   }
+}
+// swal confirmation buttons restyles:
+button.swal2-cancel.btn.btn-danger,
+button.swal2-confirm.btn.btn-success {
+  padding: 0 2rem !important;
+  margin: 0 2rem;
 }
 
 @media (min-width: 768px) {

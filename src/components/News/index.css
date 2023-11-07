@@ -19,6 +19,7 @@
 }
 .news-container section .page-info-nav span {
   color: #bebbbb;
+  text-transform: capitalize;
 }
 .news-container section .content-wrapper {
   display: flex;
@@ -134,6 +135,19 @@
 .news-container section .content-wrapper .other-news-cards-wrapper .right-light-bgS .news-card .img-wrapper span {
   left: 4vmin;
   bottom: 4vmin;
+}
+.read-news-container {
+  position: relative;
+}
+.read-news-container::after {
+  content: "";
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  background: url("../../images/news/readNewsTopRightImg.svg") top right no-repeat;
+  background-size: contain;
 }
 .read-news-container .read-news-wrapper {
   padding: 7vmin;

@@ -7,7 +7,7 @@
   font-size: 55px;
   line-height: 66px;
   font-family: ArnoProRegular;
-  margin-top: 6vmin;
+  text-transform: capitalize;
 }
 .products-home .swiper-slide img {
   height: 22rem;

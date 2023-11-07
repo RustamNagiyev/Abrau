@@ -1,8 +1,8 @@
-import { Route, Routes } from 'react-router-dom'
-import Header from './Header'
-import Main from './Main'
-import Error from './Error'
-import Success from './Success'
+import { Route, Routes } from 'react-router-dom';
+import Header from './Header';
+import Main from './Main';
+import Error from './Error';
+import Success from './Success';
 
 
 export default function Contact() {

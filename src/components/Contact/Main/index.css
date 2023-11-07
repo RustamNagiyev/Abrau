@@ -1,3 +1,6 @@
+.swal2-actions {
+  gap: 0.5rem;
+}
 .contact .main-contact .top {
   display: flex;
   justify-content: center;
@@ -123,6 +126,11 @@
   .contact .main-contact .common-input form .flex-input {
     flex-direction: row;
   }
+}
+button.swal2-cancel.btn.btn-danger,
+button.swal2-confirm.btn.btn-success {
+  padding: 0 2rem !important;
+  margin: 0 2rem;
 }
 @media (min-width: 768px) {
   .contact .main-contact .top .container-contact {

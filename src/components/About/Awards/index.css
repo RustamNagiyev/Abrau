@@ -131,11 +131,11 @@
   margin: 0 auto;
 }
 .about-awards .swiper-button-prev.custom-button {
-  translate: -6rem;
+  translate: -8rem;
 }
 .about-awards .swiper-button-next.custom-button {
   margin-top: -2.75rem;
-  translate: 3.5rem;
+  translate: 1.5rem;
 }
 .about-awards .swiper-button-prev.custom-button span,
 .about-awards .swiper-button-next.custom-button span {

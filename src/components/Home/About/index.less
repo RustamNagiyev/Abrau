@@ -1,4 +1,4 @@
-@import "../../../variables.less";
+@import "../../../utils/variables.less";
 
 .about {
   background-image: url("../../../images/home/aboutbackimg.svg");
@@ -11,12 +11,13 @@
     justify-content: space-around;
     padding: @page-left-right-paddings 0;
     .flex1 {
-      width: 35%;
+      width: 45%;
       h2 {
         padding-top: 0;
         font-family: ArnoProRegular;
         font-weight: 400;
         font-size: 55px;
+        text-transform: capitalize;
         line-height: 66px;
         text-align: center;
         color: @brown;
@@ -39,7 +40,6 @@
       button {
         display: block;
         margin: 2rem auto;
-     
       }
     }
     .flex2 {
@@ -50,14 +50,13 @@
         content: "";
         width: 100%;
         height: 100%;
-        background-color: red;
         background: url("../../../images/home/winesabout.svg") 0 0 no-repeat;
         background-position: center;
         background-size: contain;
         position: absolute;
         top: 0;
         left: 0;
-        animation: aboutImgAnimation 3s 4s alternate-reverse infinite;
+        animation: aboutImgAnimation 8s alternate-reverse infinite;
       }
     }
   }
@@ -73,16 +72,13 @@
 
 @media (max-width: 1024px) {
   .about {
-    
     .container {
       flex-direction: column;
       .flex1 {
         width: 100%;
-       
       }
       .flex2 {
         width: 100%;
-        
       }
     }
   }
