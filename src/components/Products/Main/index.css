@@ -42,6 +42,10 @@
   justify-content: center;
   margin-top: 14vmin;
   align-items: center;
+  padding: 7vmin;
+}
+.products-container input[type="checkbox"] {
+  filter: sepia(100%) brightness(80%) hue-rotate(170deg) saturate(70%) contrast(300%);
 }
 .all-products-sections .products-main .products-filter {
   display: flex;
