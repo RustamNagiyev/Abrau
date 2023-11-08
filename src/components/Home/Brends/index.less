@@ -1,7 +1,5 @@
-@import "../../../variables.less";
+@import "../../../utils/variables.less";
 .brends {
-  padding-top: 10vmin;
-  // WARNING!!:: style these h2, h3.. etc. and buttons one time in App.less generally
   h2 {
     font-family: ArnoProRegular;
     font-weight: 400;
@@ -13,7 +11,9 @@
   // all important styles
   .brendscontainer {
     position: relative;
-    margin-bottom: 10vmin;
+    h2 {
+      text-transform: uppercase;
+    }
     // styled this[height: 100vmin;] for main content's left and right absolute position ability in the jsx file
     // if we don't add this height will be effect main content, otherwise that will be destroy ru and az wines info page's responsive height too
     /* height: 100vmin; */
@@ -32,14 +32,14 @@
         position: absolute;
         color: white;
         width: min-content;
+        display: flex;
+        flex-direction: column;
         h2 {
-          font-size: 2.3rem;
-          width: 50%;
+          font-size: xx-large;
           line-height: normal;
           color: #fff;
           position: relative;
         }
-       
       }
       img {
         position: absolute;
@@ -59,6 +59,7 @@
       .text-wrapper {
         bottom: 4vmin;
         right: 4vmin;
+        align-items: flex-end;
         h2 {
           text-align: end;
         }
@@ -135,12 +136,14 @@
         width: 100%;
         .imgru,
         .imgaz {
-          // width: 98%;
           height: 50vmin;
           width: 100%;
           object-fit: cover;
           object-position: 0 20%;
         }
+      }
+      h2 {
+        text-transform: initial;
       }
     }
   }
@@ -149,6 +152,21 @@
 @keyframes homeWineInfoPageAnimation {
   100% {
     max-height: 250vmin;
+  }
+}
+@media (max-width: 425px) {
+  .brends {
+    // all important styles
+    .brendscontainer {
+      .left,
+      .right {
+        .text-wrapper {
+          h2 {
+            font-size: x-large;
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width: 900px) {

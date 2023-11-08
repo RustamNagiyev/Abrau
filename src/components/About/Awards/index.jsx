@@ -8,12 +8,14 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Navigation } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 
 export default function Awards(prop) {
+  const { t } = useTranslation();
   return (
     <section className="about-awards">
       <div className="all-awards-slider">
-        <h2>Mükafatlar</h2>
+        <h2>{t("awards")}</h2>
         {prop.awards && <Swiper
           loop={true}
           navigation={{
@@ -47,12 +49,12 @@ export default function Awards(prop) {
               )
             })}
           </div>
-          <div className="swiper-button-prev custom-button"><span>&#8592;</span>geri</div>
-          <div className="swiper-button-next custom-button">irəli<span>&#8594;</span></div>
+          <div className="swiper-button-prev custom-button"><span>&#8592;</span>{t("prev")}</div>
+          <div className="swiper-button-next custom-button">{t("next")}<span>&#8594;</span></div>
         </Swiper>}
       </div>
       <div className="other-awards">
-        <h2>Mükafatlar</h2>
+        <h2>{t("awards")}</h2>
         <div className="mundus-awards">
           <h3>Mundus Vini</h3>
           <div className="awards-container">

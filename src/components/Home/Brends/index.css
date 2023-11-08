@@ -1,6 +1,3 @@
-.brends {
-  padding-top: 10vmin;
-}
 .brends h2 {
   font-family: ArnoProRegular;
   font-weight: 400;
@@ -11,8 +8,10 @@
 }
 .brends .brendscontainer {
   position: relative;
-  margin-bottom: 10vmin;
   /* height: 100vmin; */
+}
+.brends .brendscontainer h2 {
+  text-transform: uppercase;
 }
 .brends .brendscontainer .left,
 .brends .brendscontainer .right {
@@ -31,11 +30,12 @@
   position: absolute;
   color: white;
   width: min-content;
+  display: flex;
+  flex-direction: column;
 }
 .brends .brendscontainer .left .text-wrapper h2,
 .brends .brendscontainer .right .text-wrapper h2 {
-  font-size: 2.3rem;
-  width: 50%;
+  font-size: xx-large;
   line-height: normal;
   color: #fff;
   position: relative;
@@ -58,6 +58,7 @@
 .brends .brendscontainer .right .text-wrapper {
   bottom: 4vmin;
   right: 4vmin;
+  align-items: flex-end;
 }
 .brends .brendscontainer .right .text-wrapper h2 {
   text-align: end;
@@ -143,9 +144,19 @@
   object-fit: cover;
   object-position: 0 20%;
 }
+.brends .brendscontainer .img1 h2,
+.brends .brendscontainer .img2 h2 {
+  text-transform: initial;
+}
 @keyframes homeWineInfoPageAnimation {
   100% {
     max-height: 250vmin;
+  }
+}
+@media (max-width: 425px) {
+  .brends .brendscontainer .left .text-wrapper h2,
+  .brends .brendscontainer .right .text-wrapper h2 {
+    font-size: x-large;
   }
 }
 @media (min-width: 900px) {

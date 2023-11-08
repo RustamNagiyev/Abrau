@@ -21,8 +21,8 @@ function App() {
     awards: [],
   });
   const [clickedProductId, setClickedProductId] = useState(null);
-
   const [errors, setErrors] = useState([]);
+  const [switchedLanguage, setSwitchedLanguage] = useState("az");
 
   const fetchData = async (url, stateProperty) => {
     try {
@@ -36,20 +36,40 @@ function App() {
   };
 
   useEffect(() => {
-    const endpoints = [
-      { url: PRODUCTS_URL, property: "products" },
-      { url: NEWS_URL, property: "news" },
-      { url: MAP_URL, property: "map" },
-      { url: ABOUTDATA_URL, property: "aboutData" },
-      { url: AWARDS_URL, property: "awards" },
-    ];
+    const endpoints =
+      [
+        {
+          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + PRODUCTS_URL,
+          property: "products",
+        },
+        {
+          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + NEWS_URL,
+          property: "news",
+        },
+        {
+          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + MAP_URL,
+          property: "map",
+        },
+        {
+          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + ABOUTDATA_URL,
+          property: "aboutData",
+        },
+        {
+          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + AWARDS_URL,
+          property: "awards",
+        },
+      ];
 
     // Fetch data for each URL and update the corresponding state property
     endpoints.forEach(({ url, property }) => fetchData(url, property));
-  }, []);
+  }, [switchedLanguage]);
 
   const handleSetClickedProductIdFromNavAndProducts = (id) => {
     setClickedProductId(id);
+  };
+
+  const setSwitchedLanguageFromNav = (lang) => {
+    setSwitchedLanguage(lang);
   };
 
   return (
@@ -57,6 +77,7 @@ function App() {
       <Nav
         products={data.products}
         handleSetClickedPId={handleSetClickedProductIdFromNavAndProducts}
+        setSwitchedLanguageFromNav={setSwitchedLanguageFromNav}
       />
       <PropsData
         data={data}

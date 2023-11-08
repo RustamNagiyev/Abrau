@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
+import { useTranslation } from 'react-i18next';
+import { Link } from "react-router-dom";
 
 export default function Main(props) {
   const [showReadProduct, setShowReadProduct] = useState(false);
@@ -52,79 +54,105 @@ export default function Main(props) {
       })
       : [];
 
+  const { t } = useTranslation();
   return (
-    <>
+    <div className="all-products-sections">
       {!showReadProduct & window.location.search === '' ? (
         <section className="products-main">
+          <div className="page-info-nav">
+            <Link to={'/'}><h4>{t("mainPage")} /</h4></Link>
+            <span>&nbsp; {t("products")}</span>
+          </div>
           <div className="products-container">
             <div className="categories">
               <div className="cat-div">
-                <h3 className="h3-cat">Kateqoriya</h3>
+                <h3 className="h3-cat">{t("category")}</h3>
                 <button className="clean-btn" onClick={handleResetCategories}>
-                  təmizlə
+                  {t("clear")}
                 </button>
               </div>
-              <p className="headp">-Şəki şərabı</p>
+              <p className="headp">-{t("homeHeaderTitle2")}</p>
               <label>
-                <input
-                  type="checkbox"
-                  checked={selectedCategories.includes("SekiHamısı")}
-                  onChange={() => handleCategoryChange("SekiHamısı")}
-                />
-                Hamısı
+                <span className='checkbox-container'>
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes("SekiHamısı")}
+                    onChange={() => handleCategoryChange("SekiHamısı")}
+                  />
+                  <span></span>
+                </span>
+                {t("all")}
               </label>
               <label>
-                <input
-                  type="checkbox"
-                  checked={selectedCategories.includes("Yüngül şərablar")}
-                  onChange={() => handleCategoryChange("Yüngül şərablar")}
-                />
-                Yüngül şərablar
+                <span className='checkbox-container'>
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes("Yüngül şərablar")}
+                    onChange={() => handleCategoryChange("Yüngül şərablar")}
+                  />
+                  <span></span>
+                </span>
+                {t("lightWines")}
               </label>
               <label>
-                <input
-                  type="checkbox"
-                  checked={selectedCategories.includes("Portveyn")}
-                  onChange={() => handleCategoryChange("Portveyn")}
-                />
-                Portveyn
+                <span className='checkbox-container'>
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes("Portveyn")}
+                    onChange={() => handleCategoryChange("Portveyn")}
+                  />
+                  <span></span>
+                </span>
+                {t("portveyn")}
               </label>
-              <p className="headp">-Azabrau</p>
+              <p className="headp">-{t("azabrau")}</p>
               <label>
-                <input
-                  type="checkbox"
-                  checked={selectedCategories.includes("AzabrauHamısı")}
-                  onChange={() => handleCategoryChange("AzabrauHamısı")}
-                />
-                Hamısı
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={selectedCategories.includes("Alkaqolsuz içkilər")}
-                  onChange={() => handleCategoryChange("Alkaqolsuz içkilər")}
-                />
-                Alkaqolsuz içkilər
+                <span className='checkbox-container'>
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes("AzabrauHamısı")}
+                    onChange={() => handleCategoryChange("AzabrauHamısı")}
+                  />
+                  <span></span>
+                </span>
+                {t("all")}
               </label>
               <label>
-                <input
-                  type="checkbox"
-                  checked={selectedCategories.includes(
-                    "Yüksək alkoqollu içkilər"
-                  )}
-                  onChange={() =>
-                    handleCategoryChange("Yüksək alkoqollu içkilər")
-                  }
-                />
-                Yüksək alkoqollu içkilər
+                <span className='checkbox-container'>
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes("Alkaqolsuz içkilər")}
+                    onChange={() => handleCategoryChange("Alkaqolsuz içkilər")}
+                  />
+                  <span></span>
+                </span>
+                {t("alcoholless")}
               </label>
               <label>
-                <input
-                  type="checkbox"
-                  checked={selectedCategories.includes("Köpüklü şərablar")}
-                  onChange={() => handleCategoryChange("Köpüklü şərablar")}
-                />
-                Köpüklü şərablar
+                <span className='checkbox-container'>
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes(
+                      "Yüksək alkoqollu içkilər"
+                    )}
+                    onChange={() =>
+                      handleCategoryChange("Yüksək alkoqollu içkilər")
+                    }
+                  />
+                  <span></span>
+                </span>
+                {t("highAlcohol")}
+              </label>
+              <label>
+                <span className='checkbox-container'>
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes("Köpüklü şərablar")}
+                    onChange={() => handleCategoryChange("Köpüklü şərablar")}
+                  />
+                  <span></span>
+                </span>
+                {t("sparklingWines")}
               </label>
             </div>
 
@@ -135,19 +163,21 @@ export default function Main(props) {
                     src={require(`../../../images/home/${product.img}`)}
                     alt={product.name}
                   />
-                  <h3>{product.name}</h3>
-                  <p>{product.sort}</p>
-                  <p>{product.alcohol}</p>
-                  <p>{product.madeIn}</p>
-                  <button
-                    onClick={() => {
-                      setShowReadProduct(true);
-                      setClickedId(product.id);
-                      window.scrollTo(0, 0);
-                    }}
-                  >
-                    Ətraflı
-                  </button>
+                  <div className="content-container">
+                    <h3>{product.name}</h3>
+                    <p>{product.sort}</p>
+                    <p>{product.alcohol}</p>
+                    <p>{product.madeIn}</p>
+                    <button
+                      onClick={() => {
+                        setShowReadProduct(true);
+                        setClickedId(product.id);
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      {t("moreInfoButton")}
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
@@ -171,16 +201,16 @@ export default function Main(props) {
                         <h3 className="product-h3">{product.name}</h3>
                         <p className="product-p">{product.advertText}</p>
                         <hr className="product-hr" />
-                        <h4 className="product-h4">Mənşəyi</h4>
+                        <h4 className="product-h4">{t("origin")}</h4>
                         <p className="product-p">{product.madeIn}</p>
                         <hr className="product-hr" />
-                        <h4 className="product-h4">Alkoqol dərəcəsi</h4>
+                        <h4 className="product-h4">{t("alcoholDegree")}</h4>
                         <p className="product-p">{product.alcohol}</p>
                         <hr className="product-hr" />
-                        <h4 className="product-h4">İstehsal ili</h4>
+                        <h4 className="product-h4">{t("productionYear")}</h4>
                         <p className="product-p">{product.productionYear}</p>
                         <hr className="product-hr" />
-                        <h4 className="product-h4">Məhsul haqqında</h4>
+                        <h4 className="product-h4">{t("aboutProduct")}</h4>
                         <p className="product-p">{product.about}</p>
                         <img
                           className="wolt"
@@ -194,9 +224,9 @@ export default function Main(props) {
                         <img
                           className="wolt"
                           src={require("../../../images/home/grape.png")}
-                          alt="grape"
+                          alt="wolt"
                         />
-                        <h4 className="product-h42">Tərkibi</h4>
+                        <h4 className="product-h42">{t("ingredient")}</h4>
                         <p className="product-p2">{product.ingredients}</p>
                       </div>
                       <div className="composition">
@@ -205,7 +235,7 @@ export default function Main(props) {
                           src={require("../../../images/home/availability.png")}
                           alt="availability"
                         />
-                        <h4 className="product-h43">Uygunluq</h4>
+                        <h4 className="product-h43">{t("suitability")}</h4>
                         <p className="product-p2">{product.suitability}</p>
                       </div>
                       <div className="composition">
@@ -214,7 +244,7 @@ export default function Main(props) {
                           src={require("../../../images/home/temperature.png")}
                           alt="temperature"
                         />
-                        <h4 className="product-h43">Temperatur</h4>
+                        <h4 className="product-h43">{t("temperature")}</h4>
                         <p className="product-p2">{product.temperatur}</p>
                       </div>
                       <div className="composition">
@@ -223,11 +253,11 @@ export default function Main(props) {
                           src={require("../../../images/home/storage.png")}
                           alt="storage"
                         />
-                        <h4 className="product-h43">Saxlama forması</h4>
+                        <h4 className="product-h43">{t("storageForm")}</h4>
                         <p className="product-p2">{product.storageForm}</p>
                       </div>
                     </div>
-                    <h3 className="product-h32">Digər Məhsullar</h3>
+                    <h3 className="product-h32">{t("otherProducts")}</h3>
                     <div className="container-flex-products">
                       {filteredProducts.slice(0, 4).map((product) => (
 
@@ -236,20 +266,22 @@ export default function Main(props) {
                             src={require(`../../../images/home/${product.img}`)}
                             alt={product.name}
                           />
-                          <h3>{product.name}</h3>
-                          <p>{product.sort}</p>
-                          <p>{product.alcohol}</p>
-                          <p>{product.madeIn}</p>
-                          <button
-                            onClick={() => {
-                              setShowReadProduct(true);
-                              setClickedId(product.id);
-                              props.handleSetClickedPId(product.id);
-                              window.scrollTo(0, 0);
-                            }}
-                          >
-                            Ətraflı
-                          </button>
+                          <div className="content-container">
+                            <h3>{product.name}</h3>
+                            <p>{product.sort}</p>
+                            <p>{product.alcohol}</p>
+                            <p>{product.madeIn}</p>
+                            <button
+                              onClick={() => {
+                                setShowReadProduct(true);
+                                setClickedId(product.id);
+                                props.handleSetClickedPId(product.id);
+                                window.scrollTo(0, 0);
+                              }}
+                            >
+                              {t("moreInfoButton")}
+                            </button>
+                          </div>
                         </div>
 
                       ))}
@@ -260,6 +292,6 @@ export default function Main(props) {
             })}
         </section>
       )}
-    </>
+    </div>
   );
 }

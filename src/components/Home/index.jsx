@@ -1,9 +1,9 @@
 import About from "./About"
 import Brends from "./Brends"
-import Header from "./Header"
-import News from "./News"
-import OurWork from "./OurWork"
-import Products from "./Products"
+import Header from "./Header";
+import News from "./News";
+import OurWork from "./OurWork";
+import Products from "./Products";
 
 
 

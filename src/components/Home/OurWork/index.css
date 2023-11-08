@@ -1,6 +1,5 @@
 .ourwork {
-  background-image: url("../../../images/home//barrelGif.gif");
-  height: 653px;
+  background-image: url("../../../images/home/home-gif.gif");
   background-size: cover;
   padding: 7vmin;
 }
@@ -10,6 +9,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  padding-bottom: 3rem;
 }
 .ourwork div h2 {
   font-family: ArnoProRegular;
@@ -37,6 +37,6 @@
     width: 40%;
   }
   .ourwork div p {
-    width: 50%;
+    width: 45%;
   }
 }

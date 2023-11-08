@@ -1,24 +1,21 @@
 import { Link } from "react-router-dom";
 import "./index.css";
+import { useTranslation } from 'react-i18next';
+
+
 export default function About() {
+  const { t } = useTranslation();
   return (
     <section className="about">
       <div className="container">
         <div className="flex1">
-          <h2>Haqqımızda</h2>
-          <p className="text1">Lorem Ipsum is simply </p>
+          <h2>{t("about")}</h2>
+          <p className="text1">{t("homeAboutTitle2")}</p>
           <p className="text2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum hasLorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum hasLorem Ipsum is
-            simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum hasLorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum hasLorem Ipsum is
-            simply dummy text of the printing and typesetting industry.{" "}
+            {t("homeAboutP1")} <br />
+            {t("homeAboutP2")}
           </p>
-          <Link to={'/about'}><button>Ətraflı</button></Link>
+          <Link to={'/about'}><button>{t("moreInfoButton")}</button></Link>
         </div>
         <div className="flex2">
         </div>

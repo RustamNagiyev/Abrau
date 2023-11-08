@@ -10,13 +10,14 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next'
 
 export default function News(prop) {
+    const { t } = useTranslation();
     return (
         <section className='home-news'>
-            <h2>Xəbərlər</h2>
-            {prop.news && prop.news.length !== 0 &&  <Swiper
+            <h2>{t("news")}</h2>
+            {prop.news && prop.news.length !== 0 && <Swiper
                 loop={true}
                 navigation={{
                     nextEl: '.swiper-button-next',
@@ -47,8 +48,8 @@ export default function News(prop) {
                         )
                     })}
                 </div>
-                <div className="swiper-button-prev custom-button"><span>&#8592;</span>geri</div>
-                <div className="swiper-button-next custom-button">irəli<span>&#8594;</span></div>
+                <div className="swiper-button-prev custom-button"><span>&#8592;</span>{t("prev")}</div>
+                <div className="swiper-button-next custom-button">{t("next")}<span>&#8594;</span></div>
             </Swiper>}
         </section>
     )

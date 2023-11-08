@@ -8,6 +8,7 @@ import search from "../../../images/home/searchicon.svg";
 import globus from "../../../images/home/globus.svg";
 import "./index.css";
 
+
 export default function Nav(prop) {
   const [clickedMenuButton, setClickedMenuButton] = useState(false);
   const [clickedSearchButton, setClickedSearchButton] = useState(false);
@@ -23,6 +24,8 @@ export default function Nav(prop) {
   const handleClick = () => {
     setClickedMenuButton(!clickedMenuButton);
   }
+
+  const { t } = useTranslation();
   return (
     <nav className='nav'>
       <div className={`container ${clickedMenuButton && 'clicked-menuList'}`}>
@@ -31,11 +34,11 @@ export default function Nav(prop) {
         </div>
         <div className="center">
           <ul onClick={(e) => { e.target.nodeName === 'A' && setClickedMenuButton(false) }}>
-            <li><NavLink to="about">HAQQIMIZDA</NavLink></li>
-            <li><NavLink to='map'>SATIŞ MƏNTƏQƏLƏRİ</NavLink></li>
-            <li><NavLink to='news'>XƏBƏRLƏR</NavLink></li>
-            <li><NavLink to='products'>MƏHSULLAR</NavLink></li>
-            <li><NavLink to="contact">ƏLAQƏ</NavLink></li>
+            <li><NavLink to="about">{t("about")}</NavLink></li>
+            <li><NavLink to='map'>{t("salePlaces")}</NavLink></li>
+            <li><NavLink to='news'>{t("news")}</NavLink></li>
+            <li><NavLink to='products'>{t("products")}</NavLink></li>
+            <li><NavLink to="contact">{t("contact")}</NavLink></li>
           </ul>
         </div>
         <div className={`center-menu-button ${clickedMenuButton && 'clicked'}`} onClick={handleClick}>
@@ -49,7 +52,7 @@ export default function Nav(prop) {
           <div className='search-container'>
             <div className={`${clickedSearchButton ? "search-wrapper clicked" : "search-wrapper"}`}>
               <img src={search} alt='search' onClick={() => { setClickedSearchButton(!clickedSearchButton) }} />
-              <input type='text' name='search' ref={searchInput} onChange={(e) => { setSearchValue(e.target.value);}} />
+              <input type='text' name='search' ref={searchInput} onChange={(e) => { setSearchValue(e.target.value); }} />
             </div>
             <ul>
               {clickedSearchButton && prop.products && prop.products.map((product) => {
@@ -63,8 +66,8 @@ export default function Nav(prop) {
             <div className="lang-container">
               <img src={globus} alt='languages' />
               <ul className="lang-wrapper">
-                <li onClick={() => { changeLanguage('az') }} style={{ color: i18n.resolvedLanguage === 'az' ? 'black' : 'white' }}>AZ</li>
-                <li onClick={() => { changeLanguage('ru') }} style={{ color: i18n.resolvedLanguage === 'ru' ? 'black' : 'white' }}>RU</li>
+                <li onClick={() => { changeLanguage('az'); prop.setSwitchedLanguageFromNav('az') }} style={{ color: i18n.resolvedLanguage === 'az' ? 'black' : 'white' }}>AZ</li>
+                <li onClick={() => { changeLanguage('ru'); prop.setSwitchedLanguageFromNav('ru') }} style={{ color: i18n.resolvedLanguage === 'ru' ? 'black' : 'white' }}>RU</li>
               </ul>
             </div>
           </div>

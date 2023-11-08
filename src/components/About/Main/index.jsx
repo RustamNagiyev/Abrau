@@ -1,12 +1,14 @@
 import "./index.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export default function Main(prop) {
+  const { t } = useTranslation();
   return (
     <section className="about-main">
       <div className="page-info-nav">
-        <Link to={'/'}><h4>Ana Səhifə /</h4></Link>
-        <span>&nbsp; Haqqımızda</span>
+        <Link to={'/'}><h4>{t("mainPage")} /</h4></Link>
+        <span>&nbsp; {t("about")}</span>
       </div>
       {prop.aboutData && prop.aboutData.map((data) => {
         return (
