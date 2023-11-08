@@ -3,8 +3,12 @@
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  margin-top: 20vmin;
+  margin-top: 10vmin;
   align-items: center;
+  padding: 7vmin;
+}
+.products-container input[type="checkbox"] {
+  filter: sepia(100%) brightness(80%) hue-rotate(170deg) saturate(70%) contrast(300%);
 }
 .products-filter {
   display: flex;
