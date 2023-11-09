@@ -1,13 +1,15 @@
 .products-home {
-  padding-bottom: 10vmin;
+  margin: 4rem 0;
 }
-.products-home .products-h2 {
-  color: #974d24;
-  font-weight: 400;
-  font-size: 55px;
-  line-height: 66px;
-  font-family: ArnoProRegular;
-  text-transform: capitalize;
+.products-home .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.3rem;
+  margin: 1rem 0;
+}
+.products-home .text-wrapper h3 {
+  font-size: 1.4rem;
 }
 .products-home .swiper-slide img {
   height: 22rem;
@@ -28,37 +30,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.products-home button {
-  display: block;
-  margin: 30px auto;
-  width: max-content;
-  padding: 0 5rem;
-  height: 40px;
-  text-align: center;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #974d24;
-  border-radius: 5px;
-  border: 1px solid #974d24;
-  background-color: #f4e5d4;
-  cursor: pointer;
-  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
-}
-.products-home button:hover {
-  color: #fff;
-  background-color: #974d24;
-}
-.products-home h3 {
-  padding-top: 2vmin;
-  color: #130f02;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 24px;
-}
-.products-home p {
-  padding-top: 1vmin;
 }
 @media (min-width: 1440px) {
   .products-home .text-wrapper {

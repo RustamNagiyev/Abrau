@@ -1,5 +1,6 @@
 @import "../../../utils/variables.less";
 .ourwork {
+  //** Rustam's alternative barrel gif
   // background-image: url("../../../images/home//barrelGif.gif");
   background-image: url("../../../images/home/home-gif.gif");
   background-size: cover;
@@ -8,41 +9,28 @@
   div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 2rem;
-    padding-bottom: 3rem;
+    margin: 9rem 0;
+    * {
+      text-align: left;
+    }
     h2 {
       font-family: ArnoProRegular;
       font-weight: 600;
-      font-size: 50px;
-      line-height: 75px;
       color: @white;
       width: 100%;
     }
     p {
-      font-family: Legan;
       color: @white;
       font-weight: 400;
-      font-size: 20px;
-      line-height: 20px;
-      text-align: center;
     }
   }
 }
 
-@media (min-width: 768px) {
-  .ourwork {
-    div {
-      align-items: flex-start;
-      h2,
-      p {
-        text-align: left;
-        width: 40%;
-      }
-      p {
-        width: 45%;
-      }
-    }
+@media (max-width: 267px) {
+  h2 {
+    font-size: 2rem;
   }
 }

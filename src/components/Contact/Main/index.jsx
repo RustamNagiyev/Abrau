@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./index.css";
-import axios from "axios";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import { CONTACT_URL } from "../../../utils/BASE_URL";
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import database from '../../../utils/firebase';
+import { push, ref } from "firebase/database";
+
 
 export default function Main() {
   const [inputValues, setInputValues] = useState({});
   const [allInputs, setAllInputs] = useState([]);
-  const [submitSuccessed, setSubmitSuccessed] = useState(null);
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -22,28 +21,25 @@ export default function Main() {
     setAllInputs(allInputsArray);
   }
 
-  const postingDataWithAxios = async () => {
+  const postDataToTheDatabase = async () => {
     try {
-      const response = await axios.post('https://azabrau-database-russian.vercel.app/contact', { ...inputValues });
-      setSubmitSuccessed(true);
-      console.log(response.data);
+      // alternative version with axios which our database served on vercel.app gives 500 internal error for readonly files of itself(vercel):
+      // const response = await axios.post('https://azabrau-database-russian.vercel.app/contact', { ...inputValues });
+
+      // Get a reference to the 'data' node in your Firebase database
+      const dataRef = ref(database, 'azabrau-contact');
+      // Push the new data to the database
+      await push(dataRef, {
+        value: { ...inputValues },
+      });
+
+      // Clear the input field
+      setInputValues({});
       // Redirect to the success page if posting data is successful
       navigate('/contact/success');
-      // response.status(200).json({ success: true });
+      // // response.status(200).json({ success: true });
     } catch (error) {
-      console.error("Error in /contact endpoint:", error);
-      // response.status(500).json({ error: "Internal Server Error" });
-      if (error.request) {
-        // The request was made but no response was received
-        console.error("No response received:", error.request);
-        console.log("");
-        console.log('else if');
-      } else {
-        // Something happened in setting up the request that triggered an Error
-        console.error("Error setting up the request:", error.message);
-        console.log('el');
-      }
-      setSubmitSuccessed(false);
+      console.error(error);
       // Redirect to the error page if an error occurs
       navigate('/contact/error');
     }
@@ -51,11 +47,7 @@ export default function Main() {
 
 
 
-
-
-  const submitContactData = async (e) => {
-    e.preventDefault();
-
+  const handleSwalConfirmation = () => {
     // SWAL confirmation:
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -81,8 +73,7 @@ export default function Main() {
           'success'
         )
         // if choosed 'send my note' action, then send axios data to the server:
-        postingDataWithAxios();
-        console.log('gonderildiiiiiiii');
+        postDataToTheDatabase();
       } else if (
         /* Read more about handling dismissals below */
         result.dismiss === Swal.DismissReason.cancel
@@ -92,11 +83,14 @@ export default function Main() {
           t("noWorries"),
           'error'
         )
-        console.log('gonderilmeeeeediiiiiiii');
-
       }
     })
+  }
 
+
+  const submitContactData = async (e) => {
+    e.preventDefault();
+    handleSwalConfirmation();
   }
 
 
@@ -126,7 +120,7 @@ export default function Main() {
         </div>
       </div>
       <div className="common-input">
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form onSubmit={submitContactData}>
           <div className="flex-input">
             <input type="text" placeholder={t("yourName")} autoComplete="off" name="name" onChange={handleInputOnchanges} required />
             <input type="text" placeholder={t("yourSurname")} name="surname" onChange={handleInputOnchanges} required />
@@ -136,7 +130,7 @@ export default function Main() {
             <input type="tel" placeholder={t("yourPhone")} pattern="^\d{9,10}$" name="phone" autoComplete="off" onChange={handleInputOnchanges} required />
           </div>
           <textarea placeholder={t("yourNote")} name="note" required onChange={handleInputOnchanges} />
-          <button type="button" className="contact-btn" onClick={submitContactData}>{t("moreInfoButton")}</button>
+          <button type="submit" className="contact-btn">{t("moreInfoButton")}</button>
         </form>
       </div>
     </section>

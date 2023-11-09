@@ -76,6 +76,7 @@ export default function Main(props) {
                 <span className='checkbox-container'>
                   <input
                     type="checkbox"
+                    name="checkbox"
                     checked={selectedCategories.includes("SekiHamısı")}
                     onChange={() => handleCategoryChange("SekiHamısı")}
                   />
@@ -87,6 +88,7 @@ export default function Main(props) {
                 <span className='checkbox-container'>
                   <input
                     type="checkbox"
+                    name="checkbox"
                     checked={selectedCategories.includes("Yüngül şərablar")}
                     onChange={() => handleCategoryChange("Yüngül şərablar")}
                   />
@@ -98,6 +100,7 @@ export default function Main(props) {
                 <span className='checkbox-container'>
                   <input
                     type="checkbox"
+                    name="checkbox"
                     checked={selectedCategories.includes("Portveyn")}
                     onChange={() => handleCategoryChange("Portveyn")}
                   />
@@ -110,6 +113,7 @@ export default function Main(props) {
                 <span className='checkbox-container'>
                   <input
                     type="checkbox"
+                    name="checkbox"
                     checked={selectedCategories.includes("AzabrauHamısı")}
                     onChange={() => handleCategoryChange("AzabrauHamısı")}
                   />
@@ -121,6 +125,7 @@ export default function Main(props) {
                 <span className='checkbox-container'>
                   <input
                     type="checkbox"
+                    name="checkbox"
                     checked={selectedCategories.includes("Alkaqolsuz içkilər")}
                     onChange={() => handleCategoryChange("Alkaqolsuz içkilər")}
                   />
@@ -132,6 +137,7 @@ export default function Main(props) {
                 <span className='checkbox-container'>
                   <input
                     type="checkbox"
+                    name="checkbox"
                     checked={selectedCategories.includes(
                       "Yüksək alkoqollu içkilər"
                     )}
@@ -147,6 +153,7 @@ export default function Main(props) {
                 <span className='checkbox-container'>
                   <input
                     type="checkbox"
+                    name="checkbox"
                     checked={selectedCategories.includes("Köpüklü şərablar")}
                     onChange={() => handleCategoryChange("Köpüklü şərablar")}
                   />
@@ -222,7 +229,7 @@ export default function Main(props) {
                     <div className="container-product">
                       <div className="composition">
                         <img
-                          className="wolt"
+                          className="composition-img"
                           src={require("../../../images/home/grape.png")}
                           alt="wolt"
                         />

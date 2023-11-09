@@ -6,37 +6,26 @@
 .ourwork div {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 2rem;
-  padding-bottom: 3rem;
+  margin: 9rem 0;
+}
+.ourwork div * {
+  text-align: left;
 }
 .ourwork div h2 {
   font-family: ArnoProRegular;
   font-weight: 600;
-  font-size: 50px;
-  line-height: 75px;
   color: #fafafd;
   width: 100%;
 }
 .ourwork div p {
-  font-family: Legan;
   color: #fafafd;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 20px;
-  text-align: center;
 }
-@media (min-width: 768px) {
-  .ourwork div {
-    align-items: flex-start;
-  }
-  .ourwork div h2,
-  .ourwork div p {
-    text-align: left;
-    width: 40%;
-  }
-  .ourwork div p {
-    width: 45%;
+@media (max-width: 267px) {
+  h2 {
+    font-size: 2rem;
   }
 }

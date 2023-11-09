@@ -19,22 +19,6 @@
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-.map-main .page-info-nav {
-  position: absolute;
-  display: flex;
-  left: 2rem;
-  top: 3vmin;
-}
-.map-main .page-info-nav * {
-  font-family: Legan;
-}
-.map-main .page-info-nav a h4 {
-  color: #4c192a;
-}
-.map-main .page-info-nav span {
-  text-transform: capitalize;
-  color: #bebbbb;
-}
 .map-main .map-container {
   margin-top: 6vmin;
   justify-content: center;
@@ -65,20 +49,25 @@
   height: 300px;
 }
 .map-main .map-h2 {
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 48px;
-  text-align: center;
-  color: #974d24;
+  font-size: 2.2rem;
   padding-top: 80px;
+  text-transform: unset;
+}
+.map-main h3 {
+  font-size: 1.2rem;
+  color: #974d24;
+}
+.map-main p {
+  color: #4c192a;
 }
 .map-main .map-btn {
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
   display: block;
   margin-left: auto;
   text-decoration: underline;
+  font-size: 1.2rem;
 }
 .map-main .map-btn:hover {
   background: none;

@@ -5,7 +5,7 @@ export default function Header() {
   const { t } = useTranslation();
   return (
     <section className="header-products">
-      <h2 className="header-h2">{t("products")}</h2>
+      <h1 className="header-h2">{t("products")}</h1>
     </section>
   )
 }

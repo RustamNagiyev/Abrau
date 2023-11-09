@@ -49,8 +49,10 @@ export default function Awards(prop) {
               )
             })}
           </div>
-          <div className="swiper-button-prev custom-button"><span>&#8592;</span>{t("prev")}</div>
-          <div className="swiper-button-next custom-button">{t("next")}<span>&#8594;</span></div>
+          <div className="buttons-wrapper">
+            <div className="swiper-button-prev custom-button"><span>&#8592;</span>{t("prev")}</div>
+            <div className="swiper-button-next custom-button">{t("next")}<span>&#8594;</span></div>
+          </div>
         </Swiper>}
       </div>
       <div className="other-awards">

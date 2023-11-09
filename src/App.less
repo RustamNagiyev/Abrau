@@ -24,10 +24,13 @@
   text-decoration: none;
   color: @black;
 }
+html {
+  font-size: 18px;
+}
 body {
   &.loader {
     &::before {
-      content: '';
+      content: "";
       background-color: black;
       position: fixed;
       width: 100%;
@@ -37,7 +40,7 @@ body {
       z-index: 9999;
     }
     &::after {
-      content: '';
+      content: "";
       height: 7rem;
       width: 7rem;
       position: fixed;
@@ -47,7 +50,7 @@ body {
       left: 50%;
       top: 50%;
       translate: -50% -50%;
-      background: url('./images/page-loader-gif.gif') 0 0 no-repeat;
+      background: url("./images/page-loader-gif.gif") 0 0 no-repeat;
       background-size: contain;
     }
   }
@@ -56,64 +59,39 @@ body {
   background-color: @pink;
 }
 // common styles:
-// .swiper {
-//   width: 100%;
-//   height: 100%;
-// }
-// .swiper-slide {
-//   text-align: center;
-//   font-size: 18px;
-//   background: transparent;
-//   // width: 20%!important;
-
-//   /* Center slide text vertically */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-// .swiper-slide img {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
 button {
   display: block;
-  // margin: 80px auto;
-  padding: 0 7vmin !important;
-  height: 40px;
+  padding: 0.5vmin 7vmin !important;
   text-align: center;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.2rem;
+  margin: 0 auto;
   color: @brown;
   border-radius: 5px;
   border: 1px solid @brown;
   background-color: @pink;
-  transition: 0.5s ease-in-out;
   width: max-content;
   &:hover {
+    transition: 0.5s ease-in-out;
     color: #fff;
     background-color: @brown;
     cursor: pointer;
   }
   &.black-bg {
-    // margin-left: 10vmin;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fafafd;
-    // margin-top: 8vmin;
     border: 1px solid #fafafd !important;
-    transition: 0.5s ease-in-out;
     &:hover {
-      background-color: rgba(151, 77, 36, 0.5);
+      transition: 0.5s ease-in-out;
+      background-color: rgba(162, 148, 148, 0.5);
     }
   }
   &.transparent-bg {
     border: 1px solid rgb(250, 250, 253);
     background-color: rgba(110, 97, 97, 0.5);
     color: white;
-    transition: 0.5s ease-in-out;
     &:hover {
+      transition: 0.5s ease-in-out;
       background-color: rgba(162, 148, 148, 0.5);
       cursor: pointer;
       color: #fff;
@@ -121,18 +99,77 @@ button {
     }
   }
 }
-h2 {
+h1,
+h2,
+h3,
+h4 {
   font-family: ArnoProRegular;
+}
+h1 {
+  font-size: 3.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 26.3vh 1rem;
+}
+h2 {
   font-weight: 400;
-  font-size: 55px;
-  line-height: 66px;
+  font-size: 3.5rem;
   text-align: center;
   color: @brown;
+  text-transform: capitalize;
 }
 
-@media (max-width: 500px) {
-  h1,
-  h2 {
-    word-wrap: break-word !important;
+h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+  font-family: Legan;
+}
+
+.page-info-nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: @page-top-bottom-padding;
+  left: 1.5rem;
+  * {
+    font-family: Legan;
+    font-size: 1rem;
+  }
+  h4 {
+    color: #4c192a;
+    cursor: pointer;
+    word-wrap: nowrap;
+    text-wrap: nowrap;
+    transition: color 0.5s;
+    &:hover {
+      color: @brown;
+    }
+  }
+  span {
+    text-transform: capitalize;
+    color: #bebbbb;
+  }
+}
+
+@media (max-width: 470px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 233px) {
+  html {
+    font-size: 8px;
   }
 }

@@ -1,17 +1,5 @@
-h1 {
-  text-transform: uppercase;
-}
-h2 {
-  text-align: center;
-  padding-top: 180px;
-  font-weight: 400;
-  font-family: ArnoProRegular;
-  font-size: 65px;
-  line-height: 78px;
-  color: #fff;
-}
 .header-map {
   background-image: url("../../../images/home/mapheaderback.png");
-  height: 425px;
+  height: 60vh;
   background-size: cover;
 }

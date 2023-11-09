@@ -7,40 +7,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: space-between;
 }
 .all-products-sections .product img {
   width: 5rem;
 }
-.all-products-sections .product .content-container button {
-  margin: 1rem auto;
+.all-products-sections .product h3 {
+  font-size: 1.2rem;
 }
-.all-products-sections .products-main .page-info-nav {
-  margin-top: 5rem;
-  margin-left: 5rem;
+.all-products-sections .product .content-container {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  justify-content: space-between;
 }
-.all-products-sections .products-main .page-info-nav h4 {
-  color: #4c192a;
-  cursor: pointer;
-  word-wrap: nowrap;
-  text-wrap: nowrap;
-  transition: color 0.5s;
-}
-.all-products-sections .products-main .page-info-nav h4:hover {
-  color: #974d24;
-}
-.all-products-sections .products-main .page-info-nav span {
-  text-transform: capitalize;
-  color: #bebbbb;
+.all-products-sections .products-main {
+  position: relative;
 }
 .all-products-sections .products-main .products-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  margin-top: 14vmin;
   align-items: center;
 }
 .all-products-sections .products-main .products-filter {
@@ -48,6 +38,7 @@
   flex-wrap: wrap;
   width: 60%;
   justify-content: center;
+  margin-bottom: 7rem;
 }
 .all-products-sections .products-main .categories {
   display: flex;
@@ -55,33 +46,45 @@
   width: 60%;
   border: 1px solid #e7d2bb;
   padding: 1.5rem;
+  margin-top: 7rem;
 }
 .all-products-sections .products-main .cat-div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 4vmin;
   flex-wrap: wrap;
   border-bottom: 1px solid #e7d2bb;
   padding: 0 0 2vmin;
 }
-.all-products-sections .products-main .clean-btn {
+.all-products-sections .products-main .cat-div h3 {
+  font-size: 1.5rem;
+  color: #4c192a;
+  font-weight: 400;
+}
+.all-products-sections .products-main .cat-div .clean-btn {
   padding: 0;
   background: none;
   height: unset;
   border: none;
-  color: #313131;
+  color: #4c192a;
   text-align: end;
   text-decoration: underline;
+  font-size: 1.2rem;
+  margin: 0 !important;
+  padding: 0 !important;
 }
-.all-products-sections .products-main .clean-btn:hover {
+.all-products-sections .products-main .cat-div .clean-btn:hover {
   background: none;
   color: red;
 }
 .all-products-sections .products-main .headp {
   padding: 2vmin 0;
+  color: #4c192a;
 }
 .all-products-sections .products-main label {
   margin: 2px 0;
+  color: #4c192a;
 }
 .all-products-sections .products-main label span.checkbox-container {
   position: relative;
@@ -110,6 +113,9 @@
   left: 0;
   top: 0;
 }
+.all-products-sections section {
+  padding: 7vmin;
+}
 .all-products-sections section .container-clicked {
   display: flex;
   justify-content: space-around;
@@ -137,36 +143,25 @@
 }
 .all-products-sections section .flex-product {
   width: 50%;
+  padding: 7vmin;
 }
 .all-products-sections section .flex-product .product-h3 {
-  font-size: 50px;
   font-weight: 400;
-  line-height: 60px;
+  font-size: 2rem;
   letter-spacing: 0em;
   text-align: left;
-  font-family: ArnoProRegular;
   color: #974d24;
 }
 .all-products-sections section .flex-product .product-p {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
   color: #4c192a;
-  padding-bottom: 2vmin;
+  padding: 0.4rem 0 1rem;
   width: 60%;
 }
 .all-products-sections section .flex-product .product-h4 {
-  font-family: ArnoProRegular;
-  font-size: 17px;
   font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.02em;
-  text-align: left;
+  font-size: 1.2rem;
+  margin-top: 1rem;
   color: #974d24;
-  padding-top: 0;
-  padding-top: 2vmin;
 }
 .all-products-sections section .flex-product .product-hr {
   border: 1px solid #e7d2bb;
@@ -185,44 +180,28 @@
 .all-products-sections section .container-product .composition {
   border-right: 1px solid #e7d2bb;
   width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 3vmin;
+  gap: 0.7rem;
 }
-.all-products-sections section .container-product .composition .product-h42 {
-  font-family: ArnoProRegular;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.02em;
-  text-align: left;
+.all-products-sections section .container-product .composition h4 {
+  font-size: 1.2rem;
   color: #974d24;
-  padding-top: 0;
-  padding-top: 2vmin;
-  text-align: center;
-}
-.all-products-sections section .container-product .composition .product-h43 {
-  font-family: ArnoProRegular;
-  font-size: 17px;
   font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.02em;
-  text-align: left;
-  color: #974d24;
-  padding-top: 4vmin;
-  text-align: center;
+  margin-top: 1rem;
 }
 .all-products-sections section .container-product .composition .composition-img {
-  margin-top: 2vmin;
+  height: 4rem;
+  object-fit: contain;
 }
 .all-products-sections section .container-product .composition .product-p2 {
   padding-bottom: 4vmin;
-  padding-left: 2vmin;
-  padding-right: 2vmin;
 }
 .all-products-sections section .product-h32 {
   font-family: ArnoProRegular;
-  font-size: 55px;
+  font-size: 3rem;
   font-weight: 400;
-  line-height: 66px;
-  letter-spacing: 0em;
   text-align: center;
   color: #974d24;
 }
@@ -230,11 +209,15 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-top: 15vmin;
+  margin: 1rem 0 4rem;
 }
 .all-products-sections section .container-flex-products .product {
   border: none;
   width: 17rem;
+  margin-top: 0;
+}
+.all-products-sections section .container-flex-products .product img {
+  width: 5rem;
 }
 @media (min-width: 934px) {
   .all-products-sections .products-main .products-container {
@@ -245,20 +228,12 @@
   .all-products-sections .products-main .products-container .categories {
     width: 30%;
   }
+  .all-products-sections .products-main .products-container .products-filter {
+    margin-top: 7rem;
+  }
 }
-@media (max-width: 905px) {
+@media (max-width: 1000px) {
   .all-products-sections section .flex-product {
-    width: 100%;
-    padding: 7vmin;
-  }
-  .all-products-sections section .flex-product .product-h3 {
-    text-align: center;
-  }
-  .all-products-sections section .flex-product .product-h4 {
-    text-align: center;
-  }
-  .all-products-sections section .flex-product .product-p {
-    text-align: center;
     width: 100%;
   }
   .all-products-sections section .container-clicked {

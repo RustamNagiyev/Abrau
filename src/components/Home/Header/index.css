@@ -14,7 +14,7 @@ header.home-header img {
   display: block;
   margin: 0 auto;
   padding-top: 15rem;
-  width: 44%;
+  width: 20rem;
 }
 header.home-header h1,
 header.home-header p,
@@ -23,37 +23,30 @@ header.home-header img {
   position: relative;
 }
 header.home-header .p1 {
-  display: block;
   margin: 40px auto;
   text-align: center;
-  font-family: Legan;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5rem;
-  width: 30%;
+  width: 60%;
   color: #f4e5d4;
+  height: 54vh;
 }
 header.home-header h1 {
   margin-top: 15rem;
   color: #ef9700;
-  font-family: ArnoProRegular;
   font-weight: 400;
-  font-size: 80px;
-  line-height: 96px;
   text-align: center;
   text-transform: uppercase;
-  word-wrap: break-word;
-  hyphens: auto;
+  padding: 0 3vmin;
 }
 header.home-header .p2 {
-  font-size: Legan;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5rem;
-  width: 40%;
+  width: 45%;
   display: block;
-  margin: 40px auto;
+  margin: 40px auto 0;
   text-align: center;
   color: #f4e5d4;
   padding-bottom: 15rem;
+}
+@media (max-width: 290px) {
+  header.home-header img {
+    width: 17rem;
+  }
 }

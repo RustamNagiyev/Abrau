@@ -10,43 +10,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: space-between;
     img {
       width: 5rem;
     }
+    h3 {
+      font-size: 1.2rem;
+    }
     .content-container {
-      button {
-        margin: 1rem auto;
-      }
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      height: 100%;
+      justify-content: space-between;
     }
   }
   .products-main {
-    .page-info-nav {
-      margin-top: 5rem;
-      margin-left: 5rem;
-      display: flex;
-      h4 {
-        color: #4c192a;
-        cursor: pointer;
-        word-wrap: nowrap;
-        text-wrap: nowrap;
-        transition: color 0.5s;
-        &:hover {
-          color: @brown;
-        }
-      }
-      span {
-        text-transform: capitalize;
-        color: #bebbbb;
-      }
-    }
+    position: relative;
     .products-container {
       display: flex;
       flex-direction: column;
       width: 100%;
       justify-content: center;
-      margin-top: 14vmin;
       align-items: center;
     }
     .products-filter {
@@ -54,6 +40,7 @@
       flex-wrap: wrap;
       width: 60%;
       justify-content: center;
+      margin-bottom: 7rem;
     }
     .categories {
       display: flex;
@@ -61,34 +48,46 @@
       width: 60%;
       border: 1px solid #e7d2bb;
       padding: 1.5rem;
+      margin-top: 7rem;
     }
     .cat-div {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 4vmin;
       flex-wrap: wrap;
       border-bottom: 1px solid #e7d2bb;
       padding: 0 0 2vmin;
-    }
-    .clean-btn {
-      padding: 0;
-      background: none;
-      height: unset;
-      border: none;
-      color: #313131;
-      text-align: end;
-      text-decoration: underline;
-      &:hover {
+      h3 {
+        font-size: 1.5rem;
+        color: #4c192a;
+        font-weight: 400;
+      }
+      .clean-btn {
+        padding: 0;
         background: none;
-        color: red;
+        height: unset;
+        border: none;
+        color: #4c192a;
+        text-align: end;
+        text-decoration: underline;
+        font-size: 1.2rem;
+        margin: 0 !important;
+        padding: 0 !important;
+        &:hover {
+          background: none;
+          color: red;
+        }
       }
     }
 
     .headp {
       padding: 2vmin 0;
+      color: #4c192a;
     }
     label {
       margin: 2px 0;
+      color: #4c192a;
       span.checkbox-container {
         position: relative;
         margin-right: 4px;
@@ -120,7 +119,9 @@
       }
     }
   }
+  // read product
   section {
+    padding: @page-left-right-paddings;
     .container-clicked {
       display: flex;
       justify-content: space-around;
@@ -148,36 +149,25 @@
     }
     .flex-product {
       width: 50%;
+      padding: @page-left-right-paddings;
 
       .product-h3 {
-        font-size: 50px;
         font-weight: 400;
-        line-height: 60px;
+        font-size: 2rem;
         letter-spacing: 0em;
         text-align: left;
-        font-family: ArnoProRegular;
         color: #974d24;
       }
       .product-p {
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0em;
-        text-align: left;
         color: #4c192a;
-        padding-bottom: 2vmin;
+        padding: .4rem 0 1rem;
         width: 60%;
       }
       .product-h4 {
-        font-family: ArnoProRegular;
-        font-size: 17px;
         font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0.02em;
-        text-align: left;
+        font-size: 1.2rem;
+        margin-top: 1rem;
         color: #974d24;
-        padding-top: 0;
-        padding-top: 2vmin;
       }
       .product-hr {
         border: 1px solid #e7d2bb;
@@ -196,47 +186,29 @@
       .composition {
         border-right: 1px solid #e7d2bb;
         width: 25%;
-
-        .product-h42 {
-          font-family: ArnoProRegular;
-          font-size: 17px;
+        display: flex;
+        flex-direction: column;
+        padding: @page-top-bottom-padding;
+        gap: .7rem;
+        h4 {
+          font-size: 1.2rem;
+          color: @brown;
           font-weight: 400;
-          line-height: 20px;
-          letter-spacing: 0.02em;
-          text-align: left;
-          color: #974d24;
-          padding-top: 0;
-          padding-top: 2vmin;
-          text-align: center;
-        }
-        .product-h43 {
-          font-family: ArnoProRegular;
-          font-size: 17px;
-          font-weight: 400;
-          line-height: 20px;
-          letter-spacing: 0.02em;
-          text-align: left;
-          color: #974d24;
-
-          padding-top: 4vmin;
-          text-align: center;
+          margin-top: 1rem;
         }
         .composition-img {
-          margin-top: 2vmin;
+          height: 4rem;
+          object-fit: contain;
         }
         .product-p2 {
           padding-bottom: 4vmin;
-          padding-left: 2vmin;
-          padding-right: 2vmin;
         }
       }
     }
     .product-h32 {
       font-family: ArnoProRegular;
-      font-size: 55px;
+      font-size: 3rem;
       font-weight: 400;
-      line-height: 66px;
-      letter-spacing: 0em;
       text-align: center;
       color: #974d24;
     }
@@ -244,10 +216,14 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      padding-top: 15vmin;
+      margin: 1rem 0 4rem;
       .product {
         border: none;
         width: 17rem;
+        margin-top: 0;
+        img {
+          width: 5rem;
+        }
       }
     }
   }
@@ -262,26 +238,18 @@
         .categories {
           width: 30%;
         }
+        .products-filter {
+          margin-top: 7rem;
+        }
       }
     }
   }
 }
-@media (max-width: 905px) {
+@media (max-width: 1000px) {
   .all-products-sections {
     section {
       .flex-product {
         width: 100%;
-        padding: @page-left-right-paddings;
-        .product-h3 {
-          text-align: center;
-        }
-        .product-h4 {
-          text-align: center;
-        }
-        .product-p {
-          text-align: center;
-          width: 100%;
-        }
       }
       .container-clicked {
         flex-direction: column-reverse;

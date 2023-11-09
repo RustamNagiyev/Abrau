@@ -10,7 +10,7 @@ export default function About() {
       <div className="container">
         <div className="flex1">
           <h2>{t("about")}</h2>
-          <p className="text1">{t("homeAboutTitle2")}</p>
+          <h4 className="text1">{t("homeAboutTitle2")}</h4>
           <p className="text2">
             {t("homeAboutP1")} <br />
             {t("homeAboutP2")}

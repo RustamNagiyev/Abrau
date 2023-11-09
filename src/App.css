@@ -23,8 +23,11 @@
   text-decoration: none;
   color: #130f02;
 }
+html {
+  font-size: 18px;
+}
 body.loader::before {
-  content: '';
+  content: "";
   background-color: black;
   position: fixed;
   width: 100%;
@@ -34,7 +37,7 @@ body.loader::before {
   z-index: 9999;
 }
 body.loader::after {
-  content: '';
+  content: "";
   height: 7rem;
   width: 7rem;
   position: fixed;
@@ -44,7 +47,7 @@ body.loader::after {
   left: 50%;
   top: 50%;
   translate: -50% -50%;
-  background: url('images/page-loader-gif.gif') 0 0 no-repeat;
+  background: url("images/page-loader-gif.gif") 0 0 no-repeat;
   background-size: contain;
 }
 .App {
@@ -52,20 +55,19 @@ body.loader::after {
 }
 button {
   display: block;
-  padding: 0 7vmin !important;
-  height: 40px;
+  padding: 0.5vmin 7vmin !important;
   text-align: center;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.2rem;
+  margin: 0 auto;
   color: #974d24;
   border-radius: 5px;
   border: 1px solid #974d24;
   background-color: #f4e5d4;
-  transition: 0.5s ease-in-out;
   width: max-content;
 }
 button:hover {
+  transition: 0.5s ease-in-out;
   color: #fff;
   background-color: #974d24;
   cursor: pointer;
@@ -74,34 +76,91 @@ button.black-bg {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fafafd;
   border: 1px solid #fafafd !important;
-  transition: 0.5s ease-in-out;
 }
 button.black-bg:hover {
-  background-color: rgba(151, 77, 36, 0.5);
+  transition: 0.5s ease-in-out;
+  background-color: rgba(162, 148, 148, 0.5);
 }
 button.transparent-bg {
   border: 1px solid #fafafd;
   background-color: rgba(110, 97, 97, 0.5);
   color: white;
-  transition: 0.5s ease-in-out;
 }
 button.transparent-bg:hover {
+  transition: 0.5s ease-in-out;
   background-color: rgba(162, 148, 148, 0.5);
   cursor: pointer;
   color: #fff;
   box-shadow: 0 0 400px 500px #00000069;
 }
-h2 {
+h1,
+h2,
+h3,
+h4 {
   font-family: ArnoProRegular;
+}
+h1 {
+  font-size: 3.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 26.3vh 1rem;
+}
+h2 {
   font-weight: 400;
-  font-size: 55px;
-  line-height: 66px;
+  font-size: 3.5rem;
   text-align: center;
   color: #974d24;
+  text-transform: capitalize;
 }
-@media (max-width: 500px) {
-  h1,
-  h2 {
-    word-wrap: break-word !important;
+h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+  font-family: Legan;
+}
+.page-info-nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 3vmin;
+  left: 1.5rem;
+}
+.page-info-nav * {
+  font-family: Legan;
+  font-size: 1rem;
+}
+.page-info-nav h4 {
+  color: #4c192a;
+  cursor: pointer;
+  word-wrap: nowrap;
+  text-wrap: nowrap;
+  transition: color 0.5s;
+}
+.page-info-nav h4:hover {
+  color: #974d24;
+}
+.page-info-nav span {
+  text-transform: capitalize;
+  color: #bebbbb;
+}
+@media (max-width: 470px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 233px) {
+  html {
+    font-size: 8px;
   }
 }

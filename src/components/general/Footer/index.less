@@ -42,16 +42,14 @@
 
     p {
       font-family: ArnoProRegular;
-      font-size: 17px;
-      line-height: 20px;
+      font-size: 1rem;
       font-weight: 600;
       text-transform: capitalize;
 
       span {
         font-size: Mondia;
         font-weight: 400;
-        font-size: 15px;
-        line-height: 15px;
+        font-size: 0.9rem;
       }
     }
     img {
@@ -65,9 +63,13 @@
   }
   .containertwo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     padding: @page-top-bottom-padding @page-left-right-paddings;
 
+    img {
+      width: 3.5rem;
+    }
     .pend1 {
       width: 26%;
     }

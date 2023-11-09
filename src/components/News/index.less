@@ -6,26 +6,11 @@
     background: url("../../images/news/news-header-bg.svg") 0 0 no-repeat;
     background-position: center;
     background-size: cover;
-    padding-bottom: 4rem;
-    h1 {
-      margin: 4rem 0;
-    }
+    height: 60vh;
   }
   section {
+    position: relative;
     padding: @page-left-right-paddings;
-    .page-info-nav {
-      display: flex;
-      margin: 1rem 0 4rem;
-      a {
-        h4 {
-          color: #4c192a;
-        }
-      }
-      span {
-        color: #bebbbb;
-        text-transform: capitalize;
-      }
-    }
     .content-wrapper {
       display: flex;
       flex-direction: column;
@@ -36,6 +21,7 @@
         gap: 2rem;
         justify-content: space-between;
         align-items: center;
+        margin-top: 2rem;
         img {
           width: 100%;
         }
@@ -49,11 +35,6 @@
           }
           span {
             color: #838383;
-          }
-          p {
-            height: 7.2rem;
-            overflow: hidden;
-            color: #4c192a;
           }
           button {
             text-align: center;
@@ -115,6 +96,7 @@
               h3 {
                 width: 50%;
                 hyphens: auto;
+                font-size: 1.5rem;
               }
             }
           }
@@ -167,41 +149,21 @@
   }
   .read-news-wrapper {
     padding: @page-left-right-paddings;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    .page-info-nav {
-      margin-top: 5rem;
-      display: flex;
-      h4 {
-        color: #4c192a;
-        cursor: pointer;
-        word-wrap: nowrap;
-        text-wrap: nowrap;
-        transition: color 0.5s;
-        &:hover {
-          color: @brown;
-        }
-      }
-      span {
-        color: #bebbbb;
-      }
-    }
     .read-news-card {
       h3 {
         text-align: center;
         color: @brown;
-        margin: 2rem 0;
+        margin: 4rem 0 3rem;
       }
       img {
         width: 100%;
       }
       span {
         color: hsla(340, 50%, 20%, 0.451);
-      }
-      p {
-        margin: 2rem 0;
-        color: #4c192a;
       }
     }
   }

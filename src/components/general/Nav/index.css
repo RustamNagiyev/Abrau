@@ -23,6 +23,9 @@
 .nav .container img:hover {
   transform: scale(0.9);
 }
+.nav .container img.logo {
+  width: 3.5rem;
+}
 .nav .container .center {
   display: none;
 }
@@ -289,7 +292,7 @@
     display: none !important;
   }
 }
-@media (min-width: 720px) {
+@media (min-width: 805px) {
   .nav .container {
     display: grid;
     grid-template-areas: "left right" "center center";
