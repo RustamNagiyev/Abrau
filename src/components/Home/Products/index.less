@@ -1,13 +1,15 @@
 @import "../../../utils/variables.less";
 .products-home {
-  padding-bottom: 10vmin;
-  .products-h2 {
-    color: #974d24;
-    font-weight: 400;
-    font-size: 55px;
-    line-height: 66px;
-    font-family: ArnoProRegular;
-    text-transform: capitalize;
+  margin: 4rem 0;
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.3rem;
+    margin: 1rem 0;
+    h3 {
+      font-size: 1.4rem;
+    }
   }
   //SWIPER styles:
   .swiper-slide img {
@@ -31,38 +33,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  button {
-    display: block;
-    margin: 30px auto;
-    width: max-content;
-    padding: 0 5rem;
-    height: 40px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: @brown;
-    border-radius: 5px;
-    border: 1px solid @brown;
-    background-color: @pink;
-    cursor: pointer;
-    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
-    &:hover {
-      color: #fff;
-      background-color: @brown;
-    }
-  }
-  h3 {
-    padding-top: 2vmin;
-    color: #130f02;
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 24px;
-  }
-  p {
-    padding-top: 1vmin;
   }
 }
 

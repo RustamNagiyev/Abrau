@@ -8,7 +8,6 @@ export default function Map(prop) {
     <section className='map'>
       <Header />
       <Main map={prop.map} />
-
     </section>
   )
 }

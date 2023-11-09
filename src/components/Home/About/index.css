@@ -10,33 +10,14 @@
   justify-content: space-around;
   padding: 7vmin 0;
 }
+.about .container * {
+  text-align: center;
+}
 .about .container .flex1 {
   width: 45%;
 }
-.about .container .flex1 h2 {
-  padding-top: 0;
-  font-family: ArnoProRegular;
-  font-weight: 400;
-  font-size: 55px;
-  text-transform: capitalize;
-  line-height: 66px;
-  text-align: center;
-  color: #974d24;
-}
-.about .container .flex1 .text1 {
-  font-family: ArnoProRegular;
-  text-align: center;
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 30px;
-}
 .about .container .flex1 .text2 {
   margin-top: 10px;
-  color: #130f02;
-  text-align: center;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
 }
 .about .container .flex1 button {
   display: block;

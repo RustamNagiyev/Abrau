@@ -35,16 +35,14 @@
 }
 .sectionfooter .container p {
   font-family: ArnoProRegular;
-  font-size: 17px;
-  line-height: 20px;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: capitalize;
 }
 .sectionfooter .container p span {
   font-size: Mondia;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 0.9rem;
 }
 .sectionfooter .container img {
   height: 1rem;
@@ -56,8 +54,12 @@
 }
 .sectionfooter .containertwo {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   padding: 3vmin 7vmin;
+}
+.sectionfooter .containertwo img {
+  width: 3.5rem;
 }
 .sectionfooter .containertwo .pend1 {
   width: 26%;

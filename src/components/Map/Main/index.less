@@ -23,24 +23,6 @@
     cursor: pointer;
   }
 
-  .page-info-nav {
-    position: absolute;
-    display: flex;
-    left: 2rem;
-    top: @page-top-bottom-padding;
-    * {
-      font-family: Legan;
-    }
-    a {
-      h4 {
-        color: @bordo-color;
-      }
-    }
-    span {
-      text-transform: capitalize;
-      color: #bebbbb;
-    }
-  }
   .map-container {
     display: flex;
     margin-top: 6vmin;
@@ -74,20 +56,25 @@
   }
 
   .map-h2 {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-    text-align: center;
-    color: @brown;
+    font-size: 2.2rem;
     padding-top: 80px;
+    text-transform: unset;
+  }
+  h3 {
+    font-size: 1.2rem;
+    color: @brown;
+  }
+  p {
+    color: #4c192a;
   }
   .map-btn {
     border: none;
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
     display: block;
     margin-left: auto;
     text-decoration: underline;
+    font-size: 1.2rem;
     &:hover {
       background: none;
       color: @black;

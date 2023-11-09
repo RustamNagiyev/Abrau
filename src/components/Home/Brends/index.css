@@ -1,17 +1,9 @@
-.brends h2 {
-  font-family: ArnoProRegular;
-  font-weight: 400;
-  font-size: 55px;
-  line-height: 66px;
-  color: #974d24;
-  text-align: center;
+.brends {
+  margin: 4rem 0;
 }
 .brends .brendscontainer {
   position: relative;
   /* height: 100vmin; */
-}
-.brends .brendscontainer h2 {
-  text-transform: uppercase;
 }
 .brends .brendscontainer .left,
 .brends .brendscontainer .right {
@@ -35,10 +27,15 @@
 }
 .brends .brendscontainer .left .text-wrapper h2,
 .brends .brendscontainer .right .text-wrapper h2 {
-  font-size: xx-large;
+  font-size: 1.7rem;
   line-height: normal;
   color: #fff;
   position: relative;
+  text-transform: uppercase;
+}
+.brends .brendscontainer .left .text-wrapper button,
+.brends .brendscontainer .right .text-wrapper button {
+  margin: unset;
 }
 .brends .brendscontainer .left img,
 .brends .brendscontainer .right img {
@@ -60,8 +57,9 @@
   right: 4vmin;
   align-items: flex-end;
 }
-.brends .brendscontainer .right .text-wrapper h2 {
-  text-align: end;
+.brends .brendscontainer .right .text-wrapper * {
+  text-align: right;
+  align-self: flex-end;
 }
 .brends .brendscontainer .left {
   position: absolute;
@@ -75,9 +73,9 @@
   top: 4vmin;
   left: 4vmin;
 }
-.brends .brendscontainer .left .text-wrapper h2 {
-  text-align: start;
-  padding-top: 0;
+.brends .brendscontainer .left .text-wrapper * {
+  text-align: left;
+  align-self: flex-start;
 }
 .brends .brendscontainer .img1,
 .brends .brendscontainer .img2 {
@@ -95,6 +93,16 @@
 .brends .brendscontainer .img2 .divflex1 {
   width: 100%;
   background-color: #fff;
+  padding: 7vmin;
+}
+.brends .brendscontainer .img1 .divflex1 h2,
+.brends .brendscontainer .img2 .divflex1 h2 {
+  text-align: right;
+  font-size: 2.5rem;
+}
+.brends .brendscontainer .img1 .divflex1 p,
+.brends .brendscontainer .img2 .divflex1 p {
+  text-align: justify;
 }
 .brends .brendscontainer .img1 .divflex1 h3.button,
 .brends .brendscontainer .img2 .divflex1 h3.button {
@@ -104,6 +112,7 @@
   padding-left: 5px;
   width: max-content;
   transition: 0.5s ease-in-out;
+  margin: -7vmin -7vmin auto;
 }
 .brends .brendscontainer .img1 .divflex1 h3.button:hover,
 .brends .brendscontainer .img2 .divflex1 h3.button:hover {
@@ -111,25 +120,6 @@
   padding: 0 55px 0 5px;
   border-radius: 0 0 25px 0;
   cursor: pointer;
-}
-.brends .brendscontainer .img1 .divflex1 h2,
-.brends .brendscontainer .img2 .divflex1 h2 {
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 60px;
-  font-family: ArnoProRegular;
-  color: #974d24;
-  padding: 5vmin 5vmin 0;
-  text-align: right;
-}
-.brends .brendscontainer .img1 .divflex1 p,
-.brends .brendscontainer .img2 .divflex1 p {
-  padding: 4vmin 5vmin 7vmin;
-  text-align: justify;
-  color: #505050;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
 }
 .brends .brendscontainer .img1 .divflex2,
 .brends .brendscontainer .img2 .divflex2 {
@@ -144,19 +134,9 @@
   object-fit: cover;
   object-position: 0 20%;
 }
-.brends .brendscontainer .img1 h2,
-.brends .brendscontainer .img2 h2 {
-  text-transform: initial;
-}
 @keyframes homeWineInfoPageAnimation {
   100% {
-    max-height: 250vmin;
-  }
-}
-@media (max-width: 425px) {
-  .brends .brendscontainer .left .text-wrapper h2,
-  .brends .brendscontainer .right .text-wrapper h2 {
-    font-size: x-large;
+    max-height: 100rem;
   }
 }
 @media (min-width: 900px) {

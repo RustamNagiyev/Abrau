@@ -8,8 +8,9 @@
   padding-bottom: 8vmin;
 }
 .contact .main-contact .top h2 {
-  padding: 0;
-  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
 }
 .contact .main-contact .top .container-contact {
   display: flex;
@@ -24,19 +25,6 @@
 }
 .contact .main-contact .top .container-contact .flex-contact * {
   text-align: center;
-}
-.contact .main-contact .top .container-contact .flex-contact h2 {
-  font-weight: 600;
-  font-size: 26px;
-  line-height: 21px;
-  color: #974d24;
-  font-family: ArnoProRegular;
-}
-.contact .main-contact .top .container-contact .flex-contact p {
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 20px;
-  padding-top: 2vmin;
 }
 .contact .main-contact .common-input form {
   display: flex;

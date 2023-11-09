@@ -1,12 +1,6 @@
 @import "../../../utils/variables.less";
 
 .home-news {
-  h2 {
-    color: @brown;
-    padding: 0;
-    text-transform: capitalize;
-    margin-top: 2rem;
-  }
   .home-news-card-container {
     display: flex;
     flex-direction: row;
@@ -33,12 +27,6 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-        }
-        h3 {
-          position: absolute;
-          left: 4vmin;
-          top: 4vmin;
-          width: 50%;
         }
         span {
           position: absolute;
@@ -78,11 +66,12 @@
         height: 14rem;
         object-fit: cover !important;
       }
-      h3 {
+      h4 {
         position: absolute;
         left: 4vmin;
         top: 4vmin;
         width: 50%;
+        font-weight: 400;
         text-align: left;
         z-index: 2;
       }
@@ -104,17 +93,6 @@
     .swiper-button-next.custom-button {
       position: relative;
       color: #974d24;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .swiper-button-prev.custom-button {
-      translate: -10rem;
-    }
-
-    .swiper-button-next.custom-button {
-      margin-top: -2.75rem;
-      translate: 2rem;
     }
 
     .swiper-button-prev.custom-button span,
@@ -134,14 +112,13 @@
       background-color: rgba(151, 76, 36, 0.176);
       color: #fff;
     }
-  }
-}
-@media (max-width: 767px) {
-  .home-news {
-    // SWIPER
-    .swiper {
-      .swiper-button-prev.custom-button {
-        translate: -7rem;
+    .buttons-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 9rem;
+      margin: 2rem 0 4rem;
+      button {
+        display: inline-block;
       }
     }
   }

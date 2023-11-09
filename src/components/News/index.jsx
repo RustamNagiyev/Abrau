@@ -78,7 +78,7 @@ export default function News(prop) {
                             <div key={news.id} className="read-news-wrapper">
                                 <div className="page-info-nav">
                                     <Link to={'/'}><h4>Ana Səhifə / &nbsp;</h4></Link>
-                                    <h4 onClick={() => { setShowReadNews(false) }}>&nbsp; Xəbərlər /</h4>
+                                    <h4 onClick={() => { setShowReadNews(false) }}>Xəbərlər / &nbsp;</h4>
                                     <span>&nbsp;&nbsp; {news.title}</span>
                                 </div>
                                 <div className="read-news-card">

@@ -39,7 +39,7 @@ export default function News(prop) {
                                     <div className="home-news-card">
                                         <div className="img-wrapper">
                                             <img src={require(`../../../images/news/${news.img}`)} alt="news" />
-                                            <h3>{news.title}</h3>
+                                            <h4>{news.title}</h4>
                                             <span>{news.releasedTime}</span>
                                         </div>
                                     </div>
@@ -48,8 +48,10 @@ export default function News(prop) {
                         )
                     })}
                 </div>
-                <div className="swiper-button-prev custom-button"><span>&#8592;</span>{t("prev")}</div>
-                <div className="swiper-button-next custom-button">{t("next")}<span>&#8594;</span></div>
+                <div className='buttons-wrapper'>
+                    <div className="swiper-button-prev custom-button"><span>&#8592;</span>{t("prev")}</div>
+                    <div className="swiper-button-next custom-button">{t("next")}<span>&#8594;</span></div>
+                </div>
             </Swiper>}
         </section>
     )

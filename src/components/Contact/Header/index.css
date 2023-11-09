@@ -1,13 +1,4 @@
-h1 {
-  text-align: center;
-  padding-top: 180px;
-  font-weight: 400;
-  font-family: ArnoProRegular;
-  font-size: 65px;
-  line-height: 78px;
-  color: #fff;
-}
 .header-contact {
   background-image: url("../../../images/home/contactheaderback.png");
-  height: 425px;
+  height: 60vh;
 }
