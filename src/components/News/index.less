@@ -135,7 +135,6 @@
 }
 // read news
 .read-news-container {
-  position: relative;
   &::after {
     content: "";
     width: 15rem;
@@ -146,6 +145,7 @@
     background: url("../../images/news/readNewsTopRightImg.svg") top right
       no-repeat;
     background-size: contain;
+    z-index: 1;
   }
   .read-news-wrapper {
     padding: @page-left-right-paddings;
@@ -153,7 +153,13 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    position: relative;
+    padding-top: 7rem;
+    .page-info-nav {
+      top: 8rem;
+    }
     .read-news-card {
+      margin-top: 2rem;
       h3 {
         text-align: center;
         color: @brown;
@@ -161,6 +167,9 @@
       }
       img {
         width: 100%;
+
+        position: relative;
+        z-index: 2;
       }
       span {
         color: hsla(340, 50%, 20%, 0.451);

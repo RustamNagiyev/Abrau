@@ -24,45 +24,62 @@ function App() {
   const [errors, setErrors] = useState([]);
   const [switchedLanguage, setSwitchedLanguage] = useState("az");
 
-  const fetchData = async (url, stateProperty) => {
-    try {
-      const response = await axios.get(url);
-      setData((prevData) => ({ ...prevData, [stateProperty]: response.data }));
-    } catch (error) {
-      console.error(`Error fetching data from ${url}:`, error);
-      setErrors((prevErrors) => [...prevErrors, error]);
-      console.log(errors);
-    }
-  };
-
   useEffect(() => {
-    const endpoints =
-      [
-        {
-          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + PRODUCTS_URL,
-          property: "products",
-        },
-        {
-          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + NEWS_URL,
-          property: "news",
-        },
-        {
-          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + MAP_URL,
-          property: "map",
-        },
-        {
-          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + ABOUTDATA_URL,
-          property: "aboutData",
-        },
-        {
-          url: `https://azabrau-database${switchedLanguage === 'ru' ? '-russian' : ''}.vercel.app` + AWARDS_URL,
-          property: "awards",
-        },
-      ];
+    const endpoints = [
+      {
+        url:
+          `https://azabrau-database${
+            switchedLanguage === "ru" ? "-russian" : ""
+          }.vercel.app` + PRODUCTS_URL,
+        property: "products",
+      },
+      {
+        url:
+          `https://azabrau-database${
+            switchedLanguage === "ru" ? "-russian" : ""
+          }.vercel.app` + NEWS_URL,
+        property: "news",
+      },
+      {
+        url:
+          `https://azabrau-database${
+            switchedLanguage === "ru" ? "-russian" : ""
+          }.vercel.app` + MAP_URL,
+        property: "map",
+      },
+      {
+        url:
+          `https://azabrau-database${
+            switchedLanguage === "ru" ? "-russian" : ""
+          }.vercel.app` + ABOUTDATA_URL,
+        property: "aboutData",
+      },
+      {
+        url:
+          `https://azabrau-database${
+            switchedLanguage === "ru" ? "-russian" : ""
+          }.vercel.app` + AWARDS_URL,
+        property: "awards",
+      },
+    ];
+
+    const fetchData = async (url, stateProperty) => {
+      try {
+        const response = await axios.get(url);
+        setData((prevData) => ({
+          ...prevData,
+          [stateProperty]: response.data,
+        }));
+      } catch (error) {
+        console.error(`Error fetching data from ${url}:`, error);
+        setErrors((prevErrors) => [...prevErrors, error]);
+        console.log(errors);
+      }
+    };
 
     // Fetch data for each URL and update the corresponding state property
     endpoints.forEach(({ url, property }) => fetchData(url, property));
-  }, [switchedLanguage]);
+  }, [switchedLanguage, errors]);
 
   const handleSetClickedProductIdFromNavAndProducts = (id) => {
     setClickedProductId(id);

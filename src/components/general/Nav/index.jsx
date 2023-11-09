@@ -56,7 +56,7 @@ export default function Nav(prop) {
             </div>
             <ul>
               {clickedSearchButton && prop.products && prop.products.map((product) => {
-                return searchValue !== '' && product.name.toLowerCase().includes(searchValue) && <li key={product.id}><Link to={`/products?searching`} onClick={() => { prop.handleSetClickedPId && prop.handleSetClickedPId(product.id); window.scrollTo(0, 0); setSearchValue(''); setClickedSearchButton(false); searchInput.current.value = '' }}>{product.name}</Link></li>
+                return searchValue !== '' && (product.name.toLowerCase().includes(searchValue) || product.name.toUpperCase().includes(searchValue)) && <li key={product.id}><Link to={`/products?searching`} onClick={() => { prop.handleSetClickedPId && prop.handleSetClickedPId(product.id); window.scrollTo(0, 0); setSearchValue(''); setClickedSearchButton(false); searchInput.current.value = '' }}>{product.name}</Link></li>
               })}
             </ul>
           </div>
