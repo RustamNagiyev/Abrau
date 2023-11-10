@@ -14,6 +14,9 @@
   font-family: Legan;
   src: url("../public/fonts/Legan.ttf");
 }
+::-webkit-scrollbar {
+  width: 0;
+}
 * {
   font-family: Mondia;
   margin: 0;
@@ -37,18 +40,34 @@ body.loader::before {
   z-index: 9999;
 }
 body.loader::after {
-  content: "";
+  content: "Loading";
+  color: #fff;
   height: 7rem;
-  width: 7rem;
+  width: 6rem;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 9999;
-  left: 50%;
   top: 50%;
+  left: 50%;
   translate: -50% -50%;
-  background: url("images/page-loader-gif.gif") 0 0 no-repeat;
+  background: url("images/page-loader-gif.gif") 0 1.5rem no-repeat;
   background-size: contain;
+  animation: loadingAnimation 1s infinite alternate-reverse linear;
+}
+@keyframes loadingAnimation {
+  25% {
+    content: "Loading";
+  }
+  50% {
+    content: "Loading .";
+  }
+  75% {
+    content: "Loading . .";
+  }
+  100% {
+    content: "Loading . . .";
+  }
 }
 .App {
   background-color: #f4e5d4;

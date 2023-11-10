@@ -23,12 +23,13 @@
       padding: 0 2vmin;
       display: flex;
       flex-direction: column;
-      gap: .5rem;
+      gap: 0.2rem;
       height: 100%;
       justify-content: space-between;
       button {
-        padding: .5vmin !important;
+        padding: 0.5vmin !important;
         width: 70%;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -131,26 +132,28 @@
     .container-clicked {
       display: flex;
       justify-content: space-around;
-      margin-top: 15vmin;
+      align-items: center;
+      flex: 1 0;
     }
     .back-imgClicked {
       position: relative;
-      width: 40vmin;
-      display: flex;
-      justify-content: center;
-      &::before {
-        content: "";
-        width: 400px;
-        background: url("../../../images/home/backimgwine.png") 0 0 no-repeat;
-        background-size: contain;
-        height: 30rem;
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        translate: -50% -50%;
-      }
+      width: 50%;
+      text-align: center;
       img {
+        height: 20rem;
         z-index: 1;
+        position: relative;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 20rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../../../images/home/backimgwine.png") center center
+          no-repeat;
+        background-size: contain;
       }
     }
     .flex-product {
@@ -166,8 +169,7 @@
       }
       .product-p {
         color: #4c192a;
-        padding: .4rem 0 1rem;
-        width: 60%;
+        padding: 0.4rem 0 1rem;
       }
       .product-h4 {
         font-weight: 400;
@@ -188,14 +190,14 @@
       text-align: center;
       border: 1px solid #e7d2bb;
       width: 90%;
-      margin: 25vmin auto;
+      margin: 10vmin auto 25vmin;
       .composition {
         border-right: 1px solid #e7d2bb;
         width: 25%;
         display: flex;
         flex-direction: column;
         padding: @page-top-bottom-padding;
-        gap: .7rem;
+        gap: 0.7rem;
         h4 {
           font-size: 1.2rem;
           color: @brown;

@@ -11,11 +11,12 @@
   padding-top: 10vmin;
 }
 .about-header .top-img-wrapper img:last-child {
-  width: 4rem;
+  width: 3rem;
   position: absolute;
+  display: block;
+  margin: 0 auto;
   top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  left: calc(50% - 1.5rem);
   cursor: pointer;
   transition: box-shadow 0.3s;
   border-radius: 50%;

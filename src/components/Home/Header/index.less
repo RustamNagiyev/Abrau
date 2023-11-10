@@ -38,7 +38,7 @@ header.home-header {
     padding: 0 @page-top-bottom-padding;
   }
   .p2 {
-    width: 45%;
+    padding: 0 @page-left-right-paddings;
     display: block;
     margin: 40px auto 0;
     text-align: center;
@@ -51,6 +51,17 @@ header.home-header {
   header.home-header {
     img {
       width: 17rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  header.home-header {
+    .p1 {
+      width: 27%;
+    }
+    .p2 {
+      width: 45%;
     }
   }
 }

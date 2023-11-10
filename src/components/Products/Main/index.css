@@ -21,13 +21,14 @@
   padding: 0 2vmin;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.2rem;
   height: 100%;
   justify-content: space-between;
 }
 .all-products-sections .product .content-container button {
   padding: 0.5vmin !important;
   width: 70%;
+  margin-bottom: 1rem;
 }
 .all-products-sections .products-main {
   position: relative;
@@ -125,27 +126,28 @@
 .all-products-sections section .container-clicked {
   display: flex;
   justify-content: space-around;
-  margin-top: 15vmin;
+  align-items: center;
+  flex: 1 0;
 }
 .all-products-sections section .back-imgClicked {
   position: relative;
-  width: 40vmin;
-  display: flex;
-  justify-content: center;
-}
-.all-products-sections section .back-imgClicked::before {
-  content: "";
-  width: 400px;
-  background: url("../../../images/home/backimgwine.png") 0 0 no-repeat;
-  background-size: contain;
-  height: 30rem;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  translate: -50% -50%;
+  width: 50%;
+  text-align: center;
 }
 .all-products-sections section .back-imgClicked img {
+  height: 20rem;
   z-index: 1;
+  position: relative;
+}
+.all-products-sections section .back-imgClicked::after {
+  content: "";
+  width: 100%;
+  height: 20rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../../images/home/backimgwine.png") center center no-repeat;
+  background-size: contain;
 }
 .all-products-sections section .flex-product {
   width: 50%;
@@ -161,7 +163,6 @@
 .all-products-sections section .flex-product .product-p {
   color: #4c192a;
   padding: 0.4rem 0 1rem;
-  width: 60%;
 }
 .all-products-sections section .flex-product .product-h4 {
   font-weight: 400;
@@ -181,7 +182,7 @@
   text-align: center;
   border: 1px solid #e7d2bb;
   width: 90%;
-  margin: 25vmin auto;
+  margin: 10vmin auto 25vmin;
 }
 .all-products-sections section .container-product .composition {
   border-right: 1px solid #e7d2bb;

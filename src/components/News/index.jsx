@@ -77,8 +77,8 @@ export default function News(prop) {
                         return clickedId === news.id && (
                             <div key={news.id} className="read-news-wrapper">
                                 <div className="page-info-nav">
-                                    <Link to={'/'}><h4>Ana Səhifə / &nbsp;</h4></Link>
-                                    <h4 onClick={() => { setShowReadNews(false) }}>Xəbərlər / &nbsp;</h4>
+                                    <Link to={'/'}><h4>{t("mainPage")} / &nbsp;</h4></Link>
+                                    <h4 onClick={() => { setShowReadNews(false) }} style={{textTransform: "capitalize"}}>{t("news")} / &nbsp;</h4>
                                     <span>{news.title}</span>
                                 </div>
                                 <div className="read-news-card">
