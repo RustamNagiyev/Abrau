@@ -26,18 +26,20 @@ export default function Main() {
       // alternative version with axios which our database served on vercel.app gives 500 internal error for readonly files of itself(vercel):
       // const response = await axios.post('https://azabrau-database-russian.vercel.app/contact', { ...inputValues });
 
-      // Get a reference to the 'data' node in your Firebase database
+      // Get a reference to the 'azabrau-contact' node in our Firebase database
       const dataRef = ref(database, 'azabrau-contact');
-      // Push the new data to the database
-      await push(dataRef, {
+      // Push the new data to the database and get the completion promise
+      const pushPromise = push(dataRef, {
         value: { ...inputValues },
       });
+
+      // Wait for the completion of the push operation
+      await pushPromise;
 
       // Clear the input field
       setInputValues({});
       // Redirect to the success page if posting data is successful
       navigate('/contact/success');
-      // // response.status(200).json({ success: true });
     } catch (error) {
       console.error(error);
       // Redirect to the error page if an error occurs

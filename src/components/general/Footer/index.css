@@ -54,19 +54,17 @@
 }
 .sectionfooter .containertwo {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 3vmin 7vmin;
+  gap: 1.5rem;
 }
 .sectionfooter .containertwo img {
   width: 3.5rem;
 }
-.sectionfooter .containertwo .pend1 {
-  width: 26%;
-}
 .sectionfooter .containertwo .pend2 {
   text-align: end;
-  width: 25%;
   overflow-x: hidden;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;

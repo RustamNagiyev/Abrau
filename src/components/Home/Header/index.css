@@ -38,7 +38,7 @@ header.home-header h1 {
   padding: 0 3vmin;
 }
 header.home-header .p2 {
-  width: 45%;
+  padding: 0 7vmin;
   display: block;
   margin: 40px auto 0;
   text-align: center;
@@ -48,5 +48,13 @@ header.home-header .p2 {
 @media (max-width: 290px) {
   header.home-header img {
     width: 17rem;
+  }
+}
+@media (min-width: 1024px) {
+  header.home-header .p1 {
+    width: 27%;
+  }
+  header.home-header .p2 {
+    width: 45%;
   }
 }
